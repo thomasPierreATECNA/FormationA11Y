@@ -44,12 +44,18 @@ export default {
   div * {
     line-height: 1.25;
     font-size: .9rem;
+    padding-block: 0.5rem;
+
+    &:is(p) {
+      margin: 0;
+      text-wrap: auto;
+    }
   }
 }
 
 
 .Alert--idea {
-  --color: var(--green-500);
+  --color: var(--blue-500);
 }
 
 .Alert--success {

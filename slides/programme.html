@@ -1,20 +1,50 @@
 ---
 layout: image-left
+image: images/code.jpg
+transition: slide-left
+---
+
+<h1>Au programme</h1>
+
+<h2 v-click>Jour 1</h2>
+<h3 v-click class="text-xl! text-lighter mbs-3xl">Matin</h3>
+<ul class="mbs-md">
+  <ListItem label="Introduction" />
+  <ListItem label="Le cadre légal" />
+  <ListItem label="Les principes fondamentaux de l'accessibilité" />
+  <ListItem label="Les référentiels" />
+  <ListItem label="Les outils" />
+</ul>
+
+<h3 v-click class="text-xl! text-lighter mbs-3xl">Après-midi</h3>
+<ul class="mbs-md">
+  <ListItem label="Présentation de l'information" />
+  <ListItem label="Structuration de l'information" />
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: image-left
 image: code.jpg
 transition: slide-left
 ---
 
-<h1>Le programme</h1>
+<h1>Au programme</h1>
 
-<h3 class="text-xl! text-lighter mbs-5 mbe-2">L'accessibilité numérique.</h3>
+<h2 v-click>Jour 2</h2>
+<h3 v-click class="text-xl! text-lighter mbs-3xl">Matin</h3>
+<ul class="mbs-md">
+  <ListItem label="Identification des liens" />
+  <ListItem label="Mise en conformité des scripts" />
+</ul>
 
-<ol class="mbs-10">
-  <ListItem label="Introduction" />
-  <ListItem label="Le cadre légal" />
-  <ListItem label="Principes fondamentaux de l'accessibilité" />
-  <ListItem label="Points clés" />
-  <ListItem label="Mise en situation" />
-  <ListItem label="Auditer l'accessibilité" />
-</ol>
+<h2 v-click class="text-xl! text-lighter mbs-sm">Après-midi</h2>
+<ul class="mbs-md">
+  <ListItem label="Systèmes de navigation" />
+  <ListItem label="Les formulaires" />
+  <ListItem label="Conclusion" />
+</ul>
 
 <SlideFooter />

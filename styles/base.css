@@ -19,18 +19,32 @@
 
   h1 {
     color: var(--coral-500);
+
+    & + p {
+      margin-top: 0;
+      margin-bottom: inherit;
+      opacity: 1;
+    }
   }
 
   p {
-    text-wrap: pretty;
+    text-wrap: balance;
   }
-}
 
-/* .slidev-layout {
-  
+  a {
+    color: var(--coral-500);
+    font-weight: 500;
+    border: none;
+    text-decoration-color: var(--coral-500);
 
-  pre code {
-    font-size: 14px;
+    &:hover {
+      border: none;
+      color: var(--coral-700);
+      text-decoration-line: underline;
+      text-decoration-style: solid !important;
+      text-decoration-thickness: 0.0625rem;
+      text-decoration-color: var(--coral-700);
+    }
   }
 
   blockquote {
@@ -66,9 +80,5 @@
     .border-s-warning {
       @apply border-s-warning;
     }
-
-    p {
-      margin: 0;
-    }
   }
-} */
+}
