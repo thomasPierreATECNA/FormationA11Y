@@ -39,6 +39,7 @@ export default {
   p {
     margin: 0;
     padding: 0;
+    text-wrap: auto;
   }
 }
 </style>

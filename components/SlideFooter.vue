@@ -35,7 +35,7 @@ const year = today.getFullYear();
 
 <template>
   <footer
-    class="absolute border-t border-white bottom-0 inset-inline-0 bg-grey-800 flex gap-xs justify-end items-center px-2 py-1 text-2 text-white">
+    class="absolute border-t-1 border-grey-600 bottom-0 inset-inline-0 bg-grey-800 flex gap-xs justify-end items-center px-2 py-1 text-2 text-white">
     <img src="/atecna/logo-full-white.svg" alt="" class="h-4" />
     <span>|</span>
     <span>{{ projectTitle ?? "Formation" }}</span>

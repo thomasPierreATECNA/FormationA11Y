@@ -25,25 +25,35 @@
       margin-bottom: inherit;
       opacity: 1;
     }
+
+    ul,
+    ol {
+      li {
+        margin: 0 !important;
+      }
+    }
   }
 
   p {
     text-wrap: balance;
+    margin-top: 0;
+    margin-bottom: 1ch;
   }
 
   a {
     color: var(--coral-500);
     font-weight: 500;
     border: none;
+    text-decoration-line: underline;
+    text-decoration-style: solid !important;
+    text-decoration-thickness: 0.0625rem;
     text-decoration-color: var(--coral-500);
 
     &:hover {
       border: none;
-      color: var(--coral-700);
-      text-decoration-line: underline;
-      text-decoration-style: solid !important;
-      text-decoration-thickness: 0.0625rem;
-      text-decoration-color: var(--coral-700);
+      color: var(--coral-600);
+      text-decoration-thickness: 0.125rem;
+      text-decoration-color: var(--coral-600);
     }
   }
 

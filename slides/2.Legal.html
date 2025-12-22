@@ -3,151 +3,369 @@ layout: center
 transition: slide-up
 ---
 
-<h1 class="!text-6xl">Le cadre légal</h1>
+<h1 class="!text-8xl">Le cadre légal.</h1>
 
 <SlideFooter />
 
---- layout: image-right image: eu.jpg transition: slide-up ---
+<!-- prettier-ignore -->
+--- 
+layout: image-right 
+image: images/eu.jpg 
+transition: slide-up 
+---
 <h1>Le cadre légal</h1>
 
-<p v-click>
-  Le
-  <u>11 février 2005</u>
-  , la France adopte la loi pour l’égalité des droits et des chances, la
-  participation et la citoyenneté des personnes handicapées. Cette loi pose les
-  bases d'une société plus inclusive en France, mais son application reste
-  partielle.
-</p>
+<div class="flex flex-col gap-lg mbs-2xl">
+  <p v-click>
+    Le
+    <b>11 février 2005</b>
+    , la France adopte la loi pour l’égalité des droits et des chances, la
+    participation et la citoyenneté des personnes handicapées.
+  </p>
 
-<p v-click>
-  À partir du
-  <u>28 juin 2025</u>
-  , l'a11y connaîtra une évolution majeure en France et dans l'ensemble de
-  l'Union européenne avec l'entrée en vigueur de la directive européenne
-  2019/882, connue sous le nom d'
-  <b>European Accessibility Act (EAA)</b>
-  . Cette directive impose des obligations d'accessibilité renforcées pour de
-  nombreux produits et services numériques, tant publics que privés.
-</p>
+  <p v-after>
+    Cette loi pose les bases d'une société plus inclusive en France, mais son
+    application reste partielle.
+  </p>
+
+  <p v-click>
+    Depuis le
+    <b>28 juin 2025,</b>
+    l'a11y à connu une évolution majeure en France et dans l'ensemble de l'Union
+    européenne avec l'entrée en vigueur de la directive européenne 2019/882,
+    connue sous le nom d'
+    <b>European Accessibility Act (EAA).</b>
+  </p>
+</div>
 
 <SlideFooter />
 
---- layout: default transition: slide-up ---
-<h1>Qui est concerné ?</h1>
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
 
-<h2 class="!text-lg var(--text-light)">
-  L'EAA s'applique à un large éventail d'acteurs, notamment :
+<h2 class="text-xl text-light mbe-lg">Que dit la loi ?</h2>
+
+<p v-click>
+  En France et en Europe, l'accessibilité numérique n'est pas une simple
+  recommandation, mais une
+  <u>obligation légale</u>
+  pour :
+</p>
+
+<div class="grid grid-cols-2 gap-2xl mbs-2xl">
+  <div
+    v-click
+    class="flex flex-col gap-lg p-xl bg-lavander-100 border border-lavander-300 rounded-xl"
+  >
+    <h2 class="text-xl! font-semibold text-lavander-900">Le secteur public</h2>
+    <ul class="text-sm mis-xl flex flex-col">
+      <li>L'État et ses ministères.</li>
+      <li>
+        Les collectivités territoriales (Régions, Départements, Communes).
+      </li>
+      <li>
+        Les services publiques (Impôts, sécurité sociale, caisse d'allocations
+        familiales, etc.).
+      </li>
+      <li>
+        Les organismes délégataires d'une mission de service public (transport
+        public, organismes de sécurité sociale, établissements de santé, etc.).
+      </li>
+    </ul>
+  </div>
+
+  <div
+    v-click
+    class="flex flex-col gap-lg p-xl bg-green-100 border border-green-300 rounded-xl"
+  >
+    <h2 class="text-xl! font-semibold text-green-900">Le secteur public</h2>
+    <ul class="text-sm mis-xl flex flex-col">
+      <li>Les sites et applications de e-commerce.</li>
+      <li>
+        Services bancaires aux consommateurs. (applications, sites web,
+        distributeurs, etc).
+      </li>
+      <li>Services de communication électronique.</li>
+      <li>
+        Services de transport de passagers (applications, sites web, bornes de
+        réservations de billets, etc).
+      </li>
+      <li>Médias audiovisuels (TV, streaming video ou audio...)</li>
+      <li>Livres numériques</li>
+    </ul>
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">Que dit la loi ?</h2>
+
+<p>Certaines entreprises du secteur privé sont exemptées de ces obligations:</p>
+
+<ul class="my-3xl mis-8xl">
+  <ListItem label="Les entreprises de moins de 10 salariés." />
+  <ListItem
+    label="Les entreprises réalisant un chiffre d'affaire inférieur à 2 millions d'euros"
+  />
+</ul>
+
+<Alert
+  v-click
+  class="mx-8xl mbs-5xl"
+  type="idea"
+  title="Bon à savoir"
+  text="Même si certaines entreprises sont exemptées de ces obligations, il est fortement recommandé de suivre les bonnes pratiques d'accessibilité pour garantir une expérience utilisateur optimale à tous les utilisateurs, et anticiper une future évoluton de la loi."
+/>
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">Quels sont les obligations légales ?</h2>
+
+<p class="mbs-7xl!">
+  Pour être en conformité avec l'
+  <strong>EAA,</strong>
+  il faut :
+</p>
+
+<ol class="mbs-3xl mis-3xl flex flex-col gap-sm">
+  <ListItem
+    label="Avoir entrepris une démarche d'audit du site ou l'application sur un échantillon représentatif de pages."
+  />
+
+  <ListItem
+    label="Publier une déclaration d'accessibilité atteignable depuis toutes les pages
+    du site."
+  />
+
+  <ListItem label="Publier un schéma pluriannuel de mise en conformité" />
+</ol>
+
+<!-- prettier-ignore -->
+--- 
+layout: image-right 
+image: images/grille-audit.jpg
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">L'audit de conformité</h2>
+
+<p v-click>
+  Il s'agit d'une évaluation approfondie de l'accessibilité numérique d'un site
+  web selon des critères définis par les normes internationales (WCAG 2.1).
+</p>
+
+<p v-click>
+  L'audit doit être réalisé sur un échantillon représentatif de pages et
+  certaines pages doivent obligatoirement figurer dans cet échantillon.
+</p>
+
+<p v-click>
+  Bien qu'il soit possible de s'autoévaluer, il est fortement recommandé de
+  faire appel à des experts en accessibilité pour garantir une évaluation
+  précise et objective.
+</p>
+
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">La déclaration de conformité</h2>
+
+<p v-click>
+  Il s'agit d'une page ou d'un document accessible depuis toutes les pages du
+  site (idéalement situé dans le pied de page).
+</p>
+
+<p v-click>
+  Elle doit indiquer de manière transparente le niveau de conformité du site,
+  les éventuelles dérogations, ainsi que les moyens de contact pour signaler des
+  problèmes d'accessibilité.
+</p>
+
+<p v-click>Il doit y être mentionné le niveau de conformité atteint :</p>
+
+<ul class="mis-3xl mbe-xl">
+  <ListItem label="**Accessibilité conforme** si 100% de critère conformes" />
+  <ListItem
+    label="**Accessibilité partiellement conforme** entre 50% et 99% de critères conformes"
+  />
+  <ListItem
+    label="**Accessibilité non conforme** si moins de 50% de critères conformes"
+  />
+</ul>
+
+<p v-click>
+  Elle doit être rédigée dans un langage clair et compréhensible pour tous les
+  utilisateurs et être mise à jour régulièrement, notamment après chaque audit
+  ou modification majeure du site.
+</p>
+
+<p v-click class="text-3xl! text-center mbs-4xl!">
+  <a
+    target="_blank"
+    href="https://www.leroymerlin.fr/declaration-accessibilite.html"
+  >
+    Un exemple
+  </a>
+</p>
+
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">
+  Le schéma pluri-annuel de mise en conformité
 </h2>
 
-<div flex gap-5 justify-between>
-  <div v-click>
-    <p>Les entreprises proposant des services de :</p>
-    <ul mis-10 mbs-5>
-      <li>Commerce électronique</li>
-      <li>Télécommunications</li>
-      <li>Transport</li>
-      <li>Banque en ligne</li>
-      <li>Médias audiovisuels</li>
-      <li>Livres numérique</li>
-    </ul>
-  </div>
+<p v-click>
+  C'est un document qui définit la
+  <strong>"feuille de route"</strong>
+  pour rendre ses services numériques accessibles sur le long terme.
+</p>
 
-  <div v-click>
-    <p>Les fabricants de produits tels que :</p>
-    <ul mis-10 mbs-5>
-      <li>Ordinateurs</li>
-      <li>Smartphones</li>
-      <li>Distributeurs automatiques de billets</li>
-      <li>Terminaux de paiement</li>
-      <li>Liseuses électroniques</li>
-      <li>etc.</li>
-    </ul>
-  </div>
-</div>
+<p v-click>
+  Si la déclaration d'accessibilité est une photo à un instant T, le schéma
+  pluriannuel est le plan pour les années à venir, en général 3 ans.
+</p>
 
-<div v-click flex justify-center mbs-10>
-  <Alert
-    type="warning"
-    title="Exceptions"
-    text="Les entreprises ayant moins de 10 employés et un chiffre d'affaires<br/>ou un bilan annuel inférieur à 2 millions d'euros, sont exemptées de ces obligations."
-  />
-</div>
+<p v-click>
+  Il doit contenir des engagements en faveur de l'amélioration continue de
+  l'accessibilité, et la stratégie de l'organisationation en matière
+  d'accessibilité (formations des employés, critères d'achat de nouveaux
+  logiciels, etc.).
+</p>
 
-<SlideFooter />
+<p v-click>
+  C'est une preuve de transparence et de l'engagement de l'organisation envers
+  l'inclusion et la diversité
+</p>
 
---- layout: default transition: slide-up ---
-<h1>Dates clés</h1>
+<p v-click class="text-3xl! text-center mbs-4xl!">
+  <a
+    target="_blank"
+    href="https://www.leroymerlin.fr/schema-pluriannuel-accessibilite.html"
+  >
+    Un exemple
+  </a>
+</p>
 
-<h2 class="!text-xl text-light">Ce que le texte de loi prévoit :</h2>
-<ul mx-20 mbs-10>
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="text-xl text-light mbe-lg">Quels sont les risques encourus ?</h2>
+
+<p v-click>
+  En cas de non respects de ces 3 rêgles, l'EAA prévoit des sanctions
+  financières importantes :
+</p>
+
+<ul class="mx-5xl my-2xl flex flex-col">
   <ListItem
-    mbs-10
-    label="📅 **28 juin 2025** : Tous les nouveaux produits et services numériques mis sur le marché ou fournis après cette date devront être conformes aux exigences d'accessibilité."
+    label="❌**Jusqu'à 50 000 euros d'amende** par an et par service non conforme."
   />
   <ListItem
-    mbs-10
-    label="📅 **28 juin 2030** : Les produits et services existants avant le 28 juin 2025 devront être mis en conformité au plus tard à cette date."
+    label="❌**Jusqu'à 25 000 euros d'amende** en cas de non publication de la déclaration d’accessibilité ou du schéma pluriannuel."
   />
 </ul>
 
-<SlideFooter />
-
---- layout: default transition: slide-up ---
-<h1>Les obligations</h1>
-
-<p>
-  Pour être en conformité, toutes les entreprises concernées doivent suivre ces
-  étapes :
+<p v-click>
+  mais il existe d'autres risques indirects liés au non-respect de
+  l'accessibilité :
 </p>
 
-<ul mx-20 mbs-10>
+<ul class="mx-5xl my-2xl flex flex-col">
   <ListItem
-    mbs-5
-    label="**Audit d'accessibilité** : <br/>Évaluer l'état actuel de ses produits et services numériques pour identifier les non-conformités, et obtenir au moins 50% de critères valides."
+    label="❌jusqu'a **20 % de part de marché en moins** (C'est le pourcentage de personnes en situation de handicap !)"
   />
   <ListItem
-    mbs-5
-    label="**Déclaration d'accessibilité** : <br/>Publier une déclaration détaillant le niveau de conformité et les mesures prises. (disponible sur toutes les pages du site)."
+    label="❌**Perte d’accès à certains marchés ou contrats** (Ne pas être accessible peut compliquer la participation à des appels d’offres, notamment publics ou auprès de clients exigeants sur l’accessibilité.)"
   />
   <ListItem
-    mbs-5
-    label="**Schéma pluriannuel d’accessibilité** : <br/>Publier un document qui vise à planifier les actions, montrer l'engagement et fournir une vision claire des priorités."
+    label="❌**Une réputation entachée** (Une entreprise non conforme peut être perçue comme discriminante ou peu inclusive)"
   />
 </ul>
 
-<SlideFooter />
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le cadre légal</h1>
 
---- layout: default transition: slide-left ---
-<h1>Les sanctions</h1>
-<p>
-  Le non-respect des obligations d’
-  <b>a11y</b>
-  peut entraîner des sanctions financières :
+<h2 class="text-xl text-light mbe-lg">Les organismes de contrôle</h2>
+
+<p v-click>
+  En France, plusieurs organismes sont chargés de veiller au respect des
+  obligations d'accessibilité numérique dont :
 </p>
 
-<div flex justify-between gap-5 mbs-5>
-  <div w-full>
-    <p><strong>avant le 28 Juin 2025 :</strong></p>
-    <ul mis-5>
-      <ListItem label="aucun organe de contrôle." />
-      <ListItem label="25 000 euros d'amende par service non conforme." />
-      <ListItem label="1 an pour se mettre en conformité." />
-    </ul>
-  </div>
+<ol class="mx-xl mbs-2xl flex flex-col gap-xs">
+  <ListItem
+    label="**L'Arcom** <small>(Autorité de régulation de la communication audiovisuelle et numérique)</small><br/> pour toutes entreprises du secteur privé<br/>et les très grandes entreprises du secteur public (CA > 250M€)."
+    image="logos/arcom.png"
+    link="https://www.arcom.fr/"
+  />
+  <ListItem
+    label="**La DGCCRF** <small>(Direction générale de la concurrence, de la consommation et de la répression des fraudes)</small><br/> pour les entreprises privées (e-commerce, banques, transports, médias)."
+    image="logos/DGCCRF.png"
+    link="https://www.economie.gouv.fr/dgccrf"
+  />
+  <ListItem
+    label="**La DINUM** <small>(Direction Interministérielle du Numérique).<br/>C'est l'organisme qui pilote la stratégie de l'état et édite le **RGAA**.</small>"
+    image="logos/DINUM.webp"
+    link="https://www.numerique.gouv.fr/numerique-etat/dinum/"
+  />
+  <ListItem
+    label="**Le Défenseur des droits** <br/>C'est l'organisme qui peut être saisi en cas de cas de signalement.<br/>Il intervient sous l'angle de la discrimination lié au handicap."
+    image="logos/defenseur-droits.svg"
+    link="https://www.defenseurdesdroits.fr/"
+  />
+</ol>
 
-  <div w-full>
-    <p><strong>après le 28 Juin 2025 :</strong></p>
-    <ul mis-5>
-      <ListItem
-        label="5 organes de contrôles sont désignés par le gouvernement. <br/><i><b><small>DGCCRF, Arcom, Arcep, AMF et Banque de France</small></b></i>"
-      />
-      <ListItem label="50 000 euros d'amende par service non conforme." />
-      <ListItem
-        label="25 000 euros d'amende en cas de non publication de la déclarations d’accessibilité ou du schéma pluriannuel."
-      />
-      <ListItem label="6 mois pour se mettre en conformité." />
-    </ul>
-  </div>
-</div>
+<!-- prettier-ignore -->
+---
+layout: image-left
+image: images/code.jpg
+transition: slide-left
+---
+<h1>Le cadre légal</h1>
+
+<h2 class="!text-2xl text-light">Pour conclure :</h2>
+
+<p v-click class="mbs-2xl!">
+  L'accessibilité numérique est une obligation légale, mais surtout un levier
+  puissant pour l'inclusion sociale et économique.
+</p>
+
+<p v-click class="mbs-2xl!">
+  En respectant les normes d'accessibilité, les entreprise ne se contentent pas
+  de se conformer à la loi, elles contribuent à bâtir un monde numérique plus
+  juste et équitable pour tous, tout en s'ouvrant à un public plus large.
+</p>
 
 <SlideFooter />

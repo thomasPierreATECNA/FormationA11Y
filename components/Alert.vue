@@ -67,7 +67,7 @@ export default {
 }
 
 .Alert--warning {
-  --color: var(--warning-500);
+  --color: var(--warning-700);
 }
 
 .Alert--error {

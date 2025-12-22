@@ -54,10 +54,10 @@ title: Introduction
 src: ./slides/1.Introduction.html
 ---
 
-# ---
-# title: Le Cadre Légal
-# src: ./slides/2.Legal.html
-# ---
+---
+title: Le Cadre Légal
+src: ./slides/2.Legal.html
+---
 
 # ---
 # title: Les Principes Fondamentaux de l'a11Y
