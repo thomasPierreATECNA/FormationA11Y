@@ -1,4 +1,94 @@
 {
-  "editor.formatOnSave": false,
-  "editor.wordWrapColumn": 200
+  // Configuration générale
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 200,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // Configuration spécifique pour les fichiers Markdown (Slidev)
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "on"
+    },
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.rulers": [80],
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": false,
+    "files.insertFinalNewline": false,
+    "files.trimFinalNewlines": false
+  },
+
+  // Configuration pour les fichiers HTML (vos slides)
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "on"
+    },
+    "emmet.includeLanguages": {
+      "html": "html"
+    },
+    "emmet.triggerExpansionOnTab": true
+  },
+
+  // Configuration pour Vue (composants Slidev)
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Vue.volar",
+    "emmet.includeLanguages": {
+      "vue": "html"
+    },
+    "emmet.triggerExpansionOnTab": true
+  },
+
+  // Activation d'Emmet pour Markdown avec support HTML
+  "emmet.includeLanguages": {
+    "markdown": "html",
+    "vue-html": "html",
+    "html": "html"
+  },
+
+  // Configuration Emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showSuggestionsAsSnippets": true,
+
+  // Configuration Prettier pour respecter votre mise en page
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSpacing": true,
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.vueIndentScriptAndStyle": false,
+
+  // Configuration spécifique Slidev
+  "files.associations": {
+    "*.vue": "vue",
+    "*.md": "markdown"
+  },
+
+  // Autocomplétion et suggestions
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+
+  // Intellisense pour les classes CSS (Tailwind/UnoCSS)
+  "tailwindCSS.includeLanguages": {
+    "markdown": "html",
+    "vue": "html",
+    "html": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*)[\"'`]"],
+    ["classList:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*)[\"'`]"]
+  ]
 }
