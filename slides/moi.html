@@ -1,0 +1,68 @@
+---
+layout: default
+transition: slide-up
+---
+
+
+<h1>Je me présente</h1>
+
+<div v-click flex justify-start gap-5 items-center>
+  <img src="/moi.jpg" alt="" w-25 aspect-square rounded-full border-3 border-transparent shadow shadow-black class="-rotate-10">
+
+  <div grow>
+    <h2 text-light>Thomas PIERRE,</h2>
+    <h3 text-lighter>Développeur Front-End sénior</h3>
+  </div>
+
+  <div flex gap-2 items-center>
+    <a href="https://www.linkedin.com/in/thomas-pierre-9248304a/" target="_blank" class="!border-none">
+      <img src="/logos/linkedin.svg" alt="" class="w-[2em]" />
+    </a>
+    <a href="https://www.linkedin.com/in/thomas-pierre-9248304a/" target="_blank" class="!border-none">
+      <img src="/logos/github.svg" alt="" class="w-[2em]" />
+    </a>
+  </div>
+</div>
+
+<h4 v-click text-light mbs-5 mbe-1>Mon parcours :</h4>
+
+<ul>
+  <ListItem label="**2013 - 2015**, Responsable de communication numérique chez **Harley Davidson**" image="logos/harley-davidson.svg" link="https://www.harley-davidson.com/fr/fr/"/>
+  <ListItem label="**2015 - 2016**, License développement de project Web chez **Efficom**" image="logos/efficom.png" link="https://www.efficom.fr/"/>
+  <ListItem label="**2015 - 2017**, Intégrateur chez **PéoLéo**" image="logos/peoleo.png" link="https://peoleo.com"/>
+  <ListItem label="**2017 - 2018**, Développeur Front-End chez **Hobbynote**" image="logos/hobbynote.svg" link="https://www.hobbynote.com"/>
+  <ListItem label="**depuis 2018**, Lead Développeur Front-End chez **Atecna**" image="logos/atecna.svg" link="https://www.atecna.fr"/>
+  <ListItem label="**depuis 2015**, Gérant de **StudioB04**" image="logos/studiob04.svg" link="https://www.studiob04.com"/>
+</ul>
+
+<SlideFooter />
+
+
+---
+layout: default
+transition: slide-left
+---
+<h1>StudioB04</h1>
+
+<div flex gap-10 items-start>
+  <img src="/logos/studiob04.svg" alt="" w-25 mbs-2>
+
+  <div>
+    <h2 text-light>Micro agence numérique 360.</h2>
+    <p>
+      StudioB04 est une micro agence spécialisée dans la création de sites Web, et de supports de communication.
+    </p>
+    <p>
+      Nous accompagnons nos clients dans leur stratégie numérique et leur communication.<br />Nous militons pour un Web plus <u>sobre</u> et plus <u>accessible</u>.
+      Nos activités :
+    </p>
+    <ul mis-5>
+      <ListItem label="Développement et maintenance de solutions Web (sites vitrines, plateformes e-commerce, applications, etc.)" />
+      <ListItem label="Audit d'accessibilité numérique (106 critères du [R.G.A.A](https://accessibilite.numerique.gouv.fr/))" />
+      <ListItem label="Formation et sensibilisation à l'accessibilité numérique et au numérique responsable" />
+      <ListItem label="Interventions en centre de formation" />
+    </ul>
+  </div>
+</div>
+
+<SlideFooter />

@@ -1,0 +1,273 @@
+---
+layout: center
+transition: slide-up
+---
+<h1 class="!text-6xl">Introduction</h1>
+
+<SlideFooter/>
+
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Préambule</h1>
+
+<p>Pour parler d'accessibilité numérique, on emploi souvent l'acronyme <b>a11y</b>.</p>
+
+<div v-click flex flex-col gap-2 mbs-2 justify-center align-center mx-20>
+  <img src="/A11Y.png" alt="" class="w-[500px] mx-auto" />
+  
+  <div text-pretty>Il s'agit des premières et dernières lettres du mot <b>accessibility</b>, et du chiffre <b>11</b> qui correspond au nombre de lettres entre les deux. <br>Sur certains sites français, vous pourrez voir l'accronyme <b>a11é</b>.</div>
+  <div text-pretty>On retrouve souvent ce genre d'acronyme en informatique, comme <b>i18n</b>, <b>k8s</b>, <b>l10n</b>, <b>c11y</b>, etc...</div>
+</div>
+
+<!-- 
+a11y	Accessibility
+i18n	Internationalization 
+l10n	Localization
+c11y	Cybersecurity
+g11n	Globalization
+k8s	  Kubernetes
+o11y	Observability
+t9n	  Translation
+ -->
+
+<SlideFooter/>
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Vous pensez à quoi si on vous dit "accessibilité" ?</h2>
+
+<p v-click class="!text-balance">L’accessibilité, c’est le fait de rendre un lieu, un service, une information, ou une activité utilisable par <u>TOUT LE MONDE</u> : les personnes valides comme les personnes en situation de handicap.</p>
+<p v-after class="!text-balance">Dans le numérique, c’est veiller à ce que tout le monde puisse naviguer, comprendre et interagir avec un site web ou une application, quel que soit son contexte ou ses capacités.</p>
+
+<div v-click flex mbs-10 mx-25>
+  <Alert type="idea" title="Idée reçue" text="Lorsqu’on évoque l’accessibilité, on pense souvent en premier lieu aux personnes en situation de handicap. Et c’est effectivement un public central. Mais en réalité, l’accessibilité bénéficie à tout le monde, qu’on soit valide ou non." />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Avant d'aller plus loin, définissons le handicap :</h2>
+
+<blockquote v-click>
+  <p>Limitation d’activité ou restriction de la participation à la vie en société subie par une personne en raison d’une altération d’une fonction ou d’un trouble de santé invalidant.</p>
+  <cite block pt-5 text-right text-sm>Source : Article L114 – Code de l'action sociale et des familles</cite>
+</blockquote>
+
+<p v-click class="!mbs-5 !text-balance">Un handicap peut être <b><u>permanent</u></b>, <b><u>temporaire</u></b> ou <b><u>situationnel</u></b>. <br>Par exemple, une personne avec un bras cassé connaît un handicap temporaire : pendant quelque temps, certaines actions lui seront plus difficiles, voire impossibles, comme taper au clavier, scroller ou utiliser une souris.</p>
+
+<div v-click flex mbs-10 justify-center scale-130>
+  <Alert type="idea" title="Conclusion " text="Nous sommes <u>TOUS</u> concernés !" />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Question :</h2>
+
+<p class="!text-xl font-bold text-center">Selon vous, combien de personnes en situation de handicap compte-t-on en France ?</p>
+
+<div v-click mbs-10>
+  <p class="!text-6xl text-primary font-bold text-center">Entre 7 et 12 millions !</p>
+</div>
+
+<div v-after flex mbs-15 justify-center>
+  <Alert type="information" title="pourquoi un tel écart ?" text="Les chiffres varient selon les sources mais l'INSEE annonce 9.6 millions de personne concernées par le handicap en France." />
+</div>
+
+<SlideFooter/>
+
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Il existe 5 types de handicap :</h2>
+
+<div flex gap-6 mbs-5>
+  <div v-click flex flex-col items-center gap-2 w-full>
+    <h3>SENSORIEL</h3>
+    <span text-sm>5,4 millions de personnes atteintes de troubles auditifs.</span>
+    <span text-sm>1,7 million de personnes souffrant de handicap visuel.</span>
+  </div>
+  <div v-click flex flex-col items-center gap-2 w-full>
+    <h3>MOTEUR</h3>
+    <span text-sm>3,5 millions de personnes en France dont 650.000 personnes équipées d'un fauteuil roulant.</span>
+  </div>
+  <div v-click flex flex-col items-center gap-2 w-full>
+    <h3>MENTAL</h3>
+    <span text-sm>On parle de handicap mental lorsque une personne éprouve des difficultés de : </span>
+    <ul text-sm>
+      <li>de contextualisation</li>
+      <li>de réflexion</li>
+      <li>de communication</li>
+      <li>de décision</li>
+    </ul>
+  </div>
+  <div v-click flex flex-col items-center gap-2 w-full>
+    <h3>PSYCHIQUE</h3>
+    <span text-sm>Ce handicap est la conséquence d'une maladie. Les plus répandus sont les troubles bipolaires, dépressifs, la paranoïa, la schizophrénie, etc...</span>
+  </div>
+  <div v-click flex flex-col items-center gap-2 w-full>
+    <h3>COGNITIF</h3>
+    <span text-sm>Ce type de handicap regroupe : les troubles dys, l'autisme, Parkinson, la maladie d'Alzheimer, etc...</span>
+  </div>
+</div>
+
+<div v-click flex mbs-5 justify-center>
+  <Alert type="information" title="Source" text="Vous pouvez retrouver tous ces chiffres sur https://www.essentiel-autonomie.com/handicap/differents-types-handicaps" />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-5">Pour se rendre compte :</h2>
+
+<p class="font-bold">Dans une groupe de 300 personnes, soit l'équivalent d'une grande salle de cinéma, il y a en moyenne :</p>
+
+<div flex mis-10 mbs-5 items-center justify-between gap-5>
+  <ul text-sm>
+    <ListItem label="1 personne aveugle"/>
+    <ListItem label="6 personnes malvoyantes"/>
+    <ListItem label="23 personnes sourdes ou malentendantes"/>
+    <ListItem label="15 personnes daltoniennes"/>
+    <ListItem label="30 personnes dyslexiques"/>
+    <ListItem label="17 personnes atteintes de trouble de la motricité"/>
+    <ListItem label="23 personnes atteintes de handicap mental"/>
+  </ul>
+
+  <img v-click src="/camembert.jpg" alt="" class="w-1/2" />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Quelques exemples d'accessibilité dans la vie de tous les jours :</h2>
+
+<div flex gap-5 mbs-15>
+  <div v-click text-center>
+    <img src="/rampe.jpg" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Rampe d'accès PMR</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/chemin.jpg" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Chemin balisé</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/boucle.jpg" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Boucle magnétique</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/braille.jpg" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Braille</p>
+  </div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-10">Et quelques contre exemples... </h2>
+
+<div flex gap-5 mbs-15>
+  <div v-click text-center>
+    <img src="/rampe-fail.png" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Rampe d'accès ?</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/chemin-fail.png" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Chemin balisé raté</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/braille-plat.png" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Braille imprimé</p>
+  </div>
+
+  <div v-click text-center>
+    <img src="/ironie.png" alt="" class="w-[200px] aspect-square object-cover">
+    <p>Ok...</p>
+  </div>
+</div>
+
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-5">L'a11y améliore le SE0</h2>
+
+<p>Les bonnes pratiques d’accessibilité coïncident avec celles du SEO, car elles reposent sur une structure claire, un contenu compréhensible et une navigation cohérente : <b><u>Tout ce qu'aiment les moteurs de recherche</u></b> !</p>
+
+<div v-click flex mbs-5 justify-center>
+  <Alert type="idea" title="Bon à savoir" text="N'oubliez pas que les bots des moteurs de recherche sont **aveugles** et n'ont **pas de souris** pour naviguer. Ils ne voient que le code, et non pas les pages elles même !" />
+</div>
+
+<div v-click mbs-10>✅ Résultat : un site plus accessible est souvent :</div>
+<ul v-after mis-10>
+  <li>mieux compris,</li>
+  <li>mieux indexé,</li>
+  <li>plus agréable à utiliser,</li>
+  <li>donc mieux classé dans les résultats de recherche.</li>
+</ul>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-left
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-5">Pour conclure :</h2>
+
+<p v-click>Contrairement à une idée encore trop répandue, l’a11y ne concerne pas uniquement les personnes en situation de handicap lourd, comme les personnes aveugles ou en fauteuil. En réalité, <u><b>tout le monde</b></u> peut être confronté, un jour ou l’autre, à une situation qui complique l’usage du web ou d’une application.</p>
+
+<p v-click>Cela peut être un handicap <b>permanent</b>, bien sûr, mais aussi <b>temporaire</b> — comme une entorse au poignet — ou encore situationnel, comme consulter un site en plein soleil, dans les transports, ou avec un bébé dans les bras. L’accessibilité, c’est donc avant tout une question d’<b>inclusion</b>, d’<b>égalité</b> et de <b>bon sens</b>.</p>
+
+<p v-click>En tant que professionnels du numérique, que l’on soit développeur, UI designer, UX designer, nous avons la responsabilité de penser et de concevoir des expériences accessibles <u><b>à toutes et à tous, sans exception</b></u> !</p>
+
+<p v-click text-center class="!mbs-10"><b><u><i>L'accessibilité profite à tout le monde, handicapé ou non</i></u></b></p>
+
+<SlideFooter/>

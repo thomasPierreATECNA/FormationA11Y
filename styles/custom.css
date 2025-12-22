@@ -1,0 +1,17 @@
+.TMBD {
+  color: transparent;
+  position: relative;
+  font-size: 1.05em;
+  font-weight: bold;
+  background-color: #2b90b6 !important;
+  background-image: linear-gradient(125deg, #01e4d5, #01b4e4) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #01b4e4 !important;
+
+  &:is(a):hover {
+    background-image: linear-gradient(125deg, var(--fuchsia-300), var(--fuchsia-700)) !important;
+    border-color: var(--fuchsia-700) !important;
+  }
+}

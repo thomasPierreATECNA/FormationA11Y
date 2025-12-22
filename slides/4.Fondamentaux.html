@@ -1,0 +1,594 @@
+---
+layout: center
+transition: slide-up
+---
+<h1 class="!text-6xl">Les points clés</h1>
+
+<SlideFooter/>
+
+---
+layout: image-right
+transition: slide-up
+image: code.jpg
+---
+<h1>Les points clés</h1>
+
+<div mbs-10>
+    <p>Plus un site est compliqué et complet, plus il est difficile de le rendre 100% conforme aux critères du <b>RGAA</b>.</p>
+    <p>Chercher à obtenir le score parfait est quasiment impossible et peux devenir une source de frustration ou de découragement.</p>
+</div>
+
+<div mbs-5 v-click>
+    <Alert type="information" title="Les fondamentaux" text="Il y a cependant **8 points essentiels** sur lesquels vous ne devez pas faire l'impasse !" />
+</div>
+
+<div mbs-3 v-click>
+    <Alert type="idea" title="Idée" text="Ces 8 points sont relativement faciles à mettre en place et couvrent une grande partie des critères du **RGAA**. Ils sont donc prioritaires." />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<p>Tous les contenus graphique et les texte de la page doivent être suffisament contrastés par rapport à la couleur de fond afin de permettre une lecture aisée pour les déficients visuels, ou dans des conditions de lumière intense par exemple.</p>
+
+<p v-click>Le contraste, c'est la différence de luminance de 2 couleurs, comprise entre</p>
+
+<ul v-after class="!-mbs-3 mis-10">
+    <li>1:1 (pas de constraste, c'est la même couleur)</li>
+    <li>21:1 (contraste maximum : noir sur blanc)</li>
+</ul>
+
+<div flex gap-20 mx-10 mbs-5 justify-around>
+    <div v-click flex flex-col gap-2 items-center>
+        <h2 class="!text-xl !text-light">Mauvais exemple :</h2>
+        <button class="px-4 py-2 bg-blue-200 text-white rounded-2">Ajouter au panier</button>
+        <p><b>contraste : 1,42:1</b></p>
+    </div>
+    <div v-click flex flex-col gap-2 items-center>
+        <h2 class="!text-xl !text-light">Bon exemple :</h2>
+        <button class="px-4 py-2 bg-blue-900 text-white rounded-2">Ajouter au panier</button>
+        <p><b>contraste : 10,36:1</b></p>
+    </div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Que dit le référentiel ?</h3>
+
+<p v-click>Le référienciel <b>RGAA</b> prévoit 2 niveaux de conformité :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem label="**AA** :<br>Le contraste entre le texte et l'arrière-plan doit être d'au moins **4,5:1** pour le texte normal<br>et de **3:1** pour le texte de plus de 18pt et les éléments d'interface." />
+    <ListItem label="**AAA** :<br>Le contraste entre le texte et l'arrière-plan doit être d'au moins **7:1** pour le texte normal<br>et de **4,5:1** pour le texte de plus de 18pt et les éléments d'interface." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les constraste de couleur dans une page :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="WCAG-cc.png" label="**WCAG Contrast Checker**" link="https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf" />
+    <ListItem image="lighthouse.png" label="**Lighthouse**" link="https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" />
+    <ListItem image="wave.png" label="**Wave**" link="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">1. Les contrastes</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">La révolution APCA</h3>
+
+<p class="!text-balance">Les ratios définis par le <b>WCAG</b> basés sur la luminance sont une bonne base mais les résultats sont parfois déroutants. L'algorithme APCA permet d'obtenir un résultat plus fiable et sera utilisé dans les version futures du <b>RGAA</b>.</p>
+
+<img v-click src="/APCA.png" alt="" class="w-1/2 m-auto" />
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Donner du contexte aux utilisateurs non-voyants</h3>
+
+<p>Certaines personnes ne peuvent pas voir vos pages, et doivent donc en déduire le sens par rapport à ce que le lecteur d'écran va vocaliser.</p>
+
+<p>Il est donc très important de proposer une alternative textuelle à tous les éléments graphiques de la page : les images, les videos, les infographies, etc.</p>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les images :</h3>
+
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-sens.webp" alt="" class="w-[200px] shrink-0" />
+<div  shrink-1>
+<p>Chaque image <u>porteuse de sens</u> doit avoit une alternative textuelle <u>pertinente</u>.</p>
+```html
+<img 
+    src="opeco-samsung.webp" 
+    alt="Jusqu'au 25 Mai 2025, bénéficiez de 21% de réduction..." 
+/>
+```
+</div>
+</div>
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-deco.webp" alt="" class="w-[300px] shrink-0" />
+<div  shrink-1>
+<p>Chaque image <u>de décoration</u> doit avoit une alternative textuelle <u>vide</u> pour être correctement ignorée par les lecteurs d'écran.</p>
+```html
+<img src="vendeur-iphone.webp" alt="" />
+```
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les images :</h3>
+
+<p>On peut souhaiter ajouter quand même une alternative à un image à des fins de référencement. En effet, les images sont indexées dans les moteurs de recherches par rapport à la description dans l'attribut <b>alt</b>.</p>
+
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/image-deco.webp" alt="" class="w-[300px] shrink-0" />
+<div  shrink-1>
+<p>Dans ce cas on va utiliser le role <b>presentation</b> pour préciser qu'il s'agit d'une <u>image de décoration</u> et qu'elle doit être ignorée :</p>
+```html
+<img 
+    src="vendeur-iphone.webp" 
+    role="presentation" 
+    alt="Un conseiller Boulanger vends un iPhone..."
+/>
+```
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les vidéos :</h3>
+
+<p>Comme pour les images, si une vidéo est <u>porteuse de sens</u>, alors il faudra :</p>
+
+<ul mis-10>
+    <ListItem label="Ajouter un titre pour que l'on sache de quoi parle video avant de la lancer" />
+    <ListItem label="Ajouter des sous-titres synchronisés pour les personnes malentendantes" />
+    <ListItem label="Ajouter éventuellement une audio desciption" />
+</ul>
+
+<p v-click>Si ce n'est pas faisable, on peux alors masquer la video au lecteurs d'écran et proposer un bloc de texte en contrepartie.</p>
+<p v-click>Si la video est juste la pour décorer la page, on va la cacher avec <kbd>aria-hidden="true"</kbd></p>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Les infographies :</h3>
+
+<p>Pafois on a recours à des infograhies pour faire passer des informations de façon plus graphique.</p>
+
+<div v-click flex mbs-2 gap-10 items-center justify-center>
+<img src="/infographie.png" alt="" class="w-[300px]" />
+
+<div>
+<p>Il faudra faciliter la lecture des données grâçe à une alternative textuelle :</p>
+```html
+<figure>
+    <embed aria-hidden="true" src="population.jpg" />
+    <figcaption>
+       La population des métropôles du grand est...
+    </figcaption>
+</figure>
+```
+</div>
+
+</div>
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">2. Les alternatives textuelles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les alternatives sur les images :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="web-developer.png" label="**Web Developer**" link="https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm" />
+    <ListItem image="lighthouse.png" label="**Lighthouse**" link="https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" />
+    <ListItem image="wave.png" label="**Wave**" link="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Hierarchisez votre information</h3>
+
+
+
+<div class="flex justify-center gap-5">
+<div>
+<p v-click>La structure de titres joue un rôle important dans la compréhension de votre page web. Les lecteurs d'écran se servent des titres pour créer une table des matières de la page.</p>
+<p v-click>Il existe 6 niveaux de titre. Il est important de respecter un ordre cohérent.</p>
+
+<Alert v-click="4" type="idea" title="le <H1/>" text="On entends souvent dire que la page ne doit contenir une seule balise H1. En réalité, ce n'est pas vrai. en revanche l'ordre est très important. " />
+</div>
+
+<div v-click>
+```html
+<h1>Formation A11Y</h1>
+
+ <h2>Introduction</h2>
+  <h3>Préambule</h3>
+  <h3>Définitions</h3>
+  <h3>Le cadre légal</h3>
+
+ <h2>Les fondamentaux</h2>
+  <h3>Les contrastes</h3> 
+  <h3>Les alternativrs textuelles</h3>
+  <h3>Les titres</h3>
+   <h4>La balise title</h4>
+   <h4>Les balises Hn</h4>
+```
+</div>
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Le titre de la page</h3>
+
+<p>Le titre de la page est lui aussi très important. C'est le premier élément qui sera lu par le lecteur d'écran. Il est important de choisir un titre pertinent.</p>
+
+<p v-click>C'est également ce titre qui sera affiché dans l'onglet de votre navigateur, ou dans les résultats de recherches sur <b>Google</b> par exemple.</p>
+
+<div v-click flex mbs-3>
+  <Alert type="idea" title="Bon à savoir" text="Si on a plein d'onglets ouverts ouverts en même temps, il peut être pratique d'indiquer à quoi ils correspondent. <br/>C'est une bonne pratique de mettre également le nom du site au début du titre."/>
+</div> 
+
+
+<div v-after mbs-5>
+  <h2 class="!text-sm !text-light !my-0">Exemple: </h2>
+  <p><kbd>Decathlon | CHAUSSURES DE RUNNING FEMME KALENJI</kbd></p>
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">3. Les titres</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-5">Comment tester ?</h3>
+
+<p v-click>Il existe de nombreux plugin Chrome qui permettent de vérifier les structures de titre :</p>
+
+<ul mbs-5 mis-10>
+    <ListItem image="headingsmap.png" label="**Heading map**" link="https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi" />
+    <ListItem image="stark.png" label="**Stark**" link="https://chromewebstore.google.com/detail/stark-accessibility-check/fkfaapnmfippddbeemjjbclenphooipm" />
+    <ListItem label="etc..." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
+
+<p>Tous les éléments focusables de la page doivent avoir un <u>nom accessible</u>, c'est à dire un texte qui sera vocalisé lors de la prise de focus.</p>
+
+<p v-click>Par défaut c'est le texte contenu dans l'élément qui sera vocalisé :</p>
+
+<div flex mbs-10 gap-10 items-start justify-around>
+
+<div v-after  flex flex-col gap-2 items-center w-full>
+<button class="px-4 py-2 bg-blue-700 text-white rounded-2 text-sm">Ajouter au panier</button>
+```html
+<button class="button">
+    Ajouter au panier
+</button>
+```
+<p text-center>Ici le nom accessible sera "Ajouter au panier"</p>
+</div>
+
+<div v-click flex flex-col gap-2 items-center w-full>
+<button class="px-4 py-2 bg-blue-700 text-white rounded-2 text-sm"><carbon-shopping-cart-plus /></button>
+```html
+<button class="button">
+    <carbon-shopping-cart-plus />
+</button>
+```
+<p text-center>Ici en revanche on a pas de texte mais une icone, il n'y a donc aucun nom accessible !</p>
+</div>
+
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
+
+<p>Lorsque cette situation se produit, on peux expliquer aux lecteur d'écran le texte qui doit etre lu lorsque le bouton prends le focus. Il y a plusieurs méthodes :</p>
+
+<p v-click>Certains attributs peuvent combler le manque de nom accessible :</p>
+
+<ul mis-10 mbs-2>
+    <ListItem label="**L'attribut title** (Cela ajoutera aussi un tooltip visuelle)" />
+    <ListItem label="**L'attribut aria-label**" />
+    <ListItem label="**L'attribut aria-labelledby** (Prends l'ID d'un élément de la page)" />
+</ul>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Important" text="Il y a un ordre de priorité : aria-labelledby, aria-label, contenu, title.<br/>On peut donc écraser le contenu du contenu avec un aria-label." />
+</div>
+
+
+<SlideFooter/>
+
+---
+layout: image-right
+transition: slide-up
+image: debugger.png
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">4. Les noms accessibles</h2>
+
+<h3 class="!text-xl !text-lighter !mbs-10">Comment tester ?</h3>
+
+<p>Certains plugins comme <b>Lighthouse</b> peuvent identifier les éléments qui n'ont pas de nom accessible.</p>
+<p>Le plus simple est d'utiliser le débugger de <b>Chrome</b> qui possède un onglet accéssibilité.</p>
+<Arrow v-bind="{ color: '#f43f5e', x1:300, y1:400, x2:500, y2:430 }" />
+<Arrow v-bind="{ color: '#f43f5e', x1:890, y1:100, x2:890, y2:260 }" />
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Important" text='Il est important de choisir un nom accessible clair et pertinent :<br/>**"En savoir plus"** ou **"lire la suite"** manque un peu de contexte.' />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">5. La sémantique</h2>
+
+<p v-after>"La sémantique en <b>HTML</b> consiste à utiliser des balises qui donnent du <strong><u>sens</u></strong> au contenu, permettant aux navigateurs, aux moteurs de recherche et aux technologies d'assistance (ex. lecteurs d'écran) de mieux interpréter une page web."</p>
+
+<p v-click>Une grande partie des contenus web peut être rendue accessible simplement en s’assurant d’utiliser les balises HTML appropriées.</p>
+
+<p v-click>Par exemple, une image présentée dans une balise <kbd>&lt;img/&gt;</kbd> sera bien interprétée par les lecteurs décran.<br/>En revanche une <kbd>&lt;div/&gt;</kbd> avec un <code>background-image</code> en <b>CSS</b> sera ignorée !</p>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Attention" text='Eviter réattributation des rôles dans la mesure du possible. Exemple \<a role="button"\>.' />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">6. Le focus</h2>
+
+<p>Certaines personnes n'utilise pas de souris pour naviguer, soit à cause d'un handicap (cécité, handicap moteur), soit par choix, ou tout simplement parce que leur souris est en panne ou n'a plus de pile.</p>
+
+<p v-click>Lors de la navigation au clavier il est imporant pour l'utilisateur de comprendre ou il se trouve sur la page. Par défaut, les focus sont encadrés mais souvent, ils sont désactivas pour des raisons de design.</p>
+
+<div v-click flex justify-center mbs-10>
+    <Alert type="idea" title="Astuce" text='Pour éviter le focus au click, il faut utiliser la rêgle CSS **:focus-visible** au lieu de **:focus**.' />
+</div>
+<div v-click flex justify-center mbs-10>
+    <Alert type="warning" title="Attention" text="Il est important de respecter l'ordre logique de tabulation, il doit être logique est respecter l'ordre d'affichage de la page." />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">7. Les liens d'évitement</h2>
+
+<p>Lorsqu'on navigue sur un site internet, il est fréquent que la page soit raffraichie, à chaque fois qu'on clique sur un lien par exemple. Les utilisateurs qui naviguent au clavier doivent alors reparcourir tout le header et le menu avant d'arriver sur le contenu principal.</p>
+
+<p v-click>Une bonne pratique est de créer des liens vers les sections principales de la page, comme : </p>
+
+<ul mis-10>
+    <ListItem label="**L'entête de page** (header)" />
+    <ListItem label="**Le menu principal** (nav)" />
+    <ListItem label="**Le contenu principal** (main)" />
+    <ListItem label="**Le pied de page** (footer)" />
+</ul>
+
+<div v-click flex justify-center mbs-5>
+    <Alert type="warning" title="Attention" text="Il est possible de cacher ces liens mais il doivent apparaitre au focus et êtres les premiers élément atteignables au clavier." />
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+<p>Certaines personnes peuvent avoir des difficultés de compréhension. Il est donc important de ne pas donner l’information uniquement par la forme, taille ou position.</p>
+
+<p>Quelques exemples :</p>
+
+<ul mis-10>
+    <ListItem label="**Les messages d'erreurs** : <br/>Dans un formumaire il faut indiquer le champ concerné par l'erreur." />
+    <ListItem label="**Les liens** : <br/>Dans un paragraphe de texte, les liens doivent se distinguer (pas uniquement par la couleur)" />
+    <ListItem label='**Les indications floues** : <br/>évitez les indications du style du style "Cliquez sur le bouton bleu" ou "le texte a droite".' />
+    <ListItem label="**Les messages d'alerte** : <br/>Il faut indiquer dans le texte si le message est une alerte, une information ou un succès." />
+</ul>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+<p>Une information ne doit pas être donnée uniquement par la couleur.</p>
+
+<div flex gap-10 justify-center items-center mbs-15 class="">
+<div class="w-1/2">
+<p>Dans cet exemple, rien de différencie les portions du diagramme à part la couleur. Certaines personnes ne distinguent pas les couleurs, il leur est impossible de comprendre.</p>
+<Alert v-click="1" type="idea" title="Idée" text="Ajouter des flêches ou des hachures à chaque zone pour les distinguer." />
+</div>
+
+<div class="relative w-1/2">
+<img src="/colors.png" alt="" class="w-[400px] opacity-0" />
+<img v-click.hide="1"  src="/colors.png" alt="" class="absolute inset-0 w-[400px]" />
+<img v-click="1"  src="/colors.png" alt="" class="absolute inset-0 w-[400px] grayscale" />
+</div>
+</div>
+
+<SlideFooter/>
+
+---
+layout: default
+transition: slide-up
+---
+<h1>Les points clés</h1>
+
+<h2 class="!text-3xl !text-light">8. L'évidence de l'information</h2>
+
+
+<div flex gap-10 justify-center items-center mbs-0>
+    <p>Si vous avez un doute, vous pouvez utiliser l'extension <b>Stark</b> pour simuler des troubles de la perception des couleurs</p>
+    <img src="/stark-simulation.png" alt="" class="h-[400px]" />
+</div>
+
+<SlideFooter/>
+
+---
+layout: image-left
+image: code.jpg
+transition: slide-left
+---
+<h1>En conclusion</h1>
+
+<p>Les rêgles d'accessibilité sont avant tout des rêgles de bon sens.</p>
+<p>En respectant ces quelques rêgles, vous vous assurez que votre application soit utuilisable par le plus grand nombre.</p>
+
+<div @click="$slidev.nav.next" class="mbs-25 text-end text-primary cursor-pointer">
+  Suite de la formation <carbon-arrow-right />
+</div>
+
+
+<SlideFooter/>

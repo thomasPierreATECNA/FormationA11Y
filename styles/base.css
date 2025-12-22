@@ -1,0 +1,73 @@
+.slidev-layout {
+  *:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0px 2px var(--white),
+      0 0 0px 4px var(--primary-500);
+  }
+
+  * {
+    text-decoration-thickness: 0.05em;
+  }
+
+  a {
+    color: var(--primary-500);
+    border-style: solid;
+
+    &:hover {
+      color: var(--primary-700);
+      border-style: dashed;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    text-wrap: pretty;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+
+  h1 {
+    color: var(--primary-500);
+
+    & + p {
+      margin: initial;
+      opacity: 1;
+    }
+  }
+
+  pre code {
+    font-size: 14px;
+  }
+  blockquote {
+    font-size: inherit;
+    padding-inline: 1em 0.75em; 
+    padding-block: .5em; 
+    border-inline-start-width: 0.35em;
+
+    @apply bg-slate-100 border-slate-700;
+
+    .text-success { @apply text-success;}
+    .text-info { @apply text-info;}
+    .text-danger { @apply text-danger;}
+    .text-warning { @apply text-warning;}
+
+    .border-s-success { @apply border-s-success;}
+    .border-s-info { @apply border-s-info;}
+    .border-s-danger { @apply border-s-danger;}
+    .border-s-warning { @apply border-s-warning;}
+
+  
+
+    p {
+     margin: 0;
+    }
+  }
+}
