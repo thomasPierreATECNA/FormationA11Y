@@ -1,0 +1,565 @@
+---
+layout: center
+transition: slide-up
+---
+
+<h1 class="!text-8xl">Les référentiels</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: two-cols
+transition: slide-left 
+---
+
+<h1>Les référentiels</h1>
+
+<p class="text-light">
+  Pour garantir et mesurer l'A11Y, on s'appuie sur des référentiels
+  fondamentaux.
+</p>
+
+<p v-click class="mbs-3xl!">
+  Les référentiels sont les guides techniques qui définissent les règles en
+  matière d'accessibilité
+</p>
+
+<p v-click class="mbs-3xl!">
+  Il en existe plusieurs, chacun avec son propre objectif et son propre domaine
+  d'application.
+</p>
+
+<img
+  src="/images/loi.jpg"
+  alt=""
+  class="w-1/2 absolute end-0 bottom-[1.6rem]"
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: two-cols
+transition: slide-up
+---
+
+<div
+  class="absolute inset-block-0 left-0 w-1/2 bg-lavander-600 dark:bg-lavander-900 flex items-center justify-center"
+>
+  <h1 class="text-8xl! text-white!">WCAG</h1>
+</div>
+
+::right::
+
+<div class="p-4xl flex flex-col justify-center h-full">
+  <h2 class="text-2xl! text-coral mbe-2xl">
+    Web Content Accessibility Guidelines
+  </h2>
+
+  <p class="text-xl text-light">C'est le référentiel international.</p>
+
+  <p class="mbs-3xl!">
+    Les WCAG sont les directives universelles publiées par le
+    <a
+      class="text-coral"
+      href="https://www.w3.org/WAI/standards-guidelines/wcag/fr"
+    >
+      W3C (World Wide Web Consortium),
+    </a>
+    l'organisme mondial qui gère les standards du web.
+  </p>
+
+  <p>
+    Elles constituent la base technique de la quasi-totalité des lois et
+    référentiels d'accessibilité dans le monde.
+  </p>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">Un peu d'histoire</h2>
+
+<p v-click class="mbs-2xl!">
+  Le
+  <a
+    target="_blank"
+    href="https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium"
+  >
+    W3C
+  </a>
+  fait office de précurseur en matière d'accessibilité web puisque les WCAG on
+  été inités dès 1996 à travers le projet
+  <a
+    target="_blank"
+    href="https://fr.wikipedia.org/wiki/Web_Accessibility_Initiative"
+  >
+    Web Accessibility Initiative (WAI)
+  </a>
+</p>
+
+<p v-click class="mbs-2xl!">
+  La première version des WCAG a été publiée en 1999 (WCAG 1.0), suivie par la
+  version 2.0 en 2008.
+</p>
+
+<p v-click class="mbs-2xl!">
+  La version en vigueur depuis 2023 est la 2.2, tandis que la version 3.0 est en
+  cours de finalisation.
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">Les 4 principes majeurs</h2>
+
+<p v-click class="mbs-2xl!">
+  le WCAG repose sur 4 grands principes, souvent résumés par l'acronyme
+  <strong>"POUR"</strong>
+  :
+</p>
+
+<div class="-mx-lg mbs-5xl grid grid-cols-4 gap-lg">
+  <div
+    v-click
+    class="bg-lavander-100 border border-lavander-300 rounded-xl p-lg"
+  >
+    <h3 class="text-md! text-lavander-900">Perceivable</h3>
+    <p class="text-xl text-lavander-900">(Perceptible)</p>
+    <p class="text-sm leading-[1.35]!">
+      L'information doit être présentée de manière à être perceptible par tous
+      les sens (ex: alternatives textuelles pour les images).
+    </p>
+  </div>
+
+  <div v-click class="bg-error-100 border border-error-300 rounded-xl p-lg">
+    <h3 class="text-md! text-error-900">Operable</h3>
+    <p class="text-xl text-error-900">(Utilisable)</p>
+    <p class="text-sm leading-[1.35]!">
+      L'information doit être présentée de manière à être perceptible par tous
+      les sens (ex: alternatives textuelles pour les images).
+    </p>
+  </div>
+
+  <div v-click class="bg-success-100 border border-success-300 rounded-xl p-lg">
+    <h3 class="text-md! text-success-900">Understandable</h3>
+    <p class="text-xl text-success-900">(Compréhensible)</p>
+    <p class="text-sm leading-[1.35]!">
+      L'information et l'utilisation de l'interface doivent être compréhensibles
+      (ex: texte lisible, prédictibilité des interactions).
+    </p>
+  </div>
+
+  <div v-click class="bg-blue-100 border border-blue-300 rounded-xl p-lg">
+    <h3 class="text-md! text-blue-900">Robust</h3>
+    <p class="text-xl text-blue-900">(Robuste)</p>
+    <p class="text-sm leading-[1.35]!">
+      Le contenu doit pouvoir être interprété par une grande variété d'agents
+      utilisateurs, y compris les technologies d'assistance (ex: balises
+      sémantiques correctes).
+    </p>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">3 niveaux de conformité</h2>
+
+<p v-click class="mbs-2xl!">
+  Les critères de succès des WCAG sont classés en trois niveaux de conformité :
+</p>
+
+<div class="mx-4xl mbs-5xl grid grid-cols-3 gap-lg">
+  <div v-click class="bg-error-50 border border-error-300 rounded-xl p-lg">
+    <h3 class="text-md! text-error-900">A</h3>
+    <p class="text-xl text-error-900">(Minimum)</p>
+    <p class="text-sm leading-[1.35]!">
+      Le niveau de base, essentiel pour que la majorité des utilisateurs
+      puissent accéder au contenu.
+    </p>
+  </div>
+
+  <div v-click class="bg-teal-50 border border-teal-300 rounded-xl p-lg">
+    <h3 class="text-md! text-teal-900">AA</h3>
+    <p class="text-xl text-teal-900">(Cible)</p>
+    <p class="text-sm leading-[1.35]!">
+      Le niveau le plus couramment recommandé et souvent exigé par la loi dans
+      le monde (dont l'Union Européenne et la France). Il permet l'accessibilité
+      à la grande majorité des technologies d'assistance.
+    </p>
+  </div>
+
+  <div v-click class="bg-green-50 border border-green-300 rounded-xl p-lg">
+    <h3 class="text-md! text-green-900">AAA</h3>
+    <p class="text-xl text-green-900">(Optimal)</p>
+    <p class="text-sm leading-[1.35]!">
+      Le plus haut niveau d'accessibilité, généralement difficile à atteindre
+      pour l'ensemble d'un site.
+    </p>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">Des patterns validés</h2>
+
+<div class="grid grid-cols-[2fr_3fr] gap-xl items-center">
+  <div class="flex flex-col gap-lg">
+    <p>
+      Le site de la
+      <strong>WAI</strong>
+      propose des tutoriels pour concevoir des interfaces accessibles en
+      respectants les bonnes pratiques d'accessibilité.
+    </p>
+    <p>
+      Il met également à disposition des exemple de code ou de design
+      accessibles et conforme aux WCAG.
+    </p>
+  </div>
+  <img src="/images/WAI-code.png" alt="" class="w-full" />
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">3.0, Une refonte majeure</h2>
+
+<p v-click>
+  La version
+  <strong>WCAG 3.0</strong>
+  <span class="italic">(parfois appelée projet "Silver")</span>
+  représente un changement de paradigme majeur. C'est une refonte complète de la
+  structure et de la philosophie de l'accessibilité.
+</p>
+
+<p v-click>
+  La version
+  <strong>WCAG 3.0</strong>
+  apporte 3 grands changements :
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">1. Un nouveau systeme de notation</h2>
+
+<p v-click>
+  Le système de notation binaire (A, AA, AAA) disparaît au profit d'un modèle
+  plus lisible et comprehensible :
+</p>
+
+<ul class="mx-4xl mbs-5xl flex flex-col gap-xl">
+  <ListItem
+    label="🥉 **Bronze** : Le niveau de base (équivalent approximatif du AA actuel)."
+  />
+  <ListItem
+    label="🥈 **Argent** : Nécessite des tests de convivialité (UX) plus poussés."
+  />
+  <ListItem label="🥇 **Or** : Le niveau d'excellence absolue." />
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">
+  2. Un système de Score plutôt que "Pass/Fail"
+</h2>
+
+<p v-click>
+  Aujourd'hui, si un critère n'est pas respecté sur une seule page de
+  l'échantillon, le critère est considéré comme non conforme pour tout le site
+  ou l'application.
+</p>
+
+<ul class="mx-4xl mbs-5xl flex flex-col gap-xl">
+  <ListItem
+    label="**WCAG 3.0** introduit un **système de notation par points (0 à 4)**"
+  />
+  <ListItem
+    label="On évalue désormais le **pourcentage de réussite** sur l'ensemble du site.<br/>Cela permet de valoriser les efforts de progression plutôt que de sanctionner une erreur isolée."
+  />
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default 
+transition: slide-up 
+---
+<h1>Le WCAG</h1>
+
+<h2 class="text-xl text-light mbe-lg">
+  3. L'algorithme APCA pour les contrastes
+</h2>
+
+<div class="grid grid-cols-2 gap-xl items-start">
+  <div>
+    <p v-click>
+      C'est sans doute le changement technique le plus attendu pour les
+      designers.
+    </p>
+    <p v-click>
+      Le calcul actuel des contrastes
+      <strong>(WCAG&nbsp;2.x)</strong>
+      est souvent critiqué car il ne reflète pas la perception réelle de l'œil
+      humain.
+    </p>
+    <img v-after src="/images/APCA.png" alt="" class="w-full" />
+  </div>
+
+  <div>
+    <p v-click>
+      <strong>APCA (Accessible Perceptual Contrast Algorithm)</strong>
+      remplace l'ancien ratio qui est une simple formule mathématique par une
+      approche basée sur la biologie de l'œil humain.
+    </p>
+    <p v-after>
+      Au lieu d'un simple x:y, il donne un score de
+      <strong>Luminance Contrastée (Lc)</strong>
+      allant de 0 à environ 100.
+    </p>
+    <p v-click class="mbs-2xl!">Il prends notamment en compte :</p>
+    <ul>
+      <ListItem label="La taille du texte et la graisse de la police" />
+      <ListItem label="Le theme utilisé (clair ou sombre)" />
+      <ListItem label="Les élements environants (bordures, ombres, etc.)" />
+    </ul>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: two-cols
+transition: slide-up
+---
+
+<div
+  class="absolute inset-block-0 left-0 w-1/2 bg-blue-600 dark:bg-blue-900 flex items-center justify-center"
+>
+  <h1 class="text-8xl! text-white!">RGAA</h1>
+</div>
+
+::right::
+
+<div class="p-4xl flex flex-col justify-center h-full">
+  <h2 class="text-2xl! text-coral mbe-2xl">
+    Référentiel Général d'Amélioration de l'Accessibilité
+  </h2>
+
+  <p class="text-xl text-light">🇫🇷 C'est le référentiel Français.</p>
+
+  <p class="mbs-3xl!">
+    Le
+    <strong>RGAA</strong>
+    est l'application concrète et juridique des normes internationales
+    <strong>WCAG</strong>
+    en France.
+  </p>
+
+  <p>
+    C'est la
+    <a
+      target="_blank"
+      href="https://www.numerique.gouv.fr/numerique-etat/dinum/"
+    >
+      DINUM
+    </a>
+    qui assure la rédaction et la mise à jour du
+    <strong>RGAA</strong>
+    .
+  </p>
+</div>
+
+<!-- (Direction Interministérielle du Numérique) -->
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le RGAA</h1>
+
+<h2 class="text-xl text-light mbe-lg">
+  106 critères pour évaluer l'accessibilité d'un site web
+</h2>
+
+<div class="grid grid-cols-2 gap-xl items-center">
+  <div v-click>
+    <p>
+      Le RGAA traduit les critères abstraits des WCAG en une liste de 106
+      critères de contrôle très précis, organisés en 13 thématiques.
+    </p>
+    <p>
+      Le but : Permettre de calculer un taux de conformité
+      <span class="italic text-light">
+        (ex: "Ce site est accessible à 85%")
+      </span>
+      .
+    </p>
+    <a
+      target="_blank"
+      href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/"
+    >
+      Voir les critères en détail
+    </a>
+  </div>
+
+  <ol class="text-sm" v-after>
+    <li>Images</li>
+    <li>Cadres</li>
+    <li>Couleurs</li>
+    <li>Multimédia</li>
+    <li>Tableaux</li>
+    <li>Liens</li>
+    <li>Scripts</li>
+    <li>Éléments obligatoires</li>
+    <li>Structuration de l’information</li>
+    <li>Présentation de l’information</li>
+    <li>Formulaires</li>
+    <li>Navigation</li>
+    <li>Consultation</li>
+  </ol>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-up 
+---
+<h1>Le RGAA</h1>
+
+<h2 class="text-xl text-light mbe-lg">L'outil d'audit ARA</h2>
+
+<div class="grid grid-cols-[3fr_2fr] gap-xl items-start">
+  <div>
+    <p v-click>
+      <strong>Ara</strong>
+      <span class="italic">(pour "Accessibilité, Rapport, Audit")</span>
+      est un outil gratuit mis à disposition par la
+      <strong>DINUM</strong>
+      pour réaliser facilement des audits d'accessibilité
+      <strong>RGAA</strong>
+      .
+    </p>
+    <p v-click>Il propose 3 types d'audits :</p>
+    <ul class="mis-xl">
+      <ListItem
+        label="**L'audit rapide (25 critères)** : Idéal pour un diagnostic rapide. Il se concentre sur les erreurs les plus bloquantes (images, contrastes, structure)."
+      />
+      <ListItem
+        label="**L'audit complémentaire (50 critères)** : Un bon entre-deux pour aller un peu plus loin et améliorer la qualité globale d'un site."
+      />
+      <ListItem
+        label="**L'audit complet (106 critères)** : Couvre l'intégralité des critères **RGAA** pour une évaluation approfondie."
+      />
+    </ul>
+  </div>
+
+  <div class="flex flex-col gap-2xl -translate-y-7xl">
+    <Alert
+      v-click
+      type="idea"
+      title="Bon à savoir"
+      text="La **DINUM** met également à disposition une grille d'audit au format Excel."
+    />
+    <Alert
+      v-click
+      type="warning"
+      title="Attention"
+      text="**L'audit complet** est le seul qui permet d'obtenir un taux de conformité légal et de générer une déclaration d'accessibilité officielle."
+    />
+    <Alert
+      v-click
+      type="error"
+      title="Important"
+      text="**Ara** ne fait pas l'audit à votre place ! Il vous guide pour que vous puissiez le faire sans rien oublier et vous aide à calculer le taux de conformité."
+    />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+--- 
+layout: default
+transition: slide-left 
+---
+<h1>Le RGAA</h1>
+
+<h2 class="text-xl text-light mbe-lg">L'outil d'audit ARA</h2>
+
+<p>Les avantages d'Ara sont nombreux :</p>
+
+<ul class="mbs-xl mis-3xl">
+  <ListItem label="Il est **gratuit** et **accessible en ligne**." />
+  <ListItem
+    label="**Il est collaboratif** : Plusieurs personnes peuvent travailler ensemble sur un même audit."
+  />
+  <ListItem
+    label="**Il est structuré par thématique** : On coche les critères un par un."
+  />
+  <ListItem
+    label="**Il contient l'aide intégrée** : Pour chaque critère, il explique ce qu'il faut vérifier et comment le vérifier."
+  />
+  <ListItem
+    label="**Il génère des rapports détaillés** : Après l'audit, il crée automatiquement le rapport d'audit et la déclaration d'accessibilité au format conforme."
+  />
+</ul>
+
+<div v-click class="text-5xl text-center mbs-3xl">
+  <a target="_blank" href="https://ara.numerique.gouv.fr/">Démonstration</a>
+</div>
+
+<SlideFooter />

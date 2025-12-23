@@ -1,0 +1,90 @@
+---
+layout: center
+transition: slide-up
+---
+
+<h1 class="text-8xl!">Les outils.</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les outils</h1>
+
+<p>
+  Pour réaliser un audit d'accessibilité efficace, plusieurs outils sont
+  disponibles sous forme d'extensions de navigateur. Si vous ne les avez pas
+  encore installés, prenez le temps de le faire maintenant.
+</p>
+
+<ul class="mis-2xl mbs-3xl flex flex-col gap-xl">
+  <ListItem
+    label="**Lighthouse** : <small>un outil intégré à Chrome qui permet de tester certains critères</small>"
+    image="/images/lighthouse.png"
+    link="https://developers.google.com/web/tools/lighthouse"
+  />
+  <ListItem
+    label="**Axe Dev Tools** : <small>une extension pour analyser une page en profondeur, et lister les principaux problèmes</small>"
+    image="/images/axe.png"
+    link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd"
+  />
+  <ListItem
+    label="**WCAG Color Contrast Checker** : <small>permet de verifier et détecter les problemes de contraste de couleur</small>"
+    image="/images/color-checker.png"
+    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf"
+  />
+  <ListItem
+    label="**Headingsmap** : <small>Une extension qui permet d'afficher la structure de titre de la page</small>"
+    image="/images/headings-map.png"
+    link="https://chromewebstore.google.com/detail/flbjommegcjonpdmenkdiocclhjacmbi"
+  />
+  <ListItem
+    label="**Web Developper** : <small>Une très vielle extension qui permet de cacher ou supprimer certains éléments d'une page web</small>"
+    image="/images/web-developper.png"
+    link="https://chromewebstore.google.com/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+  />
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+<div class="absolute inset-0 flex items-start gap-2xl p-xl">
+  <div>
+    <h1>Les bookmarklets Access42</h1>
+    <div v-click class="flex gap-xl items-center mbs-8xl">
+      <img
+        src="/logos/access42.png"
+        alt=""
+        class="w-[16rem] -mis-4xl mbe-3xl dark:invert"
+      />
+      <div class="flex flex-col">
+        <p>
+          <a target="_blank" href="https://access42.net/">Access42</a>
+          est un cabinet de conseil français expert en accessibilité numérique.
+        </p>
+        <p>
+          Ils proposent plusieurs
+          <strong>bookmarklets</strong>
+          très utiles pour faiciliter les audits d'accessibilité.
+        </p>
+      </div>
+    </div>
+    <p class="mbs-4xl! text-xl text-end">
+      <a v-click href="./../bm-access42.html" download no-follow>
+        Télécharger les Bookmarklets Access42
+      </a>
+    </p>
+  </div>
+
+  <img v-click="1" src="/images/access42-bm.png" alt="" class="h-full" />
+</div>
+
+<SlideFooter />

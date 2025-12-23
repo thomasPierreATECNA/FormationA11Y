@@ -23,7 +23,7 @@ export default {
       <carbon-checkmark v-if="type === 'success'" />
       <carbon-information v-if="type === 'information'" />
       <carbon-warning v-if="type === 'warning'" />
-      <carbon-warning v-if="type === 'danger'" />
+      <carbon-warning v-if="type === 'error'" />
       {{ title }}
     </header>
     <div v-html="renderedText"></div>

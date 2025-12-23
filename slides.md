@@ -59,22 +59,12 @@ title: Le Cadre Légal
 src: ./slides/2.Legal.html
 ---
 
-# ---
-# title: Les Principes Fondamentaux de l'a11Y
-# src: ./slides/3.Principes.html
-# ---
+---
+title: Les référentiels
+src: ./slides/3.Referentiels.html
+---
 
-# ---
-# title: Les Principes Fondamentaux de l'a11Y
-# src: ./slides/4.Fondamentaux.html
-# ---
-
-# ---
-# title: Test à l'aveugle
-# src: ./slides/5.test.html
-# ---
-
-# ---
-# title: Le RGAA
-# src: ./slides/6.Audit.html
-# ---
+---
+title: Les Outils
+src: ./slides/4.Outils.html
+---
