@@ -44,10 +44,10 @@ title: Programme
 src: ./slides/programme.html
 ---
 
----
-title: moi
-src: ./slides/moi.html
----
+# ---
+# title: moi
+# src: ./slides/moi.html
+# ---
 
 ---
 title: Introduction
