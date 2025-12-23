@@ -68,3 +68,8 @@ src: ./slides/3.Referentiels.html
 title: Les Outils
 src: ./slides/4.Outils.html
 ---
+
+---
+title: Pause déjeuner ?
+src: ./slides/pause-repas.html
+---
