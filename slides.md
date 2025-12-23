@@ -73,3 +73,13 @@ src: ./slides/4.Outils.html
 title: Pause déjeuner ?
 src: ./slides/pause-repas.html
 ---
+
+---
+title: Présentation de l'information
+src: ./slides/Presentation-information/index.html
+---
+
+---
+title: Merci ! 
+src: ./slides/fin.html
+---

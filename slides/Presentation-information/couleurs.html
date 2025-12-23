@@ -1,0 +1,270 @@
+<h1>Les couleurs</h1>
+<h2 class="text-light">Les ratios de contraste</h2>
+
+<p class="mbs-2xl!">
+  C'est surement la première règle à laquelle on pense lorsqu'on parle
+  d'accessibilité.
+</p>
+
+<p v-click class="mbs-5xl!">
+  Les
+  <strong>textes,</strong>
+  les
+  <strong>composants d’interface</strong>
+  et les
+  <strong>éléments graphiques porteurs d’informations</strong>
+  doivent respecter des rapports de contraste minimums :
+</p>
+
+<div class="grid grid-cols-2 gap-xl items-strech">
+  <div
+    v-click
+    class="bg-coral-50 border border-coral-500 text-coral-950 rounded-xl p-sm"
+  >
+    <h3 class="text-ligher">Pour les textes</h3>
+    <ul class="text-sm mis-2xl mbs-lg! ">
+      <ListItem
+        v-after
+        label="\<= à **24px ou 18px gras**, le ratio minimum est de **4.5:1**."
+      />
+      <ListItem
+        v-after
+        label="\> à **24px ou 18px gras**, le ratio minimum est de **3:1**."
+      />
+    </ul>
+    <p class="text-sm mbs-xl! text-cenrter">Critère 3.2 du RGAA.</p>
+  </div>
+
+  <div
+    v-click
+    class="bg-lavander-50 border border-lavander-500 text-lavander-950 rounded-xl p-sm"
+  >
+    <h3 class="text-ligher">Pour les éléments d'interface</h3>
+    <ul class="text-sm mis-2xl mbs-lg! ">
+      <ListItem v-after label="le ratio minimum est de **3:1**." />
+    </ul>
+    <p class="text-sm mbs-xl! text-cenrter">Critère 3.3 du RGAA.</p>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">Les ratios de contraste</h2>
+
+<div class="grid grid-cols-[4fr_3fr] gap-xl items start">
+  <div v-click="1">
+    <p class="mbs-2xl! text-wrap!">
+      Ces ratios peuvent être sur la version par défaut de la page, ou activés
+      via un
+      <a
+        target="_blank"
+        href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#mecanisme-qui-permet-d-afficher-un-rapport-de-contraste-conforme"
+      >
+        mécanisme
+      </a>
+      qui permet d’afficher un rapport de contraste conforme.
+    </p>
+    <p>
+      Ce mecanisme doit lui-même
+      <strong>respecter les rapports de contraste minimums</strong>
+      et être
+      <strong>conforme au RGAA</strong>
+      .
+    </p>
+    <Alert
+      v-click="2"
+      class="mbs-4xl"
+      type="idea"
+      title="Bon à savoir"
+      text="Il est possible de parametrer des contrastes élevé via les **préférences d'accessibilité du système d'exploitation** et de récupérer cette préférence dans le **CSS** pour appliquer un style spécifique."
+    />
+  </div>
+
+  <div v-click="1">
+    <p class="text-sm">Un exemple sur le site de la région pays basque :</p>
+    <img src="/images/pays-basque.png" alt="Pays Basque" />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">Les ratios de contraste</h2>
+
+<p class="mbs-7xl! mis-3xl!">
+  Pour tester les contrastes, on pourra utiliser les extensions suivantes :
+</p>
+
+<ul class="mx-6xl">
+  <ListItem
+    label="**WCAG Color Contrast Checker**"
+    image="/images/color-checker.png"
+    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf"
+  />
+  <ListItem
+    label="**Lighthouse**"
+    image="/images/lighthouse.png"
+    link="https://developers.google.com/web/tools/lighthouse"
+  />
+  <ListItem
+    label="**Axe Dev Tools**"
+    image="/images/axe.png"
+    link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd"
+  />
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">L'information par la couleur</h2>
+
+<p class="mbs-2xl!"><strong>Critère 3.1 du RGAA.</strong></p>
+
+<p>
+  Afin d'être compréhensible par tous, une information ne doit pas être
+  transmise
+  <strong>uniquement par la couleur.</strong>
+</p>
+
+<p>Les cas les plus courants :</p>
+
+<ul class="mis-3xl">
+  <ListItem label="La **page active** dans un menu de navigation" />
+  <ListItem label="L'**onglet sélectionné** dans une liste d'onglets" />
+  <ListItem label="La **diapositive** active dans un carrousel" />
+</ul>
+
+<div class="grid grid-cols-2 gap-xl mbs-2xl">
+  <Alert
+    v-click
+    type="success"
+    title="Solution"
+    text="On pourra utiliser des **indicateurs supplémentaires** comme une icône, du texte supplémentaire ou une décoration comme une bordure ou un texte en gras par exemple."
+  />
+  <Alert
+    v-click
+    type="idea"
+    title="Astuce"
+    text="Il est egalement possible d'utiliser des attributs invisibles mais qui permettent de transmettre l'information via les lecteurs d'écran, comme un **title** ou un **aria-label** ou encore la propriété **aria-current=&quot;page&quot;**.    "
+  />
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">L'information par la couleur</h2>
+
+<p class="mbs-3xl!"><strong>Exemple non conforme :</strong></p>
+
+<div class="flex gap-xl items-center mbs-2xl">
+  <div class="shrink-0 w-[350px]">
+    <p>
+      Ici le lien
+      <strong>"Occasion"</strong>
+      est uniquement identifié par sa couleur.
+    </p>
+    <p>
+      On aurait pu ajouter un indicateur supplémentaire comme un trait de
+      soulignement.
+    </p>
+  </div>
+
+  <div class="shrink">
+    <img src="/images/honda.png" alt="" class="w-full" />
+  </div>
+
+  <Arrow v-bind="{ color: '#df3623', x1:820, y1:150, x2:820, y2:250 }" />
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">L'information par la couleur</h2>
+
+<p class="mbs-3xl!"><strong>Un autre exemple non conforme :</strong></p>
+
+<div class="grid grid-cols-[3fr_5fr] gap-xl items-start mbs-2xl">
+  <div class="shrink-0 w-[350px]">
+    <p>
+      Ici les jours ont des couleurs différentes pour indiquer l'affluence mais
+      cette information est indisponible pour les personnes non voyantes ou
+      daltoniennes
+    </p>
+    <Alert
+      v-click="1"
+      type="idea"
+      title="Démonstration"
+      class="mbs-2xl"
+      text="Si on passe l'image en niveaux de gris, on ne distingue plus clairement l'information."
+    />
+  </div>
+
+  <div class="shrink relative w-full h-full">
+    <img
+      alt=""
+      src="/images/color-calendar.png"
+      class="w-full absolute inset-inline-0 top-0 h-auto"
+    />
+    <img
+      v-click="1"
+      alt=""
+      src="/images/color-calendar.png"
+      class="w-full absolute inset-inline-0 top-0 h-auto grayscale"
+    />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+<h2 class="text-light">Exercice pratique</h2>
+
+<p class="mbs-3xl!">
+  <strong>À vous de jouer !</strong>
+  <br />
+  Retrouvez les erreurs d'accessibilité liées aux couleurs sur la page produit
+  du site XXXX .
+</p>
+
+<p class="text-center mbs-8xl! text-4xl! font-bold!">
+  <a href="#">Cliquez ici pour acceder à la page</a>
+</p>
+
+<SlideFooter />
