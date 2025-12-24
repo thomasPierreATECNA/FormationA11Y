@@ -75,8 +75,14 @@ src: ./slides/pause-repas.html
 ---
 
 ---
-title: Présentation de l'information
-src: ./slides/Presentation-information/index.html
+title: Les couleurs
+src: ./slides/5.Couleurs.html
+---
+
+
+---
+title: Éléments obligatoires
+src: ./slides/6.Elements-obligatoires.html
 ---
 
 ---

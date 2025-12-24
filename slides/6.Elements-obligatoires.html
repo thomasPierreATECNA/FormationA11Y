@@ -1,0 +1,432 @@
+---
+layout: center
+transition: slide-up
+---
+
+<h1 class="text-7xl!">Les éléments obligatoires</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Thématique 8 du RGAA.</h2>
+
+<div class="mbs-4xl grid grid-cols-[5fr_3fr] gap-2xl items-center">
+  <div>
+    <p v-click>
+      Le
+      <strong>RGAA</strong>
+      définit
+      <strong>10 critères</strong>
+      pour s'assurer de la présence des
+      <strong>
+        éléments indispensables à la compréhension d'une page web,
+      </strong>
+      notamment par les lecteurs d'écran.
+    </p>
+    <Alert
+      v-click
+      type="idea"
+      class="mbs-2xl"
+      title="Bon à savoir"
+      text="Les critères **8.1** et **8.2** sont aujourd'hui considérés comme obsolètes et doivent toujours être notés comme conforme lors d'un audit.<br/><br/>Ils seront retirés dans la prochaine version du RGAA."
+    />
+  </div>
+
+  <div>
+    <p v-click class="text-center">
+      <a
+        target="_blank"
+        href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8"
+      >
+        Voir les 10 critères
+        <carbon-arrow-right />
+      </a>
+    </p>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">La langue principale de la page</h2>
+
+<p class="mbs-4xl!"><strong>Critères 8.3 et 8.4</strong></p>
+
+<p v-click>
+  Comme vous le savez, certaines personnes ont recours à des
+  <strong>lecteurs&nbsp;d'écran</strong>
+  pour naviguer sur le web. Ces outils convertissent le texte en parole.
+</p>
+
+<p v-click>
+  Il est très important de déclarer la langue principale de la page avec
+  l'attribut
+  <kbd>lang</kbd>
+  afin que les lecteurs d'écran puissent correctement interpréter et prononcer
+  le contenu de façon claire.
+</p>
+
+<!-- prettier-ignore -->
+<div v-click class="flex items-center gap-6xl mbs-4xl">
+```html
+<html lang="fr">
+  <head>...</head>
+  <body>...</body>
+</html>
+```
+
+<Alert
+  type="warning"
+  title="Attention !"
+  text='Le code de la langue doit être <u>pertinent</u> et <u>valide</u> (conforme à la norme <a href="https://fr.wikipedia.org/wiki/ISO_639" target="_blank">ISO 639</a>).'
+/>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Changement de langue dans la page</h2>
+
+<p class="mbs-4xl!"><strong>Critère 8.7 et 8.8</strong></p>
+
+<p v-click>
+  Dans le cas où une partie du contenu est rédigée dans une langue différente de
+  la langue principale de la page, il est essentiel de l'indiquer.
+</p>
+
+<p v-click>
+  On utilisera alors egalment l'attribut
+  <kbd>lang</kbd>
+  sur l'élément concerné.
+</p>
+
+<!-- prettier-ignore -->
+<div v-click class="flex items-center gap-6xl mbs-4xl">
+```html
+<html lang="fr">
+  <head>...</head>
+  <body>
+    <p>Je suis un texte en français.</p>
+    <p lang="en">I am a text in English.</p>
+  </body>
+</html>
+```
+
+<Alert
+  type="idea"
+  title="Bon à savoir"
+  text="Le lecteur d'écran se basera sur le code de langue pour adapter la prononciation et changera la voix si nécessaire."
+/>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le sens de lecture</h2>
+
+<p class="mbs-4xl!"><strong>Critère 8.10</strong></p>
+
+<p v-click>
+  Tout comme la langue, le sens de lecture doit être correctement indiqué.
+</p>
+
+<p v-click>
+  Le sens de lecture par défaut est de
+  <strong>gauche à droite (ltr).</strong>
+  Si la page contient une langue qui se lit de droite à gauche, il faut
+  l'indiquer grâce à l'atgtribut
+  <kbd>dir</kbd>
+  .
+</p>
+
+<!-- prettier-ignore -->
+<div v-click class="mbs-4xl">
+```html
+<html lang="fr">
+  <head>...</head>
+  <body>
+    <p>Je suis un texte en français.</p>
+    <p lang="ar" dir="rtl">أنا نص باللغة العربية</p>
+  </body>
+</html>
+```
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le titre la page</h2>
+
+<p class="mbs-4xl!"><strong>Critère 8.5 et 8.6</strong></p>
+
+<p v-click class="text-wrap! mbs-2xl!">
+  Chaque page web doit posséder un
+  <strong>titre pertinent</strong>
+  et idéalement
+  <strong>unique</strong>
+  qui reflète son contenu.
+</p>
+
+<p v-click class="text-wrap! mbs-2xl!">
+  C'est ce titre qui s'affiche dans l'onglet et l'historique du navigateur et
+  qui est affiché dans les résultats des moteurs de recherche.
+</p>
+
+<p v-click class="text-wrap! mbs-2xl!">
+  Un titre de page bien rédigé aide les utilisateurs à comprendre le contenu de
+  la page avant même de l'ouvrir, et facilite la navigation, en particulier pour
+  les personnes utilisant des lecteurs d'écran.
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le titre la page</h2>
+
+<p class="mbs-4xl!">
+  Bien que ce ne soit pas obligatoire, il est fortement recommandé d'indiquer
+  également le nom du site dans le titre de page.
+</p>
+
+<p>
+  Cela permet de mieux s'y retrouver sur plusieurs onglets ouverts ou dans
+  l'historique du navigateur.
+</p>
+
+<p v-click class="mbs-4xl!"><strong>Quelques exemples :</strong></p>
+
+<!-- prettier-ignore -->
+<div v-after>
+```html {*}{lines:false}
+<title>Decathlon | Accueil du site</title>
+```
+
+```html {*}{lines:false}
+<title>Decathlon | Chaussure de running KALENJI 500</title>
+```
+
+```html {*}{lines:false}
+<title>Decathlon | Mon compte client</title>
+```
+
+```html {*}{lines:false}
+<title>Decathlon | Mon compte client - Adresse de livraison</title>
+```
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le titre la page</h2>
+
+<div class="flex my-3xl">
+  <Alert
+    type="error"
+    title="Important !"
+    text="Certaines mentions doivent obligatoirement apparaître dans le titre de la page <br/> pour valider le **critère 8.6** sur la pertinence du titre."
+  />
+</div>
+
+<p v-click class="mbs-3xl!">
+  Sur une page de recherche, le terme recherché doit obligatoirement apparaître
+</p>
+
+<!-- prettier-ignore -->
+<div v-after>
+```html {*}{lines:false}
+<title>Decathlon | Résultats de recherche pour "Gants de boxe"</title>
+```
+</div>
+
+<p v-click class="mbs-3xl!">
+  Si la page contient une pagination, le numéro de page et le nombre de page
+  total doivent également apparaître
+</p>
+
+<!-- prettier-ignore -->
+<div v-after>
+```html {*}{lines:false}
+<title>Decathlon | Résultats de recherche pour "Gants de boxe" - page 2 sur 18</title>
+```
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le respect de la semantique</h2>
+
+<p class="mbs-4xl!"><strong>Critère 8.9</strong></p>
+
+<p v-click>
+  <strong>HTML 5 propose plus de 106 balises.</strong>
+  Il est fortement conseillé d'utiliser les balises sémantiques pour structurer
+  le contenu et ainsi faciliter la compréhension de la page par les technologies
+  d'assistance.
+</p>
+
+<p v-click>
+  D'un autre côté, l'utilisation de balise sémantiques à des fins de
+  présentation est interdite.
+</p>
+
+<p v-after>
+  Par exemple, on n'utilisera pas une balise de titre pour afficher un texte en
+  gros si ce n'est pas un titre de section.
+</p>
+
+<Alert
+  v-click
+  class="mbs-3xl"
+  type="warning"
+  title="Important !"
+  text="Il bien faut faire la différence entre la structure et la présentation.<br/>Le **CSS** est là pour la présentation, le **HTML** est pour la structure."
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le respect de la semantique</h2>
+
+<p class="mbs-4xl!">
+  <strong>Voici des exemple de ce qu'il le faut pas faire :</strong>
+</p>
+
+<ul class="mis-3xl mbs-3xl">
+  <ListItem label="des <kbd>div</kbd> pour des paragraphes" />
+  <ListItem
+    label="des balises de titre <kbd>Hn</kbd> détournée pour le référencement ou pour le style."
+  />
+  <ListItem
+    label="des balises <kbd>p</kbd> vides pour creer de l'espacement entre les éléments."
+  />
+  <ListItem
+    label="des balises de lien <kbd>a</kbd> détournée pour déclencher des évènements."
+  />
+  <ListItem label="une suite de <kbd>div</kbd> pour creer une liste à puces." />
+  <ListItem label="etc..." />
+</ul>
+
+<Alert
+  v-click
+  class="mbs-2xl! mx-auto"
+  type="idea"
+  title="Bon à savoir !"
+  text="Les balises **HTML** natives sont bien faites et en principe accessibles.<br />Plus le code est proche de la **syntaxe HTML standard**, plus il sera **accessible** !"
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les éléments obligatoires</h1>
+<h2 class="text-light">Le respect de la semantique</h2>
+
+<p class="mbs-3xl!">
+  En
+  <strong>HTML</strong>
+  il est possible de changer la nature d'une balise avec l'attribut
+  <kbd>role</kbd>
+  , c'est très rarement une bonne idée !
+</p>
+
+<p v-click class="mbs-2xl!"><strong>Exemple :</strong></p>
+
+<!-- prettier-ignore -->
+<div v-after>
+```html {*}{lines:false}
+<a href="#" role="button" onclick="addToCart()">Ajouter au panier</a>
+```
+</div>
+
+<Alert
+  v-after
+  class="mbs-3xl"
+  type="error"
+  title="À éviter !"
+  text="Ici, un lien est transformé en bouton pour déclencher une action JavaScript.<br/>C'est une mauvaise pratique car cela perturbe la compréhension de la page par les technologies d'assistance."
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: image-left
+image: /images/code.jpg
+transition: slide-up
+---
+
+<h1>Les couleurs</h1>
+
+<h2 class="text-light">À vous de jouer !</h2>
+
+<p class="text-center text-lg! font-bold! mbs-8xl!">
+  Retrouvez les erreurs d'accessibilité liées aux éléments obligatoires sur
+  <a class="font-bold!" target="_blank" href="https://work.innorater.com/">
+    cette page
+  </a>
+</p>
+
+<!-- 
+- Problemes de contrastes 
+- Élément courant du menu indiqué uniquement par la couleur
+-->
+
+<SlideFooter />
