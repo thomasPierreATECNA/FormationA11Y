@@ -37,7 +37,7 @@ export default {
 <style>
 .ListItem {
   p {
-    margin: 0;
+    margin: .125rem 0;
     padding: 0;
     text-wrap: auto;
   }

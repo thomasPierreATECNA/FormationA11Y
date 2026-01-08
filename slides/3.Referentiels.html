@@ -54,7 +54,7 @@ transition: slide-up
 
 <div class="p-4xl flex flex-col justify-center h-full">
   <h2 class="text-2xl! text-coral mbe-2xl">
-    Web Content Accessibility Guidelines
+    "Web Content Accessibility Guidelines"
   </h2>
 
   <p class="text-xl text-light">C'est le référentiel international.</p>
@@ -132,7 +132,7 @@ transition: slide-up
   :
 </p>
 
-<div class="-mx-lg mbs-5xl grid grid-cols-4 gap-lg">
+<div class="-mx-lg mbs-5xl grid grid-cols-4 gap-xs items-start">
   <div
     v-click
     class="bg-lavander-100 border border-lavander-300 rounded-xl p-lg"
@@ -141,7 +141,9 @@ transition: slide-up
     <p class="text-xl text-lavander-900">(Perceptible)</p>
     <p class="text-sm leading-[1.35]!">
       L'information doit être présentée de manière à être perceptible par tous
-      les sens (ex: alternatives textuelles pour les images).
+      les sens.
+      <br />
+      (ex: alternatives textuelles pour les images)
     </p>
   </div>
 
@@ -149,8 +151,10 @@ transition: slide-up
     <h3 class="text-md! text-error-900">Operable</h3>
     <p class="text-xl text-error-900">(Utilisable)</p>
     <p class="text-sm leading-[1.35]!">
-      L'information doit être présentée de manière à être perceptible par tous
-      les sens (ex: alternatives textuelles pour les images).
+      L'interface doit être utilisable par tous les utilisateurs, y compris ceux
+      utilisant des technologies d'assistance.
+      <br />
+      (ex: navigation au clavier).
     </p>
   </div>
 
@@ -159,7 +163,9 @@ transition: slide-up
     <p class="text-xl text-success-900">(Compréhensible)</p>
     <p class="text-sm leading-[1.35]!">
       L'information et l'utilisation de l'interface doivent être compréhensibles
-      (ex: texte lisible, prédictibilité des interactions).
+      par tous.
+      <br />
+      (ex: police lisible, prédictibilité des interactions).
     </p>
   </div>
 
@@ -168,8 +174,9 @@ transition: slide-up
     <p class="text-xl text-blue-900">(Robuste)</p>
     <p class="text-sm leading-[1.35]!">
       Le contenu doit pouvoir être interprété par une grande variété d'agents
-      utilisateurs, y compris les technologies d'assistance (ex: balises
-      sémantiques correctes).
+      utilisateurs, y compris les technologies d'assistance.
+      <br />
+      (ex: balises sémantiques correctes).
     </p>
   </div>
 </div>
@@ -189,7 +196,7 @@ transition: slide-up
   Les critères de succès des WCAG sont classés en trois niveaux de conformité :
 </p>
 
-<div class="mx-4xl mbs-5xl grid grid-cols-3 gap-lg">
+<div class="mx-4xl mbs-5xl grid grid-cols-3 gap-3xl items-start">
   <div v-click class="bg-error-50 border border-error-300 rounded-xl p-lg">
     <h3 class="text-md! text-error-900">A</h3>
     <p class="text-xl text-error-900">(Minimum)</p>
@@ -199,13 +206,12 @@ transition: slide-up
     </p>
   </div>
 
-  <div v-click class="bg-teal-50 border border-teal-300 rounded-xl p-lg">
-    <h3 class="text-md! text-teal-900">AA</h3>
-    <p class="text-xl text-teal-900">(Cible)</p>
+  <div v-click class="bg-orange-50 border border-orange-300 rounded-xl p-lg">
+    <h3 class="text-md! text-orange-900">AA</h3>
+    <p class="text-xl text-orange-900">(Cible)</p>
     <p class="text-sm leading-[1.35]!">
       Le niveau le plus couramment recommandé et souvent exigé par la loi dans
-      le monde (dont l'Union Européenne et la France). Il permet l'accessibilité
-      à la grande majorité des technologies d'assistance.
+      le monde (dont l'Union Européenne et la France).
     </p>
   </div>
 
@@ -233,8 +239,10 @@ transition: slide-up
 <div class="grid grid-cols-[2fr_3fr] gap-xl items-center">
   <div class="flex flex-col gap-lg">
     <p>
-      Le site de la
-      <strong>WAI</strong>
+      <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" target="_blank">
+        Le site de la
+        <strong>WAI</strong>
+      </a>
       propose des tutoriels pour concevoir des interfaces accessibles en
       respectants les bonnes pratiques d'accessibilité.
     </p>
@@ -307,7 +315,7 @@ transition: slide-up
 <h1>Le WCAG</h1>
 
 <h2 class="text-xl text-light mbe-lg">
-  2. Un système de Score plutôt que "Pass/Fail"
+  2. Un système de score plutôt que "conforme/non conforme"
 </h2>
 
 <p v-click>
@@ -410,11 +418,15 @@ transition: slide-up
       target="_blank"
       href="https://www.numerique.gouv.fr/numerique-etat/dinum/"
     >
-      DINUM
+      DINUM*
     </a>
     qui assure la rédaction et la mise à jour du
     <strong>RGAA</strong>
     .
+  </p>
+
+  <p class="text-xs italic mbs-8xl! text-end">
+    *Direction Interministérielle du Numérique
   </p>
 </div>
 
@@ -433,11 +445,14 @@ transition: slide-up
   106 critères pour évaluer l'accessibilité d'un site web
 </h2>
 
-<div class="grid grid-cols-2 gap-xl items-center">
+<div class="grid grid-cols-2 gap-xl items-center mbs-3xl">
   <div v-click>
     <p>
-      Le RGAA traduit les critères abstraits des WCAG en une liste de 106
-      critères de contrôle très précis, organisés en 13 thématiques.
+      Le RGAA traduit les critères abstraits des WCAG en une liste de
+      <b><u>106 critères</u></b>
+      de contrôle très précis, organisés en
+      <b><u>13 thématiques</u></b>
+      .
     </p>
     <p>
       Le but : Permettre de calculer un taux de conformité
@@ -454,7 +469,7 @@ transition: slide-up
     </a>
   </div>
 
-  <ol class="text-sm" v-after>
+  <ol class="text-md" v-after>
     <li>Images</li>
     <li>Cadres</li>
     <li>Couleurs</li>
@@ -486,34 +501,49 @@ transition: slide-up
 ---
 <h1>Le RGAA</h1>
 
-<h2 class="text-xl text-light mbe-lg">L'outil d'audit ARA</h2>
+<h2 class="text-xl text-light">L'outil d'audit ARA</h2>
 
 <div class="grid grid-cols-[3fr_2fr] gap-xl items-start">
   <div>
     <p v-click>
-      <strong>Ara</strong>
+      <strong>ARA</strong>
       <span class="italic">(pour "Accessibilité, Rapport, Audit")</span>
       est un outil gratuit mis à disposition par la
       <strong>DINUM</strong>
-      pour réaliser facilement des audits d'accessibilité
+      pour faciliter les audits d'accessibilité
       <strong>RGAA</strong>
       .
     </p>
     <p v-click>Il propose 3 types d'audits :</p>
-    <ul class="mis-xl">
-      <ListItem
-        label="**L'audit rapide (25 critères)** : Idéal pour un diagnostic rapide. Il se concentre sur les erreurs les plus bloquantes (images, contrastes, structure)."
-      />
-      <ListItem
-        label="**L'audit complémentaire (50 critères)** : Un bon entre-deux pour aller un peu plus loin et améliorer la qualité globale d'un site."
-      />
-      <ListItem
-        label="**L'audit complet (106 critères)** : Couvre l'intégralité des critères **RGAA** pour une évaluation approfondie."
-      />
+    <ul class="mis-xl flex flex-col gap-xs">
+      <div
+        v-click
+        class="flex flex-col bg-lavander-100 border border-lavander-300 rounded-xl p-xs text-sm"
+      >
+        <b>L'audit rapide (25 critères)</b>
+        Idéal pour un diagnostic rapide. Il se concentre sur les erreurs les
+        plus bloquantes (images, contrastes, structure)
+      </div>
+      <div
+        v-click
+        class="flex flex-col bg-orange-100 border border-orange-300 rounded-xl p-xs text-sm"
+      >
+        <b>L'audit complémentaire (50 critères)</b>
+        Un bon entre-deux pour aller un peu plus loin et améliorer la qualité
+        globale d'un site.
+      </div>
+      <div
+        v-click
+        class="flex flex-col bg-success-100 border border-success-300 rounded-xl p-xs text-sm"
+      >
+        <b>L'audit complet (106 critères)</b>
+        Couvre l'intégralité des critères **RGAA** pour une évaluation
+        approfondie.
+      </div>
     </ul>
   </div>
 
-  <div class="flex flex-col gap-2xl -translate-y-7xl">
+  <div class="flex flex-col gap-2xl -translate-y-4xl">
     <Alert
       v-click
       type="idea"
@@ -546,7 +576,7 @@ transition: slide-left
 
 <h2 class="text-xl text-light mbe-lg">L'outil d'audit ARA</h2>
 
-<p>Les avantages d'Ara sont nombreux :</p>
+<p>Les avantages d'ARA sont nombreux :</p>
 
 <ul class="mbs-xl mis-3xl">
   <ListItem label="Il est **gratuit** et **accessible en ligne**." />
@@ -557,6 +587,12 @@ transition: slide-left
     label="**Il est structuré par thématique** : On coche les critères un par un."
   />
   <ListItem
+    label="**Il permet de joindre des captures d'écran** : Pour chaque critère, on peut ajouter une preuve visuelle."
+  />
+  <ListItem
+    label="**Il permet de préciser le niveau de criticité de chaque critère** : Mineur, Majeur ou Bloquant."
+  />
+  <ListItem
     label="**Il contient l'aide intégrée** : Pour chaque critère, il explique ce qu'il faut vérifier et comment le vérifier."
   />
   <ListItem
@@ -564,7 +600,7 @@ transition: slide-left
   />
 </ul>
 
-<div v-click class="text-5xl text-center mbs-3xl">
+<div v-click class="text-3xl text-center mbs-xl">
   <a target="_blank" href="https://ara.numerique.gouv.fr/">Démonstration</a>
 </div>
 

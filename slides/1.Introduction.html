@@ -21,23 +21,18 @@ transition: slide-up
   .
 </p>
 
-<div v-click class="mbs-6xl grid grid-cols-2 items-center gap-2xl">
-  <img src="/images/A11Y.jpg" alt="" class="w-[500px] mx-auto" />
+<div class="mbs-6xl grid grid-cols-2 items-start gap-2xl">
+  <img v-click src="/images/A11Y.jpg" alt="" class="w-[500px] mx-auto" />
 
   <div>
-    <p>
+    <p v-after>
       Cet acronyme est constitué de la première et dernière lettre du mot
       <b>accessibility</b>
       , et du chiffre
       <b>11</b>
       qui correspond au nombre de lettres entre les deux.
     </p>
-    <p>
-      Sur certains sites français, vous pourrez voir l'accronyme
-      <b>a11é</b>
-      .
-    </p>
-    <p>
+    <p v-after>
       On retrouve souvent ce genre d'acronyme en informatique, comme
       <b>i18n</b>
       ,
@@ -48,6 +43,13 @@ transition: slide-up
       <b>c11y</b>
       , etc...
     </p>
+    <Alert
+      v-click
+      type="idea"
+      title="Bon à savoir"
+      class="mbs-3xl"
+      text="Sur certains sites français, vous pourrez voir l'accronyme **a11é** pour <u>accessibilité</u>."
+    />
   </div>
 </div>
 
@@ -89,7 +91,7 @@ transition: slide-up
   contexte ou ses capacités.
 </p>
 
-<div v-click class="flex mbs-7xl mx-8xl">
+<div v-click class="flex mbs-7xl mx-8xl scale-120">
   <Alert
     type="idea"
     title="Idée reçue"
@@ -149,7 +151,7 @@ transition: slide-up
 <div class="flex mx-8xl p-5xl justify-center">
   <Alert
     v-click
-    class="scale-150"
+    class="scale-150 mbs-2xl"
     type="success"
     title="Conclusion "
     text="**Nous sommes <u class='text-success'>TOUS</u> concernés !**"
@@ -194,22 +196,26 @@ transition: slide-up
 
 <h2 class="text-2xl! text-light">Il existe 5 types de handicap :</h2>
 
-<div class="grid grid-cols-5 gap-sm -mx-3xl items-start mbs-xl">
+<div class="grid grid-cols-5 gap-sm -mx-3xl items-start mbs-5xl">
   <div v-click class="bg-gray-100 p-xs rounded-lg border border-gray-400">
-    <h3 class="text-center text-lg!">SENSORIEL</h3>
-    <p>5,4 millions de personnes atteintes de troubles auditifs.</p>
-    <p>1,7 million de personnes souffrant de handicap visuel.</p>
+    <h3 class="text-center text-lg! mbe-xl">SENSORIEL</h3>
+    <p class="text-sm">
+      5,4 millions de personnes atteintes de troubles auditifs.
+    </p>
+    <p class="text-sm">
+      1,7 million de personnes souffrant de handicap visuel.
+    </p>
   </div>
 
   <div v-click class="bg-green-100 p-xs rounded-lg border border-green-400">
-    <h3 class="text-center text-lg!">MOTEUR</h3>
-    <p>3,5 millions de personnes en France.</p>
-    <p>650.000 personnes équipées d'un fauteuil roulant</p>
+    <h3 class="text-center text-lg! mbe-xl">MOTEUR</h3>
+    <p class="text-sm">3,5 millions de personnes en France.</p>
+    <p class="text-sm">650.000 personnes équipées d'un fauteuil roulant</p>
   </div>
 
   <div v-click class="bg-blue-100 p-xs rounded-lg border border-blue-400">
-    <h3 class="text-center text-lg!">MENTAL</h3>
-    <p>
+    <h3 class="text-center text-lg! mbe-xl">MENTAL</h3>
+    <p class="text-sm">
       On parle de handicap mental lorsque une personne éprouve des difficultés
     </p>
     <ul class="text-sm">
@@ -221,9 +227,9 @@ transition: slide-up
   </div>
 
   <div v-click class="bg-error-100 p-xs rounded-lg border border-error-400">
-    <h3 class="text-center text-lg!">PSYCHIQUE</h3>
-    <p>Ce handicap est la conséquence d'une maladie.</p>
-    <p>
+    <h3 class="text-center text-lg! mbe-xl">PSYCHIQUE</h3>
+    <p class="text-sm">Ce handicap est la conséquence d'une maladie.</p>
+    <p class="text-sm">
       Les plus répandus sont les troubles bipolaires, dépressifs, la paranoïa,
       la schizophrénie, etc...
     </p>
@@ -233,10 +239,10 @@ transition: slide-up
     v-click
     class="bg-lavander-100 p-xs rounded-lg border border-lavander-400"
   >
-    <h3 class="text-center text-lg!">COGNITIF</h3>
-    <p>
-      Ce type de handicap regroupe : les troubles dys, l'autisme, Parkinson, la
-      maladie d'Alzheimer, etc...
+    <h3 class="text-center text-lg! mbe-xl">COGNITIF</h3>
+    <p class="text-sm">
+      Ce type de handicap regroupe : les troubles dys, l'autisme, les maladies
+      d'Alzheimer et de Parkinson, etc...
     </p>
   </div>
 </div>
@@ -356,7 +362,7 @@ transition: slide-up
 ---
 <h1>Introduction</h1>
 
-<h2 class="!text-2xl text-light mbe-3xl">Et quelques contre exemples..</h2>
+<h2 class="!text-2xl text-light mbe-3xl">Et quelques contre exemples...</h2>
 
 <div class="grid grid-cols-4 items-start gap-xl mbs-6xl">
   <div v-click class="text-center">
@@ -404,6 +410,24 @@ transition: slide-up
 
 <!-- prettier-ignore -->
 ---
+layout: image-right
+image: images/fauteuil.jpg
+transition: slide-up
+---
+<h1>Introduction</h1>
+
+<h2 class="!text-2xl text-light mbe-3xl">Dans le numérique</h2>
+
+<p class="mbs-7xl!">
+  Ces quelques exemples absurdes peuvent prêter à sourire, mais de nombreux site
+  web présentent des problèmes d'accessibilité qui peuvent exclure certains
+  utilisateurs de la même manière.
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
 layout: default
 transition: slide-up
 ---
@@ -411,7 +435,7 @@ transition: slide-up
 
 <h2 class="!text-2xl text-light mbe-5">L'a11y et le SEO</h2>
 
-<p>
+<p v-click>
   Les bonnes pratiques d’accessibilité coïncident avec celles du SEO, car elles
   reposent sur une structure claire, un contenu compréhensible et une navigation
   cohérente :
@@ -435,7 +459,7 @@ transition: slide-up
       <li>mieux compris,</li>
       <li>mieux indexé,</li>
       <li>plus agréable à utiliser,</li>
-      <li>donc mieux classé dans les résultats de recherche.</li>
+      <li>donc mieux classé dans les résultats de recherche !</li>
     </ul>
   </div>
 </div>
@@ -458,14 +482,14 @@ transition: slide-left
 </p>
 
 <p v-click>
-  <u><b>tout le monde</b></u>
+  <u><b>Tout le monde</b></u>
   peut être confronté, un jour ou l’autre, à une situation qui complique l’usage
   du web ou d’une application.
 </p>
 
 <p v-click>
   L’accessibilité, c’est donc avant tout une question
-  <strong>d'inclusion, d'égalité de bon sens.</strong>
+  <u><b>d'inclusion, d'égalité de bon sens.</b></u>
 </p>
 
 <p v-click>

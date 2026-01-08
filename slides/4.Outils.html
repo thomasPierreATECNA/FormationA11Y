@@ -16,9 +16,9 @@ transition: slide-up
 <h1>Les outils</h1>
 
 <p>
-  Pour réaliser un audit d'accessibilité efficace, plusieurs outils sont
-  disponibles sous forme d'extensions de navigateur. Si vous ne les avez pas
-  encore installés, prenez le temps de le faire maintenant.
+  Pour tester l'accessibilité, plusieurs outils sont disponibles sous forme
+  d'extensions de navigateur. Si vous ne les avez pas encore installés, prenez
+  le temps de le faire maintenant.
 </p>
 
 <ul class="mis-2xl mbs-3xl flex flex-col gap-xl">
@@ -86,5 +86,87 @@ transition: slide-left
 
   <img v-click="1" src="/images/access42-bm.png" alt="" class="h-full" />
 </div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: two-cols
+transition: slide-up
+---
+
+<h1>Les lecteurs d'écran</h1>
+
+<p>
+  Un autre outil important pour tester l'accessibilité est le lecteur d'écran.
+  Il en existe plusieurs, certains sont directement intégrés aux systèmes
+  d'exploitation.
+</p>
+
+<p v-click class="mbs-2xl!">
+  Ils permettent aux personnes aveugles ou malvoyantes d'accéder au contenu
+  numérique en vocalisant.
+</p>
+
+<p v-after class="mbs-2xl!">
+  Ils apportent également des fonctionnalités de navigation spécifiques, comme
+  la navigation par titres, liens, ou autres éléments structurants dans la page.
+</p>
+
+::right::
+
+<p v-click class="text-center">Les principaux lecteurs d'écran sont :</p>
+
+<ul class="mx-3xl mbs-3xl flex flex-col gap-xl">
+  <li v-click>
+    <a
+      href="https://www.nvaccess.org/download/"
+      target="_blank"
+      rel="nofollow noopener"
+      class="font-bold!"
+    >
+      NVDA (NonVisual Desktop Access)
+    </a>
+    <br />
+    un lecteur d'écran gratuit et open-source pour Windows.
+  </li>
+  <li v-click>
+    <a
+      href="https://www.freedomscientific.com/Products/Blindness/JAWS"
+      target="_blank"
+      rel="nofollow noopener"
+      class="font-bold!"
+    >
+      JAWS (Job Access With Speech)
+    </a>
+    <br />
+    un lecteur d'écran payant pour Windows, très utilisé dans le milieu
+    professionnel.
+  </li>
+  <li v-click>
+    <a
+      href="https://www.apple.com/accessibility/mac/vision/"
+      target="_blank"
+      rel="nofollow noopener"
+      class="font-bold!"
+    >
+      VoiceOver
+    </a>
+    <br />
+    un lecteur d'écran intégré aux appareils Apple, y compris macOS et iOS.
+  </li>
+  <li v-click>
+    <a
+      href="https://support.google.com/accessibility/android/answer/6007100?hl=fr"
+      target="_blank"
+      rel="nofollow noopener"
+      class="font-bold!"
+    >
+      TalkBack
+    </a>
+    <br />
+    un lecteur d'écran intégré aux appareils Android.
+  </li>
+</ul>
 
 <SlideFooter />

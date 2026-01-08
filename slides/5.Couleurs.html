@@ -16,16 +16,16 @@ transition: slide-up
 <h1>Les couleurs</h1>
 <h2 class="text-light">Thématique 3 du RGAA.</h2>
 
-<div class="mbs-4xl grid grid-cols-[5fr_3fr] gap-2xl items-center">
-  <div v-click>
-    <p>
+<div class="mbs-4xl grid grid-cols-[5fr_3fr] gap-xl items-center">
+  <div class="flex flex-col gap-xl">
+    <p v-click>
       Les couleurs jouent un rôle crucial dans la
       <strong>présentation de l'information.</strong>
       Cependant, il est essentiel de
-      <u>ne pas se fier uniquement à la couleur</u>
+      <u>ne pas se fier uniquement à elles</u>
       pour transmettre des informations importantes.
     </p>
-    <p>
+    <p v-click>
       Les personnes atteintes de
       <strong>daltonisme ou d'autres déficiences visuelles</strong>
       peuvent avoir des difficultés à percevoir certaines couleurs, ce qui peut
@@ -75,7 +75,7 @@ transition: slide-up
   <ListItem label="La **diapositive** active dans un carrousel" />
 </ul>
 
-<div class="grid grid-cols-2 gap-xl mbs-2xl">
+<div class="grid grid-cols-2 gap-xl mbs-2xl items-start">
   <Alert
     v-click
     type="success"
@@ -103,24 +103,27 @@ transition: slide-up
 
 <p class="mbs-3xl!"><strong>Exemple non conforme :</strong></p>
 
-<div class="flex gap-xl items-start mbs-2xl">
-  <div class="shrink-0 w-[350px]">
-    <p>
+<div class="flex gap-xl items-center mbs-2xl">
+  <div class="shrink">
+    <img src="/images/honda.png" alt="" class="w-full" />
+  </div>
+
+  <div class="shrink-0 w-[200px]" v-click>
+    <p class="text-sm!">
       Ici le lien
       <strong>"Occasion"</strong>
       est uniquement identifié par sa couleur.
     </p>
-    <p>
+    <p class="text-sm!">
       On aurait pu ajouter un indicateur supplémentaire comme un trait de
       soulignement.
     </p>
   </div>
 
-  <div class="shrink">
-    <img src="/images/honda.png" alt="" class="w-full" />
-  </div>
-
-  <Arrow v-bind="{ color: '#df3623', x1:820, y1:150, x2:820, y2:230 }" />
+  <Arrow
+    v-after
+    v-bind="{ color: '#df3623', x1:565, y1:150, x2:565, y2:245 }"
+  />
 </div>
 
 <div class="flex justify-center mx-7xl mbs-xl">
@@ -155,7 +158,7 @@ transition: slide-up
     <Alert
       v-click="1"
       type="idea"
-      title="Démonstration"
+      title="La preuve"
       class="mbs-2xl"
       text="Si on passe l'image en niveaux de gris, on ne distingue plus clairement l'information."
     />
@@ -226,7 +229,7 @@ transition: slide-up
   doivent respecter des rapports de contraste minimums :
 </p>
 
-<div class="grid grid-cols-2 gap-xl items-strech mbs-4xl">
+<div class="grid grid-cols-2 gap-xl items-start mbs-4xl">
   <div
     v-click
     class="bg-coral-50 border border-coral-500 text-coral-950 rounded-xl p-sm"
@@ -292,7 +295,7 @@ transition: slide-up
       v-click="2"
       class="mbs-4xl"
       type="idea"
-      title="Bon à savoir"
+      title="Astuce pour les développeurs"
       text="Il est possible de parametrer des contrastes élevé via les **préférences d'accessibilité du système d'exploitation** et de récupérer cette préférence dans le **CSS** pour appliquer un style spécifique."
     />
   </div>
