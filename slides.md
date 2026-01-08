@@ -40,6 +40,11 @@ src: ./slides/accueil.html
 ---
 
 ---
+title: Tour de Table
+src: ./slides/ice-breaker.html
+---
+
+---
 title: Programme
 src: ./slides/programme.html
 ---
