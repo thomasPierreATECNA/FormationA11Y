@@ -3,7 +3,13 @@ layout: center
 transition: slide-up
 ---
 
-<h1 class="text-6xl!">La présentation de l'information</h1>
+<h1 class="text-6xl! leading-snug! text-center">
+  La présentation
+  <br/>
+  de l'information
+</h1>
+
+<div v-after class="absolute start-[720px] top-[320px] scale-500">🔍</div>
 
 <SlideFooter />
 
@@ -14,25 +20,232 @@ transition: slide-up
 ---
 
 <h1>Présentation de l'information</h1>
-<h2 class="text-light">Faisons la distinction</h2>
+<h2 class="text-light">Thématique 10 du RGAA.</h2>
 
-<p class="mbs-2xl!">
-  la
+<p v-click class="mbs-2xl! strong">Faisons la distinction</p>
+
+<p v-click class="mbs-2xl!">
+  👉🏼 La
   <strong>présentation</strong>
-  concerne ce que l'utilisateur persoit, tandis que la
-  <strong>structuration</strong>
-  concerne la manière dont l'information est construite et restituée par les
-  technologies d'assistance.
+  concerne ce que l'utilisateur persoit sur la page.
 </p>
 
-<p v-click>
+<p v-click class="text-wrap!">
+  👉🏼 La
+  <strong>structuration</strong>
+  concerne le code et sa restitution par les technologies d'assistance.
+</p>
+
+<p v-click class="mbs-2xl!">
   L'objectif de ce chapitre est de comprendre comment rendre l'interface lisible
   et compréhensible pour tous, indépendamment des capacités visuelles ou
   cognitives.
 </p>
 
-<div v-click class="flex mbs-3xl">
-  <Alert type="idea" title="Thematiques 10" />
-  <div v-after class="absolute start-[570px] bottom-[220px] scale-500">🔍</div>
+<p v-click class="mbs-8xl! text-end">
+  <a
+    target="_blank"
+    href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#10"
+  >
+    Voir les 14 critères
+    <carbon-arrow-right />
+  </a>
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les feuilles de style</h2>
+
+<p class="mbs-4xl!"><strong>Critères 10.1 et 10.2</strong></p>
+
+<p v-click>
+  Les feuilles de style (CSS) permettent de contrôler la présentation visuelle
+  du contenu d'une page web. Mais Il ne faut pas oublier que certains
+  utilisateurs peuvent désactiver les styles ou utiliser des styles
+  personnalisés pour améliorer la lisibilité.
+</p>
+
+<p v-click class="mbs-2xl!">
+  Il est donc essentiel de ne pas utiliser de balises HTML uniquement à des fins
+  de présentation, mais de s'assurer que le contenu reste compréhensible même
+  sans styles.
+</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les feuilles de style</h2>
+
+<p class="mbs-2xl! text-wrap!">
+  <strong>Critères 10.1</strong>
+  <br/>
+  <span class="italic">
+    Dans le site web, des feuilles de styles sont-elles utilisées pour contrôler
+    la présentation de l’information ?
+  </span>
+</p>
+
+<p v-click class="my-xl!">
+  Certaines anciennes balise HTML servent à modifier la présentation, comme par
+  exemple :
+</p>
+
+<div class="grid grid-cols-[1fr_2fr] items-center gap-xl mx-3xl">
+  <ul v-click class="mis-3xl">
+    <li><kbd>&lt;big&gt;</kbd></li>
+    <li><kbd>&lt;blink&gt;</kbd></li>
+    <li><kbd>&lt;center&gt;</kbd></li>
+    <li><kbd>&lt;font&gt;</kbd></li>
+    <li><kbd>&lt;marquee&gt;</kbd></li>
+    <li><kbd>&lt;s&gt;</kbd></li>
+    <li><kbd>&lt;strike&gt;</kbd></li>
+    <li><kbd>&lt;tt&gt;</kbd></li>
+  </ul>
+
+  <div class="flex flex-col gap-xl">
+    <Alert
+      v-click
+      type="warning"
+      title="Attention !"
+      text="Ces balises sont obsolètes et ne doivent plus être utilisées. Elles ne fournissent aucune information sémantique et peuvent poser des problèmes d'accessibilité."
+    />
+    <Alert
+      v-click
+      type="idea"
+      title="Astuce"
+      text="Il faut privilégier l'utilisation des feuilles de style CSS pour contrôler la présentation du contenu."
+    />
+  </div>
 </div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les feuilles de style</h2>
+
+<p class="mbs-2xl! text-wrap!">
+  <strong>Critères 10.2</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, les attributs servant à la présentation de
+    l’information ne doivent pas être présents dans le code source généré des
+    pages.
+  </span>
+</p>
+
+<p v-click class="my-xl!">
+  De la même manière, certains attributs HTML sont utilisés pour la mise en
+  forme, comme:
+</p>
+
+<div class="grid grid-cols-[2fr_3fr] items-center gap-xl mx-3xl">
+  <p v-click ">
+    <kbd>align</kbd>,
+    <kbd>alink</kbd>,
+    <kbd>background</kbd>,
+    <kbd>bgcolor</kbd>,
+    <kbd>border</kbd>,
+    <kbd>cellpadding</kbd>,
+    <kbd>cellspacing</kbd>,
+    <kbd>cha</kbd>,
+    <kbd>charoff</kbd>,
+    <kbd>clear</kbd>,
+    <kbd>color</kbd>,
+    <kbd>compact</kbd>,
+    <kbd>frameborder</kbd>,
+    <kbd>hspace</kbd>,
+    <kbd>link</kbd>,
+    <kbd>marginheight</kbd>,
+    <kbd>marginwidth</kbd>,
+    <kbd>text</kbd>,
+    <kbd>valign</kbd>,
+    <kbd>vlink</kbd>,
+    <kbd>vspace</kbd>, etc...
+
+  </p>
+
+  <div class="flex flex-col gap-xl">
+    <Alert
+      v-click
+      type="idea"
+      title="Astuce"
+      text="Ici aussi il faut privilégier l'utilisation des feuilles de style CSS pour contrôler la présentation du contenu."
+    />
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les espaces</h2>
+
+<div class="grid grid-cols-[5fr_3fr] gap-8xl">
+  <div class="flex flex-col gap-3xl">
+    <p class="mbs-2xl! text-wrap!">
+      <strong>Critères 10.3</strong>
+      <span class="italic">
+      Dans chaque page web, l’utilisation des espaces vérifie-t-elle ces conditions ?
+      </span>
+    </p>
+    <ul class="italic text-sm -mbs-3xl">
+      <li>Les espaces ne sont pas utilisées pour séparer les lettres d’un mot</li>
+      <li>Les espaces ne sont pas utilisées pour simuler des tableaux</li>
+      <li>Les espaces ne sont pas utilisées pour simuler des colonnes de texte</li>
+    </ul>
+    <Alert
+      v-click="1"
+      type="idea"
+      title="Astuce"
+      text="Dans l'exemple ci-contre, des espaces insécables sont utilisées pour aligner le texte comme sur une facture papier.<br/><br/>**Il faut utiliser des tableaux HTML pour structurer ce type d'informations.**"
+    />
+  </div>
+
+  <!-- Ticket de caisse -->
+  <div v-click="1" class="font-mono text-xs! text-light">
+    Smooth&nbsp;Café&nbsp;Wasquehal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    58&nbsp;Avenue&nbsp;de&nbsp;Flandres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    59290&nbsp;Wasquehal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    Siret:&nbsp;385&nbsp;876&nbsp;486&nbsp;00029&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    --------------------------------<br/>FACTURE&nbsp;N°&nbsp;5478909&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    12&nbsp;Septembre&nbsp;2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    --------------------------------<br/>
+    Qté&nbsp;&nbsp;Désignation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prix<br/>
+    1&nbsp;&nbsp;&nbsp;&nbsp;Plat&nbsp;du&nbsp;jour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12,00€<br/>
+    1&nbsp;&nbsp;&nbsp;&nbsp;Entrecôte&nbsp;du&nbsp;chef&nbsp;&nbsp;&nbsp;&nbsp;24,00€<br/>
+    2&nbsp;&nbsp;&nbsp;&nbsp;Paix&nbsp;Dieu&nbsp;50cl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7,00€<br/>
+    2&nbsp;&nbsp;&nbsp;&nbsp;Exptresso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4,00€<br/>
+    --------------------------------<br/>
+    Total&nbsp;Facture&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;58,00€<br/>
+    Règmement&nbsp;CB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-58,00€<br/>
+    <br/>
+    DOIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0,00€<br/>
+    DONT&nbsp;tva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11,60€<br/>
+    --------------------------------<br/>
+    Merci&nbsp;de&nbsp;votre&nbsp;visite.&nbsp;À&nbsp;bientôt&nbsp;
+  </div>
+</div>
+
 <SlideFooter />

@@ -41,18 +41,18 @@ src: ./slides/accueil.html
 
 ---
 title: Tour de Table
-src: ./slides/ice-breaker.html
+src: ./slides/tour-de-table.html
+---
+
+---
+title: Je me présente
+src: ./slides/moi.html
 ---
 
 ---
 title: Programme
 src: ./slides/programme.html
 ---
-
-# ---
-# title: moi
-# src: ./slides/moi.html
-# ---
 
 ---
 title: Introduction
@@ -84,10 +84,14 @@ title: Les couleurs
 src: ./slides/5.Couleurs.html
 ---
 
-
 ---
 title: Éléments obligatoires
 src: ./slides/6.Elements-obligatoires.html
+---
+
+---
+title: Présentation de l'information
+src: ./slides/7.Presentation-information.html
 ---
 
 ---
