@@ -63,7 +63,7 @@ transition: slide-up
 <h1>Présentation de l'information</h1>
 <h2 class="text-light">Les feuilles de style</h2>
 
-<p class="mbs-4xl!"><strong>Critères 10.1 et 10.2</strong></p>
+<p class="mbs-4xl!"><strong>Critères 10.1, 10.2 et 10.3</strong></p>
 
 <p v-click>
   Les feuilles de style (CSS) permettent de contrôler la présentation visuelle
@@ -90,7 +90,7 @@ transition: slide-up
 <h2 class="text-light">Les feuilles de style</h2>
 
 <p class="mbs-2xl! text-wrap!">
-  <strong>Critères 10.1</strong>
+  <strong>Critère 10.1.1</strong>
   <br/>
   <span class="italic">
     Dans le site web, des feuilles de styles sont-elles utilisées pour contrôler
@@ -143,7 +143,7 @@ transition: slide-up
 <h2 class="text-light">Les feuilles de style</h2>
 
 <p class="mbs-2xl! text-wrap!">
-  <strong>Critères 10.2</strong>
+  <strong>Critère 10.1.2</strong>
   <br/>
   <span class="italic">
     Dans chaque page web, les attributs servant à la présentation de
@@ -193,6 +193,8 @@ transition: slide-up
   </div>
 </div>
 
+<SlideFooter />
+
 <!-- prettier-ignore -->
 ---
 layout: default
@@ -205,15 +207,15 @@ transition: slide-up
 <div class="grid grid-cols-[5fr_3fr] gap-8xl">
   <div class="flex flex-col gap-3xl">
     <p class="mbs-2xl! text-wrap!">
-      <strong>Critères 10.3</strong>
+      <strong>Critère 10.1.3</strong>
       <span class="italic">
       Dans chaque page web, l’utilisation des espaces vérifie-t-elle ces conditions ?
       </span>
     </p>
     <ul class="italic text-sm -mbs-3xl">
-      <li>Les espaces ne sont pas utilisées pour séparer les lettres d’un mot</li>
-      <li>Les espaces ne sont pas utilisées pour simuler des tableaux</li>
-      <li>Les espaces ne sont pas utilisées pour simuler des colonnes de texte</li>
+      <li>Les espaces ne sont pas utilisés pour séparer les lettres d’un mot</li>
+      <li>Les espaces ne sont pas utilisés pour simuler des tableaux</li>
+      <li>Les espaces ne sont pas utilisés pour simuler des colonnes de texte</li>
     </ul>
     <Alert
       v-click="1"
@@ -247,5 +249,621 @@ transition: slide-up
     Merci&nbsp;de&nbsp;votre&nbsp;visite.&nbsp;À&nbsp;bientôt&nbsp;
   </div>
 </div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Le contenu dans le CSS</h2>
+
+<p class="mbs-2xl! text-wrap!">
+  <strong>Critère 10.2</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, le contenu visible porteur d’information reste-t-il présent lorsque les feuilles de styles sont désactivées ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">L'idée ici c'est de ne pas véhiculer d'information via le style CSS, Il faut donc éviter d'avoir :</p>
+
+<div class="grid grid-cols-2 gap-3xl">
+  <div>
+    <ListItem label="Du texte placé en CSS via la propriété content des pseudo-éléments <kbd>::before</kbd> et <kbd>::after</kbd>."/>
+    <div v-after class="mbs-xl mis-xl">
+```css
+ input[required]::after {
+   content: "*";
+ }
+
+ input[optional]::after {
+   content: "(Optional)";
+ }
+```
+    </div>
+  </div>
+
+
+  <div>
+    <ListItem label="Du contenu porteur d'information dans des images de fond."/>
+    <div v-after class="mbs-xl mis-xl">
+```css
+  .banner {
+    background-image: url('info-importante.png');
+  }
+```
+    </div>
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Exemple non conforme :</h2>
+
+<img v-click src="/images/boulanger-dyson.png" alt="">
+
+<p v-click class="text-center">L'image ci-dessus est insérée en <kdb>background-image</kdb> via CSS, le texte est donc complètement invisible lorsque CSS est désactivé</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Le contenu dans le CSS</h2>
+
+<p class="mbs-2xl! text-wrap!">
+  <strong>Critère 10.3</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, l’information reste-t-elle compréhensible lorsque les feuilles de styles sont désactivées ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">L'ordre des éléments dans le code source doit être logique et cohérent pour garantir une bonne compréhension de l'information.</p>
+
+<Alert
+  v-click
+  class="mbs-6xl!"
+  type="idea"
+  title="Note"
+  text="Les bandeaux de cookies doivent être systématiquement présents en premier dans le code HTML, car ils représentent une condition de consultation préalable. Visuellement, ils peuvent, en revanche, être présentés en bas de page."
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Exemple non conforme :</h2>
+ 
+<div class="flex gap-2xl mbs-3xl mis-3xl max-w-1/2 items-center">
+  <Alert v-click="3"
+  type="error"
+  title="Problème"
+  text="Des éléments sont répétés plusieurs fois dans le code source, ce qui peut prêter à confusion pour les utilisateurs de lecteurs d'écran."
+  />
+  <img v-click="1" src="/images/leboncoin-1.png" alt="" width="180px">
+</div>
+<img v-click="2" src="/images/leboncoin-2.png" alt="" width="400px" class="absolute top-xl end-xl">
+
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Agrandissement du texte</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critères 10.4</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, le texte reste-t-il lisible lorsque la taille des caractères est augmentée jusqu’à 200%, au moins ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">Certains utilisateur mal-voyants ont besoin d'agrandir la taille des caractères pour mieux lire le contenu.</p>
+<p v-click>Il y a plusieurs méthodes pour cela :</p>
+
+<ul class="mis-3xl">
+  <ListItem label="Augmenter la taille de texte dans les réglages du navigateur"/>
+  <ListItem label="Augmenter la valeur de zoom dans les réglages du navigateur"/>
+  <ListItem label="Via un dispositif sur la page permettant d'agrandir la taille des caractères"/>
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Agrandissement du texte</h2>
+
+<p v-click class="mbs-2xl!">Pour valider le critère, il faut tester une de ces 3 méthodes et vérifier que la totalité du contenu reste lisible.</p>
+
+<div class="mbs-3xl mx-auto max-w-1/2 flex flex-col gap-3xl items-center justify-center">
+  <Alert
+    v-click
+    type="warning"
+    title="Attention"
+    text="Vérifier que du texte ne débordre pas de sont conteneur ou qu'il n'y a pas d'apparition de barres de défilement horizontales."
+  />
+  <Alert
+    v-click
+    type="information"
+    title="Cas particulier"
+    text="Le texte dans les images ou les sous-titres des vidéos ne sont pas concernés par ce critère."
+  />
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Couleur de texte et de fond</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.5</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, les déclarations CSS de couleurs de fond d’élément et de police sont-elles correctement utilisées ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">Dès que l'on déclare une couleur de texte en css, il faut systematiquement déclarer une couleur de fond suffisament contrastée. (ou une couleur héritée)</p>
+
+<p>Il peut y avoir des cas ou un texte serait illisible :</p>
+<ul class="mis-4xl">
+  <ListItem label="La couleur de fond par défaut a été changée dans les réglages du navigateur."/>
+  <ListItem label="Un bloc a un fond image mais l'utilisateur a désactivé les images CSS."/>
+  <ListItem label="Un bloc a un fond image mais l'image ne s'est pas correctement chargée."/>
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les liens dans de du texte</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.6</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, chaque lien dont la nature n’est pas évidente est-il visible par rapport au texte environnant ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">Lorsqu'un paragraphe de texte contient un lien, il faut que ce lien soit clairement identifiable par rapport au reste du texte.</p>
+
+
+<div class="w-1/2 mx-auto mbs-4xl">
+  <Alert
+    type="warning"
+    title="Attention"
+    text="Attention toutefois à ne pas donner l'information <u>uniquement</u> par la couleur !"
+  />
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les liens dans de du texte</h2>
+
+<div class="grid grid-cols-2 gap-3xl items-start mbs-2xl">
+  <div class="flex flex-col">
+    <p>Pour que le critère soit conforme, il faut :</p>
+    <ul class="mis-2xl">
+      <ListItem label="Utiliser une couleur différente du texte environnant et avec un contraste > 3:1."/>
+      <ListItem label="Modifier le style visuel (ex : gras, italique, soulignée, etc.) au survol et à la prise de focus."/>
+      <ListItem label="Changer le curseur au survol."/>
+    </ul>
+    <Alert
+      v-click
+      class="mbs-2xl"
+      type="information"
+      title="Encore mieux !"
+      text="Il est recommandé d'indiquer les liens sortants par une icône spécifique, ou une indication textuelle."/>
+  </div>
+
+  <div class="flex flex-col">
+    <p v-click >Exemple sur le site de Louis Vuitton :</p>
+    <img v-after src="/images/louis-vuitton.png" alt="">
+    <Alert
+      v-click
+      type="error"
+      title="Non conforme"
+      text="Le lien est de la même couleur que le texte environnant et n'a pas de style visuel distinct au survol (il reste souligné)."/>
+  </div>
+  
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">La prise de focus</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.7</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, pour chaque élément recevant le focus, la prise de focus est-elle visible ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl! text-pretty!">De nombreuses personnes naviguent sans souris (au clavier, à la voix, etc.). Il est donc indispensable de savoir avec quel élément de la page on interagit.</p>
+<p v-click class="mbs-2xl! text-pretty!">Par défaut, la prise de focus est visible grâce à un contour bleu autour de l'élément mais il arrive fréquemment que ce contour soit supprimé ou difficile à voir.</p>
+<p v-click class="mbs-2xl! text-pretty! text-center">Exemple : </p>
+<div v-after class="flex gap-2xl justify-center">
+  <button class="px-xl py-xs! text-sm bg-coral-600 text-white rounded-xl">Bouton avec focus visible</button>
+  <button class="px-xl py-xs! text-sm bg-blue-600 text-white rounded-xl focus-visible:shadow-[none] focus-visible:rounded-xl">Bouton avec focus invisible</button>
+  <button class="px-xl py-xs! text-sm bg-teal-600 text-white rounded-xl">Bouton avec focus visible</button>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">La prise de focus</h2>
+
+<p class="mbs-2xl! text-pretty!">Les contours de focus sont souvent désactivés à la demande des designers qui estiment que cela nuit à l'esthétique de la page.</p>
+<p v-click class="text-pretty!">Cependant, il n'est obligatoire de conserver un contour visible pour la prise de focus, mais il faut absolument que la prise de focus soit visible d'une autre manière.</p>
+
+<div class="grid grid-cols-2 gap-2xl mx-4xl mbs-3xl">
+  <div v-click class="flex flex-col gap-lg">
+```css
+ *:focus {
+   outline: 2px solid blue; 
+ }
+```
+    <Alert 
+      type="warning"
+      title="Attention" 
+      text="Avec <kbd>:focus</kbd>, le contour est visible lorsque l'élément reçoit le focus, y compris au clic." 
+    />
+  </div>
+  <div v-click class="flex flex-col gap-lg">
+```css
+ *:focus-visible {
+   outline: 2px solid blue; 
+ }
+```
+    <Alert 
+      type="success"
+      title="Bonne pratique" 
+      text="Avec <kbd>:focus-visible</kbd>, le contour est visible lorsque l'élément reçoit le focus, mais pas au clic." 
+    />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les contenus cachés</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.8</strong>
+  <br/>
+  <span class="italic">
+    Pour chaque page web, les contenus cachés ont-ils vocation à être ignorés par les technologies d’assistance ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl! text-pretty!">Certains éléments peuvent être cachés visuellement comme le contenu d'une fenêtre modale, des onglets non actifs, ou des menus déroulants fermés, etc.</p>
+
+<Alert 
+  v-click
+  class="mbs-2xl! mx-8xl"
+  type="warning"
+  title="Attention !" 
+  text="Il faut alors s'assurer que ces contenus sont également cachés pour les technologies d'assistance !" 
+/>
+
+<div v-click class="mbs-2xl! grid grid-cols-2 gap-xl items-start">
+
+<Alert 
+  type="idea"
+  title="Astuce" 
+  text="L'attribut <kbd>inert</kbd> permet de rendre un élément et ses enfants inaccessibles aux technologies d'assistance." 
+/>
+
+```html
+<ul id="submenu" class="hidden" inert>
+  <li><a href="/lien1">Lien 1</a></li>
+  <li><a href="/lien2">Lien 2</a></li>
+</ul>
+```
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Présentation par la forme, la taille ou la position</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critères 10.9 et 10.10</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, l’information ne doit pas être donnée uniquement par la forme, taille ou position
+  </span>
+</p>
+
+<p v-click class="text-pretty!">Ce critère ressemble fort au 3.1 qui concerne la non-utilisation de la seule couleur pour transmettre l'information</p>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Présentation par la forme, la taille ou la position</h2>
+
+<p class="mbs-2xl! text-pretty!">Quelques exemples de non conformité :</p>
+
+<div class="grid grid-cols-2 gap-2xl items-center">
+  <ul>
+    <ListItem label="Utiliser uniquement la taille de police pour indiquer l'importance d'un texte."/>
+    <ListItem label="Utiliser uniquement la forme (ex : gras, italique, souligné) pour indiquer un état (ex : erreur, succès, etc.)."/>
+    <ListItem label='Donner des instructions sur la position, par exemple <i>"cliquez sur le bouton en haut à droite"</i>.'/> 
+    <ListItem label='Un graphique à barre sans indication de la valeur de chaque barre.'/> 
+  </ul>
+
+  <div class="flex flex-col gap-xl">
+    <Alert  v-click 
+      type="idea"
+      title="Astuce" 
+      text="Il faut toujours fournir une indication textuelle en plus de la forme, via l'attribut <strong>aria-label</strong> ou <strong>title</strong> par exemple." 
+    />
+    <Alert  v-click 
+      type="success"
+      title="Encore mieux !" 
+      text="Dans le cas des graphiques, il est recommandé de fournir une alternative textuelle ou un tableau de données." 
+    />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les petits écrans</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.11</strong>
+  <br/>
+  <span class="italic">
+    Pour chaque page web, les contenus peuvent-ils être présentés sans perte d’information ou de fonctionnalité et sans avoir recours soit à un défilement vertical pour une fenêtre ayant une hauteur de 256 px, soit à un défilement horizontal pour une fenêtre ayant une largeur de 320 px
+  </span>
+</p>
+
+
+<p v-click class="mbs-2xl! text-pretty!">Qu'est-ce que cela signifie concrètement ?</p>
+
+<div class="grid grid-cols-2 gap-2xl">
+  <Alert 
+    v-click
+    type="warning"
+    title="La page doit être consultable quelle que soit la taille de la fenêtre" 
+    text="Il faut s'assurer que le contenu de la page reste accessible et lisible sans avoir à faire défiler la page horizontalement ou verticalement dans une fenêtre de taille réduite comme un mobile par exemple."
+  />
+  <ul class="flex flex-col gap-md">
+    <ListItem label="Privilégier les mises en page adaptatives (responsives) en “Mobile-first“."/>
+    <ListItem label="Utiliser des unités relatives (%, em, rem) plutôt que des unités absolues (px, pt)"/>
+    <ListItem label="Eviter les éléments “sticky“ qui occupe une partie de l'écran dans une fenêtre de taille réduite."/>
+  </ul>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Exemple de non conformité</h2>
+
+<div class="grid grid-cols-2 gap-3xl mbs-5xl! items-end">
+  <div class="flex flex-col gap-xl">
+    <p class="mbe-0!">Le site de Renault : </p>
+    <img src="/images/renault-mobile.png" alt="">
+  </div>
+
+  <div class="flex flex-col gap-xl">
+    <Alert 
+      v-click
+      type="error"
+      title="Problème 1" 
+      text="Le menu de navigation principal utilise un élément sticky qui occupe une partie de l'écran, rendant le contenu principal difficilement accessible sur un petit écran." 
+    />
+    <Alert 
+      v-click
+      type="error"
+      title="Problème 2" 
+      text="Les blocs de texte dépassent la hauteur de la fenêtre, mais il est impossible de scroller dans le texte sans passer au texte suivant." 
+    />
+    </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Adaptation des textes</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.12</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, les propriétés d’espacement du texte peuvent-elles être redéfinies par l’utilisateur sans perte de contenu ou de fonctionnalité ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl! text-pretty!">La page doit rester lisible et compréhensible lorsque l’affichage est modifié selon ces conditions :</p>
+
+<ul class="mx-5xl">
+  <ListItem label="L’espacement entre les lignes (line-height) est augmenté jusqu’à 1,5 fois la taille de la police"/>
+  <ListItem label="L’espacement suivant les paragraphes (balise p) est augmenté jusqu’à 2 fois la taille de la police"/>
+  <ListItem label="L’espacement des lettres (letter-spacing) est augmenté jusqu’à 0,12 fois la taille de la police"/>
+  <ListItem label="L’espacement des mots (word-spacing) est augmenté jusqu’à 0,16 fois la taille de la police"/>
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Les élément apparaissant à la prise de focus</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.13</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, les contenus additionnels apparaissant à la prise de focus ou au survol d’un composant d’interface sont-ils contrôlables par l’utilisateur ? 
+  </span>
+</p>
+
+<p v-click class="mbs-2xl! text-pretty!">Les élément apparaissant à la prise de focus (tooltips) doivent :</p>
+
+<ul class="mx-4xl">
+  <ListItem label="Ne pas masquer d'autres contenus importants de la page."/>
+  <ListItem label="Pouvoir être atteints et survolés sans disparaitre"/>
+  <ListItem label="Pouvoir être fermés par l'utilisateur via la touche Échap."/>
+</ul>
+
+<Alert 
+  v-click
+  class="mbs-xl! mx-8xl"
+  type="information"
+  title="Cas particulier" 
+  text="Dans le cas des fenêtre modales, des sous menus ou les messages de validation native des formulaire, ce critère ne s'applique pas." 
+/>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Affichage des contenus additionels CSS</h2>
+
+<p class="mbs-2xl!">
+  <strong>Critère 10.14</strong>
+  <br/>
+  <span class="italic">
+    Dans chaque page web, les contenus additionnels apparaissant via les styles CSS uniquement peuvent-ils être rendus visibles au clavier et par tout dispositif de pointage ?
+  </span>
+</p>
+
+<p v-click class="mbs-2xl!">Les contenus qui apparaissent au survol d’un élément, au moyen de CSS, doivent apparaître également au clavier :</p>
+<ul class="mx-5xl">
+  <ListItem label="directement à la prise de focus d’un composant"/>
+  <ListItem label="ou à l’activation d’un composant ou d’une fonctionnalité"/>
+</ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: image-left
+image: /images/code.jpg
+transition: slide-left
+---
+
+<h1>Présentation de l'information</h1>
+
+<h2 class="text-light">À vous de jouer !</h2>
+
+<p class="text-center text-lg! font-bold! mbs-8xl!">
+  Retrouvez les erreurs d'accessibilité liées à la présentation de l'information sur
+  <a class="font-bold!" target="_blank" href="https://work.innorater.com/">
+    cette page
+  </a>
+</p>
 
 <SlideFooter />
