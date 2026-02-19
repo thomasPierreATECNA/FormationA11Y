@@ -4,7 +4,6 @@
   "editor.wordWrapColumn": 200,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-
   // Configuration spécifique pour les fichiers Markdown (Slidev)
   "[markdown]": {
     "editor.formatOnSave": false,
@@ -15,17 +14,18 @@
     },
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.trimAutoWhitespace": false,
     "files.trimTrailingWhitespace": false,
     "files.insertFinalNewline": false,
     "files.trimFinalNewlines": false
   },
-
   // Configuration pour les fichiers HTML (vos slides Slidev)
   "[html]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.html-language-features",
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
@@ -36,7 +36,6 @@
     },
     "emmet.triggerExpansionOnTab": true
   },
-
   // Configuration pour Vue (composants Slidev)
   "[vue]": {
     "editor.formatOnSave": true,
@@ -46,19 +45,16 @@
     },
     "emmet.triggerExpansionOnTab": true
   },
-
   // Activation d'Emmet pour Markdown avec support HTML
   "emmet.includeLanguages": {
     "markdown": "html",
     "vue-html": "html",
     "html": "html"
   },
-
   // Configuration Emmet
   "emmet.triggerExpansionOnTab": true,
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showSuggestionsAsSnippets": true,
-
   // Configuration Prettier pour respecter votre mise en page
   "prettier.printWidth": 80,
   "prettier.tabWidth": 2,
@@ -70,18 +66,15 @@
   "prettier.htmlWhitespaceSensitivity": "css",
   "prettier.vueIndentScriptAndStyle": false,
   "prettier.embeddedLanguageFormatting": "off",
-
   // Configuration spécifique Slidev
   "files.associations": {
     "*.vue": "vue",
     "*.md": "markdown"
   },
-
   // Autocomplétion et suggestions
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.acceptSuggestionOnEnter": "on",
-
   // Intellisense pour les classes CSS (Tailwind/UnoCSS)
   "tailwindCSS.includeLanguages": {
     "markdown": "html",
@@ -89,7 +82,13 @@
     "html": "html"
   },
   "tailwindCSS.experimental.classRegex": [
-    ["class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*)[\"'`]"],
-    ["classList:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*)[\"'`]"]
+    [
+      "class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+      "[\"'`]([^\"'`]*)[\"'`]"
+    ],
+    [
+      "classList:\\s*?[\"'`]([^\"'`]*).*?[\"'`]",
+      "[\"'`]([^\"'`]*)[\"'`]"
+    ]
   ]
 }

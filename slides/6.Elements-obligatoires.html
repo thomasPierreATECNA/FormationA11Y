@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="text-7xl!">Les éléments obligatoires</h1>
@@ -10,7 +10,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -29,21 +29,13 @@ transition: slide-up
       </strong>
       notamment par les lecteurs d'écran.
     </p>
-    <Alert
-      v-click
-      type="idea"
-      class="mbs-2xl"
-      title="Bon à savoir"
-      text="Les critères **8.1** et **8.2** sont aujourd'hui considérés comme obsolètes et doivent toujours être notés comme conforme lors d'un audit.<br/><br/>Ils seront retirés dans la prochaine version du RGAA."
-    />
+    <Alert v-click type="idea" class="mbs-2xl" title="Bon à savoir"
+      text="Les critères **8.1** et **8.2** sont aujourd'hui considérés comme obsolètes et doivent toujours être notés comme conforme lors d'un audit.<br/><br/>Ils seront retirés dans la prochaine version du RGAA." />
   </div>
 
   <div>
     <p v-click class="text-center">
-      <a
-        target="_blank"
-        href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8"
-      >
+      <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#8">
         Voir les 10 critères
         <carbon-arrow-right />
       </a>
@@ -56,7 +48,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -78,20 +70,14 @@ transition: slide-up
   le contenu de façon claire.
 </p>
 
-<!-- prettier-ignore -->
 <div v-click class="flex items-center gap-6xl mbs-4xl">
 ```html
-<html lang="fr">
-  <head>...</head>
-  <body>...</body>
-</html>
+  <html lang="fr">
+    <head>...</head>
+    <body>...</body>
+  </html>
 ```
-
-<Alert
-  type="warning"
-  title="Attention !"
-  text='Le code de la langue doit être <u>pertinent</u> et <u>valide</u> (conforme à la norme <a href="https://fr.wikipedia.org/wiki/ISO_639" target="_blank">ISO 639</a>).'
-/>
+<Alert type="warning" title="Attention !" text='Le code de la langue doit être <u>pertinent</u> et <u>valide</u> (conforme à la norme <a href="https://fr.wikipedia.org/wiki/ISO_639" target="_blank">ISO 639</a>).' />
 </div>
 
 <SlideFooter />
@@ -99,7 +85,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -130,11 +116,7 @@ transition: slide-up
 </html>
 ```
 
-<Alert
-  type="idea"
-  title="Bon à savoir"
-  text="Le lecteur d'écran se basera sur le code de langue pour adapter la prononciation et changera la voix si nécessaire."
-/>
+<Alert type="idea" title="Bon à savoir" text="Le lecteur d'écran se basera sur le code de langue pour adapter la prononciation et changera la voix si nécessaire." />
 </div>
 
 <SlideFooter />
@@ -142,7 +124,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -181,7 +163,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -213,7 +195,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -229,7 +211,7 @@ transition: slide-up
   l'historique du navigateur.
 </p>
 
-<p v-click class="mbs-4xl!"><strong>Quelques exemples :</strong></p>
+<p v-click class="mbs-2xl!"><strong>Quelques exemples :</strong></p>
 
 <!-- prettier-ignore -->
 <div v-after>
@@ -255,18 +237,15 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
 <h2 class="text-light">Le titre la page</h2>
 
 <div class="flex my-3xl">
-  <Alert
-    type="error"
-    title="Important !"
-    text="Certaines mentions doivent obligatoirement apparaître dans le titre de la page <br/> pour valider le **critère 8.6** sur la pertinence du titre."
-  />
+  <Alert type="error" title="Important !"
+    text="Certaines mentions doivent obligatoirement apparaître dans le titre de la page <br/> pour valider le **critère 8.6** sur la pertinence du titre." />
 </div>
 
 <p v-click class="mbs-3xl!">
@@ -297,7 +276,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -306,8 +285,8 @@ transition: slide-up
 <p class="mbs-4xl!"><strong>Critère 8.9</strong></p>
 
 <p v-click>
-  <strong>HTML 5 propose plus de 100 balises.</strong>
-  Il est fortement conseillé d'utiliser les balises sémantiques pour structurer
+  <strong>HTML 5 propose plus d'une centaine de balises.</strong>
+  Il est fortement conseillé d'utiliser des balises sémantiques pour structurer
   le contenu et ainsi faciliter la compréhension de la page par les technologies
   d'assistance.
 </p>
@@ -318,20 +297,15 @@ transition: slide-up
   titre pour afficher un texte en gros si ce n'est pas un titre de section.
 </p>
 
-<Alert
-  v-click
-  class="mbs-3xl"
-  type="warning"
-  title="Important !"
-  text="Il bien faut faire la différence entre la structure et la présentation.<br/>Le **CSS** est là pour la présentation, le **HTML** est pour la structure."
-/>
+<Alert v-click class="mbs-3xl" type="warning" title="Important !"
+  text="Il bien faut faire la différence entre la structure et la présentation.<br/>Le **CSS** est là pour la présentation, le **HTML** est pour la structure." />
 
 <SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les éléments obligatoires</h1>
@@ -343,26 +317,15 @@ transition: slide-up
 
 <ul class="mis-3xl mbs-3xl">
   <ListItem label="des <kbd>div</kbd> pour des paragraphes" />
-  <ListItem
-    label="des balises de titre <kbd>Hn</kbd> détournée pour le référencement ou pour le style."
-  />
-  <ListItem
-    label="des balises <kbd>p</kbd> vides pour creer de l'espacement entre les éléments."
-  />
-  <ListItem
-    label="des balises de lien <kbd>a</kbd> détournée pour déclencher des évènements."
-  />
+  <ListItem label="des balises de titre <kbd>Hn</kbd> détournée pour le référencement ou pour le style." />
+  <ListItem label="des balises <kbd>p</kbd> vides pour creer de l'espacement entre les éléments." />
+  <ListItem label="des balises de lien <kbd>a</kbd> détournée pour déclencher des évènements." />
   <ListItem label="une suite de <kbd>div</kbd> pour creer une liste à puces." />
   <ListItem label="etc..." />
 </ul>
 
-<Alert
-  v-click
-  class=" mx-auto"
-  type="idea"
-  title="Bon à savoir !"
-  text="Les balises **HTML** natives sont bien faites et en principe accessibles.<br />Plus le code est proche de la **syntaxe HTML standard**, plus il sera **accessible** !"
-/>
+<Alert v-click class=" mx-auto" type="idea" title="Bon à savoir !"
+  text="Les balises **HTML** natives sont bien faites et en principe accessibles.<br />Plus le code est proche de la **syntaxe HTML standard**, plus il sera **accessible** !" />
 
 <SlideFooter />
 
@@ -376,11 +339,7 @@ transition: slide-up
 <h2 class="text-light">Le respect de la semantique</h2>
 
 <p class="mbs-3xl!">
-  En
-  <strong>HTML</strong>
-  il est possible de changer la nature d'une balise avec l'attribut
-  <kbd>role</kbd>
-  , c'est très rarement une bonne idée !
+  En <strong>HTML</strong> il est possible de changer la nature d'une balise avec l'attribut <kbd>role</kbd>, c'est très rarement une bonne idée !
 </p>
 
 <p v-click class="mbs-2xl!"><strong>Exemple :</strong></p>
@@ -392,32 +351,7 @@ transition: slide-up
 ```
 </div>
 
-<Alert
-  v-after
-  class="mbs-3xl"
-  type="error"
-  title="À éviter !"
-  text="Ici, un lien est transformé en bouton pour déclencher une action JavaScript.<br/>C'est une mauvaise pratique car cela perturbe la compréhension de la page par les technologies d'assistance."
-/>
-
-<SlideFooter />
-
-<!-- prettier-ignore -->
----
-layout: image-left
-image: /images/code.jpg
-transition: slide-left
----
-
-<h1>Les éléments obligatoires</h1>
-
-<h2 class="text-light">À vous de jouer !</h2>
-
-<p class="text-center text-lg! font-bold! mbs-8xl!">
-  Retrouvez les erreurs d'accessibilité liées aux éléments obligatoires sur
-  <a class="font-bold!" target="_blank" href="https://work.innorater.com/">
-    cette page
-  </a>
-</p>
+<Alert v-after class="mbs-3xl" type="error" title="À éviter !"
+  text="Ici, un lien est transformé en bouton pour déclencher une action JavaScript.<br/>C'est une mauvaise pratique car cela perturbe la compréhension de la page par les technologies d'assistance." />
 
 <SlideFooter />

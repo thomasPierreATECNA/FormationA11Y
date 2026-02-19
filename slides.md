@@ -70,6 +70,11 @@ src: ./slides/3.Referentiels.html
 ---
 
 ---
+title: Une petite pause ?
+src: ./slides/pause-cafe.html
+---
+
+---
 title: Les Outils
 src: ./slides/4.Outils.html
 ---
@@ -85,13 +90,28 @@ src: ./slides/5.Couleurs.html
 ---
 
 ---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
 title: Éléments obligatoires
 src: ./slides/6.Elements-obligatoires.html
 ---
 
 ---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
 title: Présentation de l'information
 src: ./slides/7.Presentation-information.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
 ---
 
 ---

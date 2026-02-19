@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="!text-8xl">Le cadre légal.</h1>
@@ -11,7 +11,7 @@ transition: slide-up
 --- 
 layout: image-right 
 image: images/eu.jpg 
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -43,7 +43,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default 
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -58,11 +58,11 @@ transition: slide-up
 
 <div class="grid grid-cols-2 gap-2xl mbs-2xl items-start">
   <div
-    v-click
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }"
     class="flex flex-col gap-lg p-xl bg-lavander-100 border border-lavander-300 rounded-xl"
   >
     <h2 class="text-xl! font-semibold text-lavander-900">Le secteur public</h2>
-    <ul class="text-sm mis-xl flex flex-col">
+    <ul class="text-sm mis-xl flex flex-col gap-lg">
       <li>L'État et ses ministères.</li>
       <li>
         Les collectivités territoriales (Régions, Départements, Communes).
@@ -79,11 +79,11 @@ transition: slide-up
   </div>
 
   <div
-    v-click
-    class="flex flex-col gap-lg p-xl bg-green-100 border border-green-300 rounded-xl"
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }"
+    class="flex flex-col gap-lg px-xl py-sm bg-green-100 border border-green-300 rounded-xl"
   >
     <h2 class="text-xl! font-semibold text-green-900">Le secteur privé</h2>
-    <ul class="text-sm mis-xl flex flex-col">
+    <ul class="text-sm mis-xl flex flex-col gap-[0.5em]">
       <li>Les sites et applications de e-commerce.</li>
       <li>
         Services bancaires aux consommateurs. (applications, sites web,
@@ -107,13 +107,13 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default 
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
 <h2 class="text-xl text-light mbe-lg">Que dit la loi ?</h2>
 
-<p>Certaines entreprises du secteur privé sont exemptées de ces obligations</p>
+<p>Certaines entreprises du secteur privé sont exemptées de ces obligations.</p>
 
 <ul class="my-3xl mis-8xl">
   <ListItem label="Les entreprises de moins de 10 salariés." />
@@ -133,13 +133,13 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default 
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
 <h2 class="text-xl text-light mbe-lg">Quels sont les obligations légales ?</h2>
 
-<p class="mbs-7xl!">
+<p v-click class="mbs-7xl!">
   Pour être en conformité avec l'
   <strong>EAA,</strong>
   il faut :
@@ -162,32 +162,34 @@ transition: slide-up
 --- 
 layout: image-right 
 image: images/grille-audit.jpg
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
 <h2 class="text-xl text-light mbe-lg">L'audit de conformité</h2>
 
-<p v-click>
+<div class="flex flex-col gap-lg">
+  <p v-click>
   Il s'agit d'une évaluation approfondie de l'accessibilité numérique d'un site
   web selon des critères définis par les normes internationales (WCAG 2.2).
 </p>
 
-<p v-click>
-  L'audit doit être réalisé sur un échantillon représentatif de pages et
-  certaines pages doivent obligatoirement figurer dans cet échantillon.
-</p>
+  <p v-click>
+    L'audit doit être réalisé sur un échantillon représentatif de pages dont
+    certaines sont obligatoires.
+  </p>
 
-<p v-click>
-  Bien qu'il soit possible de s'autoévaluer, il est fortement recommandé de
-  faire appel à des experts en accessibilité pour garantir une évaluation
-  précise et objective.
-</p>
+  <p v-click>
+    Bien qu'il soit possible de s'autoévaluer, il est fortement recommandé de
+    faire appel à des experts en accessibilité pour garantir une évaluation
+    précise et objective.
+  </p>
+</div>
 
 <!-- prettier-ignore -->
 --- 
 layout: default
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -195,7 +197,7 @@ transition: slide-up
 
 <p v-click>
   Il s'agit d'une page ou d'un document accessible depuis toutes les pages du
-  site (idéalement situé dans le pied de page).
+  site (idéalement situé dans le footer).
 </p>
 
 <p v-click>
@@ -207,7 +209,7 @@ transition: slide-up
 <p v-click>Il doit y être mentionné le niveau de conformité atteint :</p>
 
 <ul class="mis-3xl mbe-xl">
-  <ListItem label="**Accessibilité conforme** si 100% de critère conformes" />
+  <ListItem label="**Accessibilité conforme** si 100% de critères conformes" />
   <ListItem
     label="**Accessibilité partiellement conforme** entre 50% et 99% de critères conformes"
   />
@@ -234,7 +236,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -277,7 +279,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -317,7 +319,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 --- 
 layout: default
-transition: slide-up 
+transition: slide-left 
 ---
 <h1>Le cadre légal</h1>
 
@@ -355,7 +357,7 @@ transition: slide-up
 ---
 layout: image-left
 image: images/code.jpg
-transition: slide-left
+transition: slide-up
 ---
 <h1>Le cadre légal</h1>
 

@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="text-6xl! leading-snug! text-center">
@@ -9,14 +9,12 @@ transition: slide-up
   de l'information
 </h1>
 
-<div v-after class="absolute start-[720px] top-[320px] scale-500">🔍</div>
-
 <SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -27,7 +25,7 @@ transition: slide-up
 <p v-click class="mbs-2xl!">
   👉🏼 La
   <strong>présentation</strong>
-  concerne ce que l'utilisateur persoit sur la page.
+  concerne ce que l'utilisateur perçoit sur la page.
 </p>
 
 <p v-click class="text-wrap!">
@@ -57,7 +55,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -83,7 +81,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -103,7 +101,7 @@ transition: slide-up
   exemple :
 </p>
 
-<div class="grid grid-cols-[1fr_2fr] items-center gap-xl mx-3xl">
+<div class="grid grid-cols-[1fr_2fr] items-start gap-xl mx-3xl">
   <ul v-click class="mis-3xl">
     <li><kbd>&lt;big&gt;</kbd></li>
     <li><kbd>&lt;blink&gt;</kbd></li>
@@ -115,7 +113,7 @@ transition: slide-up
     <li><kbd>&lt;tt&gt;</kbd></li>
   </ul>
 
-  <div class="flex flex-col gap-xl">
+  <div class="flex flex-col gap-xs">
     <Alert
       v-click
       type="warning"
@@ -136,7 +134,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -198,7 +196,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -244,7 +242,7 @@ transition: slide-up
     Règmement&nbsp;CB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-58,00€<br/>
     <br/>
     DOIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0,00€<br/>
-    DONT&nbsp;tva&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11,60€<br/>
+    DONT&nbsp;TVA&nbsp;(20%)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11,60€<br/>
     --------------------------------<br/>
     Merci&nbsp;de&nbsp;votre&nbsp;visite.&nbsp;À&nbsp;bientôt&nbsp;
   </div>
@@ -255,7 +253,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -305,7 +303,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -313,14 +311,14 @@ transition: slide-up
 
 <img v-click src="/images/boulanger-dyson.png" alt="">
 
-<p v-click class="text-center">L'image ci-dessus est insérée en <kdb>background-image</kdb> via CSS, le texte est donc complètement invisible lorsque CSS est désactivé</p>
+<p v-after class="text-center">L'image ci-dessus est insérée en <kdb>background-image</kdb> via CSS, le texte est donc complètement invisible lorsque CSS est désactivé</p>
 
 <SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -349,7 +347,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -371,7 +369,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -385,7 +383,7 @@ transition: slide-up
   </span>
 </p>
 
-<p v-click class="mbs-2xl!">Certains utilisateur mal-voyants ont besoin d'agrandir la taille des caractères pour mieux lire le contenu.</p>
+<p v-click class="mbs-2xl!">Certains utilisateur mal-voyants ont besoin d'agrandir la taille des caractères pour facilité la lecture.</p>
 <p v-click>Il y a plusieurs méthodes pour cela :</p>
 
 <ul class="mis-3xl">
@@ -399,7 +397,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -427,7 +425,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -443,7 +441,7 @@ transition: slide-up
 
 <p v-click class="mbs-2xl!">Dès que l'on déclare une couleur de texte en css, il faut systematiquement déclarer une couleur de fond suffisament contrastée. (ou une couleur héritée)</p>
 
-<p>Il peut y avoir des cas ou un texte serait illisible :</p>
+<p v-after>Il peut y avoir des cas ou un texte serait illisible :</p>
 <ul class="mis-4xl">
   <ListItem label="La couleur de fond par défaut a été changée dans les réglages du navigateur."/>
   <ListItem label="Un bloc a un fond image mais l'utilisateur a désactivé les images CSS."/>
@@ -455,7 +453,33 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
+---
+
+<h1>Présentation de l'information</h1>
+<h2 class="text-light">Couleur de texte et de fond</h2>
+
+<div class="grid grid-cols-3 gap-xl mbs-3xl">
+  <div class="flex flex-col gap-xs">
+    <h2 class="text-lg!">Un bloc sur le site d'IKEA</h2>
+    <img src="/images/ikea.png" alt="">
+  </div>
+  <div v-click class="flex flex-col gap-xs">
+    <h2 class="text-lg!">Images désactivées</h2>
+    <img src="/images/ikea-problem.png" alt="" class="border flex">
+  </div>
+  <div v-click class="flex flex-col gap-xs">
+    <h2 class="text-lg!">La solution proposée par IKEA</h2>
+    <img src="/images/ikea-solution.png" alt="">
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -469,23 +493,21 @@ transition: slide-up
   </span>
 </p>
 
-<p v-click class="mbs-2xl!">Lorsqu'un paragraphe de texte contient un lien, il faut que ce lien soit clairement identifiable par rapport au reste du texte.</p>
+<p v-click class="my-2xl!">Lorsqu'un paragraphe de texte contient un lien, il faut que ce lien soit clairement identifiable par rapport au reste du texte.</p>
 
 
-<div class="w-1/2 mx-auto mbs-4xl">
-  <Alert
-    type="warning"
-    title="Attention"
-    text="Attention toutefois à ne pas donner l'information <u>uniquement</u> par la couleur !"
-  />
-</div>
+<Alert v-click 
+  type="warning"
+  title="Attention"
+  text="Attention toutefois à ne pas donner l'information <u>uniquement</u> par la couleur !"
+/>
 
 <SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -524,7 +546,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -544,7 +566,7 @@ transition: slide-up
 <div v-after class="flex gap-2xl justify-center">
   <button class="px-xl py-xs! text-sm bg-coral-600 text-white rounded-xl">Bouton avec focus visible</button>
   <button class="px-xl py-xs! text-sm bg-blue-600 text-white rounded-xl focus-visible:shadow-[none] focus-visible:rounded-xl">Bouton avec focus invisible</button>
-  <button class="px-xl py-xs! text-sm bg-teal-600 text-white rounded-xl">Bouton avec focus visible</button>
+  <button class="px-xl py-xs! text-sm bg-teal-600 text-white rounded-xl focus-visible:shadow-[none] border border-transparent border-2 focus-visible:border-teal-700 focus-visible:rounded-xl">Bouton avec focus peu visible</button>
 </div>
 
 <SlideFooter />
@@ -552,40 +574,39 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
 <h2 class="text-light">La prise de focus</h2>
 
 <p class="mbs-2xl! text-pretty!">Les contours de focus sont souvent désactivés à la demande des designers qui estiment que cela nuit à l'esthétique de la page.</p>
-<p v-click class="text-pretty!">Cependant, il n'est obligatoire de conserver un contour visible pour la prise de focus, mais il faut absolument que la prise de focus soit visible d'une autre manière.</p>
 
 <div class="grid grid-cols-2 gap-2xl mx-4xl mbs-3xl">
-  <div v-click class="flex flex-col gap-lg">
+<div v-click class="flex flex-col gap-lg">
+<Alert 
+  type="warning"
+  title="Attention" 
+  text="Avec <kbd>:focus</kbd>, le contour est visible lorsque l'élément reçoit le focus, y compris au clic." 
+/>
 ```css
  *:focus {
    outline: 2px solid blue; 
  }
 ```
-    <Alert 
-      type="warning"
-      title="Attention" 
-      text="Avec <kbd>:focus</kbd>, le contour est visible lorsque l'élément reçoit le focus, y compris au clic." 
-    />
-  </div>
-  <div v-click class="flex flex-col gap-lg">
+</div>
+<div v-click class="flex flex-col gap-lg">
+<Alert 
+  type="success"
+  title="Bonne pratique" 
+  text="Avec <kbd>:focus-visible</kbd>, le contour est visible lorsque l'élément reçoit le focus, mais pas au clic." 
+/>
 ```css
  *:focus-visible {
    outline: 2px solid blue; 
  }
 ```
-    <Alert 
-      type="success"
-      title="Bonne pratique" 
-      text="Avec <kbd>:focus-visible</kbd>, le contour est visible lorsque l'élément reçoit le focus, mais pas au clic." 
-    />
-  </div>
+</div>
 </div>
 
 <SlideFooter />
@@ -593,7 +614,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -617,7 +638,7 @@ transition: slide-up
   text="Il faut alors s'assurer que ces contenus sont également cachés pour les technologies d'assistance !" 
 />
 
-<div v-click class="mbs-2xl! grid grid-cols-2 gap-xl items-start">
+<div v-click class="mbs-xl grid grid-cols-2 gap-xl">
 
 <Alert 
   type="idea"
@@ -638,7 +659,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -652,14 +673,14 @@ transition: slide-up
   </span>
 </p>
 
-<p v-click class="text-pretty!">Ce critère ressemble fort au 3.1 qui concerne la non-utilisation de la seule couleur pour transmettre l'information</p>
+<p v-click class="text-pretty!">Ce critère ressemble fort au 3.1 qui concerne la non-utilisation de la seule couleur pour transmettre l'information.</p>
 
 <SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -694,7 +715,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -730,40 +751,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
----
-
-<h1>Présentation de l'information</h1>
-<h2 class="text-light">Exemple de non conformité</h2>
-
-<div class="grid grid-cols-2 gap-3xl mbs-5xl! items-end">
-  <div class="flex flex-col gap-xl">
-    <p class="mbe-0!">Le site de Renault : </p>
-    <img src="/images/renault-mobile.png" alt="">
-  </div>
-
-  <div class="flex flex-col gap-xl">
-    <Alert 
-      v-click
-      type="error"
-      title="Problème 1" 
-      text="Le menu de navigation principal utilise un élément sticky qui occupe une partie de l'écran, rendant le contenu principal difficilement accessible sur un petit écran." 
-    />
-    <Alert 
-      v-click
-      type="error"
-      title="Problème 2" 
-      text="Les blocs de texte dépassent la hauteur de la fenêtre, mais il est impossible de scroller dans le texte sans passer au texte suivant." 
-    />
-    </div>
-</div>
-
-<SlideFooter />
-
-<!-- prettier-ignore -->
----
-layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -791,7 +779,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Présentation de l'information</h1>
@@ -805,7 +793,7 @@ transition: slide-up
   </span>
 </p>
 
-<p v-click class="mbs-2xl! text-pretty!">Les élément apparaissant à la prise de focus (tooltips) doivent :</p>
+<p v-click class="mbs-2xl! text-pretty!">Les élément apparaissant à la prise de focus (comme les tooltips par exemple) doivent :</p>
 
 <ul class="mx-4xl">
   <ListItem label="Ne pas masquer d'autres contenus importants de la page."/>
@@ -845,25 +833,5 @@ transition: slide-up
   <ListItem label="directement à la prise de focus d’un composant"/>
   <ListItem label="ou à l’activation d’un composant ou d’une fonctionnalité"/>
 </ul>
-
-<SlideFooter />
-
-<!-- prettier-ignore -->
----
-layout: image-left
-image: /images/code.jpg
-transition: slide-left
----
-
-<h1>Présentation de l'information</h1>
-
-<h2 class="text-light">À vous de jouer !</h2>
-
-<p class="text-center text-lg! font-bold! mbs-8xl!">
-  Retrouvez les erreurs d'accessibilité liées à la présentation de l'information sur
-  <a class="font-bold!" target="_blank" href="https://work.innorater.com/">
-    cette page
-  </a>
-</p>
 
 <SlideFooter />

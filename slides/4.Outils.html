@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="text-8xl!">Les outils.</h1>
@@ -10,7 +10,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les outils</h1>
@@ -22,31 +22,22 @@ transition: slide-up
 </p>
 
 <ul class="mis-2xl mbs-3xl flex flex-col gap-xl">
-  <ListItem
-    label="**Lighthouse** : <small>un outil intégré à Chrome qui permet de tester certains critères</small>"
-    image="/images/lighthouse.png"
-    link="https://developers.google.com/web/tools/lighthouse"
-  />
+  <ListItem label="**Lighthouse** : <small>un outil intégré à Chrome qui permet de tester certains critères</small>"
+    image="/images/lighthouse.png" link="https://developers.google.com/web/tools/lighthouse" />
   <ListItem
     label="**Axe Dev Tools** : <small>une extension pour analyser une page en profondeur, et lister les principaux problèmes</small>"
-    image="/images/axe.png"
-    link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd"
-  />
+    image="/images/axe.png" link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd" />
   <ListItem
     label="**WCAG Color Contrast Checker** : <small>permet de verifier et détecter les problemes de contraste de couleur</small>"
     image="/images/color-checker.png"
-    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf"
-  />
+    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf" />
   <ListItem
     label="**Headingsmap** : <small>Une extension qui permet d'afficher la structure de titre de la page</small>"
-    image="/images/headings-map.png"
-    link="https://chromewebstore.google.com/detail/flbjommegcjonpdmenkdiocclhjacmbi"
-  />
+    image="/images/headings-map.png" link="https://chromewebstore.google.com/detail/flbjommegcjonpdmenkdiocclhjacmbi" />
   <ListItem
     label="**Web Developper** : <small>Une très vielle extension qui permet de cacher ou supprimer certains éléments d'une page web</small>"
     image="/images/web-developper.png"
-    link="https://chromewebstore.google.com/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm"
-  />
+    link="https://chromewebstore.google.com/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm" />
 </ul>
 
 <SlideFooter />
@@ -57,14 +48,10 @@ layout: default
 transition: slide-left
 ---
 <div class="absolute inset-0 flex items-start gap-2xl p-xl">
-  <div>
+  <div class="mis-2xl mbs-xl">
     <h1>Les bookmarklets Access42</h1>
     <div v-click class="flex gap-xl items-center mbs-8xl">
-      <img
-        src="/logos/access42.png"
-        alt=""
-        class="w-[16rem] -mis-4xl mbe-3xl dark:invert"
-      />
+      <img src="/logos/access42.png" alt="" class="w-[16rem] -mis-4xl mbe-3xl dark:invert" />
       <div class="flex flex-col">
         <p>
           <a target="_blank" href="https://access42.net/">Access42</a>
@@ -92,7 +79,7 @@ transition: slide-left
 <!-- prettier-ignore -->
 ---
 layout: two-cols
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les lecteurs d'écran</h1>
@@ -119,24 +106,15 @@ transition: slide-up
 
 <ul class="mx-3xl mbs-3xl flex flex-col gap-xl">
   <li v-click>
-    <a
-      href="https://www.nvaccess.org/download/"
-      target="_blank"
-      rel="nofollow noopener"
-      class="font-bold!"
-    >
+    <a href="https://www.nvaccess.org/download/" target="_blank" rel="nofollow noopener" class="font-bold!">
       NVDA (NonVisual Desktop Access)
     </a>
     <br />
     un lecteur d'écran gratuit et open-source pour Windows.
   </li>
   <li v-click>
-    <a
-      href="https://www.freedomscientific.com/Products/Blindness/JAWS"
-      target="_blank"
-      rel="nofollow noopener"
-      class="font-bold!"
-    >
+    <a href="https://www.freedomscientific.com/Products/Blindness/JAWS" target="_blank" rel="nofollow noopener"
+      class="font-bold!">
       JAWS (Job Access With Speech)
     </a>
     <br />
@@ -144,29 +122,105 @@ transition: slide-up
     professionnel.
   </li>
   <li v-click>
-    <a
-      href="https://www.apple.com/accessibility/mac/vision/"
-      target="_blank"
-      rel="nofollow noopener"
-      class="font-bold!"
-    >
+    <a href="https://www.apple.com/accessibility/mac/vision/" target="_blank" rel="nofollow noopener"
+      class="font-bold!">
       VoiceOver
     </a>
     <br />
     un lecteur d'écran intégré aux appareils Apple, y compris macOS et iOS.
   </li>
   <li v-click>
-    <a
-      href="https://support.google.com/accessibility/android/answer/6007100?hl=fr"
-      target="_blank"
-      rel="nofollow noopener"
-      class="font-bold!"
-    >
+    <a href="https://support.google.com/accessibility/android/answer/6007100?hl=fr" target="_blank"
+      rel="nofollow noopener" class="font-bold!">
       TalkBack
     </a>
     <br />
     un lecteur d'écran intégré aux appareils Android.
   </li>
 </ul>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+<h1>Réaliser un audit d'accessibilité</h1>
+
+<h2 class="text-xl text-light">L'outil ARA</h2>
+
+<div class="grid grid-cols-2 gap-xl items-start">
+  <div>
+    <p v-click>
+      <strong>ARA</strong>
+      <span class="italic">(pour "Accessibilité, Rapport, Audit")</span>
+      est un outil gratuit mis à disposition par la
+      <strong>DINUM</strong>
+      pour faciliter les audits d'accessibilité
+      <strong>RGAA</strong>.
+    </p>
+    <p v-click>Il propose 3 types d'audits :</p>
+    <ul class="mis-xl flex flex-col gap-[5px]">
+      <div v-click v-motion :duration="250" :initial="{ x: 100 }" :enter="{ x: 0 }"
+        class="flex flex-col bg-lavander-100 border border-lavander-300 rounded-xl p-xs text-sm">
+        <b>L'audit rapide (25 critères)</b>
+        Idéal pour un diagnostic rapide. Il se concentre sur les erreurs les
+        plus bloquantes (images, contrastes, structure)
+      </div>
+      <div v-click v-motion :duration="250" :initial="{ x: 100 }" :enter="{ x: 0 }"
+        class="flex flex-col bg-orange-100 border border-orange-300 rounded-xl p-xs text-sm">
+        <b>L'audit complémentaire (50 critères)</b>
+        Un bon entre-deux pour aller un peu plus loin et améliorer la qualité
+        globale d'un site.
+      </div>
+      <div v-click v-motion :duration="250" :initial="{ x: 100 }" :enter="{ x: 0 }"
+        class="flex flex-col bg-success-100 border border-success-300 rounded-xl p-xs text-sm">
+        <b>L'audit complet (106 critères)</b>
+        Couvre l'intégralité des critères **RGAA** pour une évaluation
+        approfondie.
+      </div>
+    </ul>
+  </div>
+
+  <div class="flex flex-col gap-2xl -translate-y-4xl">
+    <Alert v-click type="idea" title="Bon à savoir"
+      text="La **DINUM** met également à disposition une grille d'audit au format [Excel](https://accessibilite.numerique.gouv.fr/ressources/kit-audit/)." />
+    <Alert v-click type="warning" title="Attention"
+      text="**L'audit complet** est le seul qui permet d'obtenir un taux de conformité légal et de générer une déclaration d'accessibilité officielle." />
+    <Alert v-click type="error" title="Important"
+      text="**Ara** ne fait pas l'audit à votre place ! Il vous guide pour que vous puissiez le faire sans rien oublier et vous aide à calculer le taux de conformité." />
+  </div>
+</div>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+<h1>Le RGAA</h1>
+
+<h2 class="text-xl text-light mbe-lg">L'outil d'audit ARA</h2>
+
+<p>Les avantages d'ARA sont nombreux :</p>
+
+<ul class="mbs-xl mis-3xl">
+  <ListItem label="Il est **gratuit** et **accessible en ligne**." />
+  <ListItem label="**Il est collaboratif** : Plusieurs personnes peuvent travailler ensemble sur un même audit." />
+  <ListItem label="**Il est structuré par thématique** : On coche les critères un par un." />
+  <ListItem
+    label="**Il permet de joindre des captures d'écran** : Pour chaque critère, on peut ajouter une preuve visuelle." />
+  <ListItem label="**Il permet de préciser L'impact de chaque critère** : Mineur, Majeur ou Bloquant." />
+  <ListItem
+    label="**Il contient l'aide intégrée** : Pour chaque critère, il explique ce qu'il faut vérifier et comment le vérifier." />
+  <ListItem
+    label="**Il génère des rapports détaillés** : Après l'audit, il crée automatiquement le rapport d'audit et la déclaration d'accessibilité au format conforme." />
+</ul>
+
+<div v-click class="text-3xl text-center mbs-xl">
+  <a target="_blank" href="https://ara.numerique.gouv.fr/">Démonstration</a>
+</div>
 
 <SlideFooter />

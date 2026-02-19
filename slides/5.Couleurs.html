@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="text-8xl!">Les couleurs</h1>
@@ -10,7 +10,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
@@ -37,10 +37,7 @@ transition: slide-up
 
   <div>
     <p v-click class="text-center">
-      <a
-        target="_blank"
-        href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3"
-      >
+      <a target="_blank" href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#3">
         Voir les 3 critères
         <carbon-arrow-right />
       </a>
@@ -53,7 +50,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
@@ -76,18 +73,10 @@ transition: slide-up
 </ul>
 
 <div class="grid grid-cols-2 gap-xl mbs-2xl items-start">
-  <Alert
-    v-click
-    type="success"
-    title="Solution"
-    text="On pourra utiliser des **indicateurs supplémentaires** comme une icône, du texte supplémentaire ou une décoration comme une bordure ou un texte en gras par exemple."
-  />
-  <Alert
-    v-click
-    type="idea"
-    title="Astuce"
-    text="Il faut également utiliser des attributs invisibles mais qui permettent de transmettre l'information via les lecteurs d'écran, comme un **title** ou un **aria-label** ou encore la propriété **aria-current=&quot;page&quot;**.    "
-  />
+  <Alert v-click type="success" title="Solution"
+    text="On pourra utiliser des **indicateurs supplémentaires** comme une icône, du texte supplémentaire ou une décoration comme une bordure ou un texte en gras par exemple." />
+  <Alert v-click type="idea" title="Astuce"
+    text="Il faut également utiliser des attributs invisibles mais qui permettent de transmettre l'information via les lecteurs d'écran, comme un **title** ou un **aria-label** ou encore la propriété **aria-current=&quot;page&quot;**.    " />
 </div>
 
 <SlideFooter />
@@ -95,44 +84,37 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
 <h2 class="text-light">L'information par la couleur</h2>
 
-<p class="mbs-3xl!"><strong>Exemple non conforme :</strong></p>
+<p class="mbs-xl!"><strong>Exemple non conforme :</strong></p>
 
-<div class="flex gap-xl items-center mbs-2xl">
+<div class="flex gap-xl items-center">
   <div class="shrink">
     <img src="/images/honda.png" alt="" class="w-full" />
   </div>
 
-  <div class="shrink-0 w-[200px]" v-click>
-    <p class="text-sm!">
+  <div class="shrink-0 w-[250px]" v-click>
+    <p>
       Ici le lien
       <strong>"Occasion"</strong>
       est uniquement identifié par sa couleur.
     </p>
-    <p class="text-sm!">
+    <p>
       On aurait pu ajouter un indicateur supplémentaire comme un trait de
       soulignement.
     </p>
   </div>
 
-  <Arrow
-    v-after
-    v-bind="{ color: '#df3623', x1:565, y1:150, x2:565, y2:245 }"
-  />
+  <Arrow v-after v-bind="{ color: '#df3623', x1:525, y1:100, x2:525, y2:220 }" />
 </div>
 
-<div class="flex justify-center mx-7xl mbs-xl">
-  <Alert
-    v-click
-    type="idea"
-    title="Astuce"
-    text='Pour les personnes non voyantes, il faut également ajouter une indication qui sera lue par les lecteurs d&apos;écran<br/>comme un attribut **aria-current="page"** ou un **title="Occasion - page courante"** par exemple.'
-  />
+<div class="flex mbs-sm">
+  <Alert v-click type="idea" title="Astuce"
+    text='Pour les personnes non voyantes, il faut également ajouter une indication qui sera lue par les lecteurs d&apos;écran<br/>comme un attribut **aria-current="page"** ou un **title="Occasion - page courante"** par exemple.' />
 </div>
 
 <SlideFooter />
@@ -140,7 +122,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
@@ -155,27 +137,14 @@ transition: slide-up
       cette information est indisponible pour les personnes non voyantes ou
       daltoniennes
     </p>
-    <Alert
-      v-click="1"
-      type="idea"
-      title="La preuve"
-      class="mbs-2xl"
-      text="Si on passe l'image en niveaux de gris, on ne distingue plus clairement l'information."
-    />
+    <Alert v-click="1" type="idea" title="La preuve" class="mbs-2xl"
+      text="Si on passe l'image en niveaux de gris, on ne distingue plus clairement l'information." />
   </div>
 
   <div class="shrink relative w-full h-full">
-    <img
-      alt=""
-      src="/images/color-calendar.png"
-      class="w-full absolute inset-inline-0 top-0 h-auto"
-    />
-    <img
-      v-click="1"
-      alt=""
-      src="/images/color-calendar.png"
-      class="w-full absolute inset-inline-0 top-0 h-auto grayscale"
-    />
+    <img alt="" src="/images/color-calendar.png" class="w-full absolute inset-inline-0 top-0 h-auto" />
+    <img v-click="1" alt="" src="/images/color-calendar.png"
+      class="w-full absolute inset-inline-0 top-0 h-auto grayscale" />
   </div>
 </div>
 
@@ -184,7 +153,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
@@ -200,7 +169,12 @@ transition: slide-up
     </p>
   </div>
 
-  <img src="/images/captcha-couleur.png" alt="" class="w-[400px]" />
+  <div class="shrink relative w-full h-full -mbs-6xl">
+    <img alt="" src="/images/captcha-couleur.png" class="w-full absolute inset-inline-0 top-0 h-auto" />/>
+    <img v-click="1" alt="" src="/images/captcha-couleur.png"
+      class="w-full absolute inset-inline-0 top-0 h-auto grayscale" />
+  </div>
+
 </div>
 
 <SlideFooter />
@@ -208,13 +182,13 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
 <h2 class="text-light">Les ratios de contraste</h2>
 
-<p class="mbs-2xl!">
+<p v-click class="mbs-2xl!">
   C'est surement la première règle à laquelle on pense lorsqu'on parle
   d'accessibilité.
 </p>
@@ -229,34 +203,25 @@ transition: slide-up
   doivent respecter des rapports de contraste minimums :
 </p>
 
-<div class="grid grid-cols-2 gap-xl items-start mbs-4xl">
-  <div
-    v-click
-    class="bg-coral-50 border border-coral-500 text-coral-950 rounded-xl p-sm"
-  >
+<div class="grid grid-cols-2 gap-xl mbs-2xl">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }"
+    class="flex flex-col bg-coral-50 border border-coral-500 text-coral-950 rounded-xl p-sm">
     <h3 class="text-ligher">Pour les textes</h3>
-    <ul class="text-sm mis-2xl mbs-lg! ">
-      <ListItem
-        v-after
-        label="\<= à **24px ou 18px gras**, le ratio minimum est de **4.5:1**."
-      />
-      <ListItem
-        v-after
-        label="\> à **24px ou 18px gras**, le ratio minimum est de **3:1**."
-      />
+    <ul class="mis-2xl mbs-lg! grow">
+      <li><strong>4.5:1</strong> pour les textes de taille normale*</li>
+      <li><strong>3:1</strong> pour les textes de grande taille*</li>
     </ul>
-    <p class="text-sm mbs-xl! text-cenrter">Critère 3.2 du RGAA.</p>
+    <p class="text-sm mbs-xs! italic">* 24px ou 18.5px pour les textes en gras</p>
+    <p class="text-sm mbs-xl! text-center">Critère 3.2 du RGAA.</p>
   </div>
 
-  <div
-    v-click
-    class="bg-lavander-50 border border-lavander-500 text-lavander-950 rounded-xl p-sm"
-  >
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }"
+    class="flex flex-col bg-lavander-50 border border-lavander-500 text-lavander-950 rounded-xl p-sm">
     <h3 class="text-ligher">Pour les éléments d'interface</h3>
-    <ul class="text-sm mis-2xl mbs-lg! ">
-      <ListItem v-after label="le ratio minimum est de **3:1**." />
+    <ul class="text mis-2xl mbs-lg! grow">
+      <li><strong>3:1</strong> pour tous les éléments d'interface interactifs</li>
     </ul>
-    <p class="text-sm mbs-xl! text-cenrter">Critère 3.3 du RGAA.</p>
+    <p class="text-sm mbs-xl! text-center">Critère 3.3 du RGAA.</p>
   </div>
 </div>
 
@@ -265,21 +230,19 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
 <h2 class="text-light">Les ratios de contraste</h2>
 
-<div class="grid grid-cols-[4fr_3fr] gap-xl items start">
+<div class="grid grid-cols-[3fr_4fr] gap-3xl items start mbs-xl">
   <div v-click="1">
-    <p class="mbs-2xl! text-wrap!">
+    <p class="text-wrap!">
       Ces ratios peuvent être sur la version par défaut de la page, ou activés
       via un
-      <a
-        target="_blank"
-        href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#mecanisme-qui-permet-d-afficher-un-rapport-de-contraste-conforme"
-      >
+      <a target="_blank"
+        href="https://accessibilite.numerique.gouv.fr/methode/glossaire/#mecanisme-qui-permet-d-afficher-un-rapport-de-contraste-conforme">
         mécanisme
       </a>
       qui permet d’afficher un rapport de contraste conforme.
@@ -291,13 +254,8 @@ transition: slide-up
       <strong>conforme au RGAA</strong>
       .
     </p>
-    <Alert
-      v-click="2"
-      class="mbs-4xl"
-      type="idea"
-      title="Astuce pour les développeurs"
-      text="Il est possible de parametrer des contrastes élevé via les **préférences d'accessibilité du système d'exploitation** et de récupérer cette préférence dans le **CSS** pour appliquer un style spécifique."
-    />
+    <Alert v-click="2" class="mbs-xl" type="idea" title="Astuce pour les développeurs"
+      text="Il est possible de parametrer des contrastes élevé via les **préférences d'accessibilité du système d'exploitation** et de récupérer cette préférence dans le **CSS** pour appliquer un style spécifique." />
   </div>
 
   <div v-click="1">
@@ -311,7 +269,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Les couleurs</h1>
@@ -322,18 +280,10 @@ transition: slide-up
 <p>Il existe des exceptions aux règles de contraste</p>
 
 <div class="flex flex-col gap-xl mx-8xl mbs-4xl">
-  <Alert
-    v-click
-    type="information"
-    title="Pour les textes"
-    text="Les logos, les nom de marque, les textes ou image de texte décoratifs et les éléments inactifs<br/>ne sont pas soumis aux règles de contraste."
-  />
-  <Alert
-    v-click
-    type="warning"
-    title="Pour les éléments d'interface"
-    text="les éléments ayant une alternative, les logos, les drapeau, les photos et les éléments inactifs<br/>ne sont pas soumis aux règles de contraste."
-  />
+  <Alert v-click type="information" title="Pour les textes"
+    text="Les logos, les nom de marque, les textes ou image de texte décoratifs et les éléments inactifs<br/>ne sont pas soumis aux règles de contraste." />
+  <Alert v-click type="warning" title="Pour les éléments d'interface"
+    text="les éléments ayant une alternative, les logos, les drapeau, les photos et les éléments inactifs<br/>ne sont pas soumis aux règles de contraste." />
 </div>
 
 <SlideFooter />
@@ -352,50 +302,12 @@ transition: slide-up
 </p>
 
 <ul class="mx-6xl">
-  <ListItem
-    label="**WCAG Color Contrast Checker**"
-    image="/images/color-checker.png"
-    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf"
-  />
-  <ListItem
-    label="**Lighthouse**"
-    image="/images/lighthouse.png"
-    link="https://developers.google.com/web/tools/lighthouse"
-  />
-  <ListItem
-    label="**Axe Dev Tools**"
-    image="/images/axe.png"
-    link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd"
-  />
+  <ListItem label="**WCAG Color Contrast Checker**" image="/images/color-checker.png"
+    link="https://chromewebstore.google.com/detail/plnahcmalebffmaghcpcmpaciebdhgdf" />
+  <ListItem label="**Lighthouse**" image="/images/lighthouse.png"
+    link="https://developers.google.com/web/tools/lighthouse" />
+  <ListItem label="**Axe Dev Tools**" image="/images/axe.png"
+    link="https://chromewebstore.google.com/detail/lhdoppojpmngadmnindnejefpokejbdd" />
 </ul>
-
-<SlideFooter />
-
-<!-- prettier-ignore -->
----
-layout: image-left
-image: /images/code.jpg
-transition: slide-up
----
-
-<h1>Les couleurs</h1>
-
-<h2 class="text-light">À vous de jouer !</h2>
-
-<p class="text-center text-lg! font-bold! mbs-8xl!">
-  Retrouvez les erreurs d'accessibilité liées aux couleurs sur
-  <a
-    class="font-bold!"
-    target="_blank"
-    href="https://webtestingcourse.dequecloud.com/desktops.php"
-  >
-    cette page
-  </a>
-</p>
-
-<!-- 
-- Problemes de contrastes 
-- Élément courant du menu indiqué uniquement par la couleur
--->
 
 <SlideFooter />

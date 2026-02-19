@@ -1,6 +1,6 @@
 ---
 layout: center
-transition: slide-up
+transition: slide-left
 ---
 
 <h1 class="text-8xl!">Introduction.</h1>
@@ -10,18 +10,18 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Préambule</h1>
 
-<p>
+<p class="text-2xl">
   Pour parler d'accessibilité numérique, on emploi souvent l'acronyme
   <b class="text-coral">a11y</b>
   .
 </p>
 
-<div class="mbs-6xl grid grid-cols-2 items-start gap-2xl">
+<div class="mbs-8xl grid grid-cols-2 items-start gap-2xl">
   <img v-click src="/images/A11Y.jpg" alt="" class="w-[500px] mx-auto" />
 
   <div>
@@ -69,7 +69,7 @@ t9n	  Translation
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <h1>Introduction</h1>
@@ -95,7 +95,7 @@ transition: slide-up
   <Alert
     type="idea"
     title="Idée reçue"
-    text="Bien que les personnes en situation de handicap soient au cœur des enjeux d'accessibilité, cette démarche s'avère bénéfique pour tous les usagers, quelles que soient leurs capacités."
+    text="Bien que les personnes en situation de handicap soient au cœur des enjeux d'accessibilité, cette démarche s'avère bénéfique pour <u>tous les usagers</u>, quelles que soient leurs capacités."
   />
 </div>
 
@@ -104,7 +104,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -130,7 +130,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -151,17 +151,19 @@ transition: slide-up
 <div class="flex mx-8xl p-5xl justify-center">
   <Alert
     v-click
-    class="scale-150 mbs-2xl"
+    class="scale-150"
     type="success"
-    title="Conclusion "
-    text="**Nous sommes <u class='text-success'>TOUS</u> concernés !**"
+    title="Conclusion"
+    text="**Nous sommes <u class='text-success'>TOUTES</u> et <u class='text-success'>TOUS</u> concernés !**"
   />
 </div>
+
+<SlideFooter />
 
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -190,14 +192,14 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
 <h2 class="text-2xl! text-light">Il existe 5 types de handicap :</h2>
 
 <div class="grid grid-cols-5 gap-sm -mx-3xl items-start mbs-5xl">
-  <div v-click class="bg-gray-100 p-xs rounded-lg border border-gray-400">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-gray-100 p-xs rounded-lg border border-gray-400">
     <h3 class="text-center text-lg! mbe-xl">SENSORIEL</h3>
     <p class="text-sm">
       5,4 millions de personnes atteintes de troubles auditifs.
@@ -207,13 +209,13 @@ transition: slide-up
     </p>
   </div>
 
-  <div v-click class="bg-green-100 p-xs rounded-lg border border-green-400">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-green-100 p-xs rounded-lg border border-green-400">
     <h3 class="text-center text-lg! mbe-xl">MOTEUR</h3>
     <p class="text-sm">3,5 millions de personnes en France.</p>
     <p class="text-sm">650.000 personnes équipées d'un fauteuil roulant</p>
   </div>
 
-  <div v-click class="bg-blue-100 p-xs rounded-lg border border-blue-400">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-blue-100 p-xs rounded-lg border border-blue-400">
     <h3 class="text-center text-lg! mbe-xl">MENTAL</h3>
     <p class="text-sm">
       On parle de handicap mental lorsque une personne éprouve des difficultés
@@ -226,7 +228,7 @@ transition: slide-up
     </ul>
   </div>
 
-  <div v-click class="bg-error-100 p-xs rounded-lg border border-error-400">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-error-100 p-xs rounded-lg border border-error-400">
     <h3 class="text-center text-lg! mbe-xl">PSYCHIQUE</h3>
     <p class="text-sm">Ce handicap est la conséquence d'une maladie.</p>
     <p class="text-sm">
@@ -235,10 +237,7 @@ transition: slide-up
     </p>
   </div>
 
-  <div
-    v-click
-    class="bg-lavander-100 p-xs rounded-lg border border-lavander-400"
-  >
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-lavander-100 p-xs rounded-lg border border-lavander-400">
     <h3 class="text-center text-lg! mbe-xl">COGNITIF</h3>
     <p class="text-sm">
       Ce type de handicap regroupe : les troubles dys, l'autisme, les maladies
@@ -247,7 +246,7 @@ transition: slide-up
   </div>
 </div>
 
-<p v-after class="!mbs-2xl text-sm italic text-end">
+<p v-click class="!mbs-2xl text-sm italic text-end">
   sources :
   <a
     target="_blank"
@@ -262,7 +261,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -275,27 +274,18 @@ transition: slide-up
   cinéma, il y a en moyenne :
 </p>
 
-<div class="flex mis-3xl mbs-xl items-center justify-between gap-5">
+<div class="grid grid-cols-[4fr_3fr] gap-sm mbs-3xl items-center justify-between">
   <ul>
     <ListItem label="**1 personne** aveugle" />
-    <ListItem label="**6 personnes** malvoyantes" />
+    <ListItem label="**5 personnes** malvoyantes" />
     <ListItem label="**23 personnes** sourdes ou malentendantes" />
-    <ListItem label="**15 personnes** daltoniennes" />
-    <ListItem label="**30 personnes** atteintes de troubles Dys" />
-    <ListItem label="**17 personnes** atteintes de trouble de la motricité" />
-    <ListItem label="**23 personnes** atteintes de handicap mental" />
+    <ListItem label="**12 personnes** daltoniennes" />
+    <ListItem label="**23 personnes** atteintes de troubles Dys" />
+    <ListItem label="**10 personnes** atteintes de troubles de la motricité" />
+    <ListItem label="**3 personnes** atteintes de handicap mental" />
   </ul>
 
-  <img
-    v-click
-    v-motion
-    :duration="250"
-    :initial="{ x: 500 }"
-    :enter="{ x: 0 }"
-    src="/images/handicap-chart.jpg"
-    alt=""
-    class="w-[500px]"
-  />
+  <Alert type="information" title="80% de ces handicaps sont invisibles." text="Dans la salle, vous ne remarqueriez probablement que 2 ou 3 personnes sur les 85 concernées. Pourtant, près d'un spectateur sur quatre a besoin d'un aménagement (sous-titres, rampe, audiodescription ou accueil spécifique) pour profiter du film comme les autres." />
 </div>
 
 <SlideFooter />
@@ -303,7 +293,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -358,7 +348,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -412,7 +402,7 @@ transition: slide-up
 ---
 layout: image-right
 image: images/fauteuil.jpg
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -429,7 +419,7 @@ transition: slide-up
 <!-- prettier-ignore -->
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 <h1>Introduction</h1>
 
@@ -470,7 +460,7 @@ transition: slide-up
 ---
 layout: image-left
 image: images/code.jpg
-transition: slide-left
+transition: slide-up
 ---
 <h1>Introduction</h1>
 
