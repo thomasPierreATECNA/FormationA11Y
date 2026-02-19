@@ -1,0 +1,171 @@
+---
+layout: center
+transition: slide-left
+---
+
+<h1 class="text-6xl! leading-snug! text-center">
+  Les liens
+</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les liens</h1>
+<h2 class="text-light">Thématique 6 du RGAA.</h2>
+
+<p v-click class="mbs-2xl!">
+  Un lien, c'est la porte vers une autre information : si l'utilisateur ne voit pas cette porte, qu'il ne sait pas où elle mène ou qu'il ne peut pas l'ouvrir, la navigation s'arrête.
+</p>
+
+<p v-click>
+  Un lien se doit d'être <u>clair</u>, <u>explicite</u>, <u>compréhensible</u> et <u>facilement identifiable</u> pour tous les utilisateurs, y compris ceux qui utilisent des technologies d'assistance.
+</p>
+
+<p v-click class="mbs-8xl! text-end">
+  <a
+    target="_blank"
+    href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#6"
+  >
+    Voir les 2 critères
+    <carbon-arrow-right />
+  </a>
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les liens</h1>
+<h2 class="text-light">Des liens explicites</h2>
+
+<p class="mbs-2xl!"><strong>Critères 6.1</strong></p>
+
+<p v-click>
+  Pour qu'un lien soit explicite, sont intitulé seul ou additioné à son contexte doit permettre à l'utilisateur de comprendre où il mène.
+</p>
+
+<p v-click>
+  Par exemple, dans un menu de navigation, les liens <u class="text-coral font-bold">"Accueil"</u>, <u class="text-coral font-bold">"Contact"</u> ou <u class="text-coral font-bold">"À propos"</u> sont généralement considérés comme explicites, car ils indiquent clairement leur destination.
+</p>
+
+<p v-click>
+  En revanche des liens comme <u class="text-coral font-bold">"Cliquez ici"</u>, <u class="text-coral font-bold">"En savoir plus"</u> ou <u class="text-coral font-bold">"Lire la suite"</u> peuvent être considérés comme non explicites, si le contexte n'est pas suffisant pour comprendre où ils mènent.
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les liens</h1>
+<h2 class="text-light">Donner du contexte</h2>
+<p class="mbs-2xl!"><strong>Critères 6.1</strong></p>
+
+<div class="grid grid-cols-2 gap-3xl items-start mbe-xl">
+  <div>
+    <p v-click>Les lecteurs d'écran vont restituer le lien selon le <u>"nom accessible"</u> du lien. Le nom accessible d'un élément interactif est déterminé par (dans cet ordre) :</p>
+    <ul class="mis-3xl">
+      <ListItem label="L'attribut <kbd>aria-labelledby</kbd>"/>
+      <ListItem label="L'attribut <kbd>aria-label</kbd>"/>
+      <ListItem label="Son contenu"/>
+      <ListItem label="L'attribut <kbd>title</kbd>"/>
+    </ul>
+  </div>
+
+  <div class="flex flex-col gap-xl">
+    <Alert type="warning" title="Donner du contexte" text="On peux donc donner des informations supplémentaires via les attributs ARIA pour améliorer l'accessibilité des liens." />
+    <Alert type="error" title="Attention !" text="Il est impératif que le contenu du lien soit repris dans le nom accessible, sinon le critère est non conforme." />
+  </div>
+</div>
+
+<div v-click>
+```html
+<a href="https://example.com" aria-label="Lire la suite de l'article sur l'accessibilité" aria-labelledby="8976">
+  Lire la suite.
+</a>
+```
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les liens</h1>
+<h2 class="text-light">Donner du contexte</h2>
+
+<p class="mbs-2xl!"><strong>Critères 6.1</strong></p>
+
+<p v-click>Les liens sortants doivent être clairement identifiés.<br/>On pourra alors utiliser une icone ou un texte indiquant que le lien est sortant.</p>
+
+<p v-after>
+  Exemple :
+    <a
+    target="_blank"
+    href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#6"
+  >
+    Voir les critères RGAA. <span class="text-xs">(lien sortant)</span>
+  </a>
+</p>
+
+<p v-click class="mbs-4xl!">Les liens vers des documents doivent également être clairement identifiés. C'est d'ailleurs une bonne pratique d'ajouter un texte indiquant le type de document (PDF, DOCX, etc.) et sa taille.</p>
+
+<p v-after>
+  Exemple :
+    <a
+    target="_blank"
+    download
+    href="https://accessibilite.numerique.gouv.fr/doc/rgaa4.1.2.modele-de-grille-d-audit.ods"
+  >
+    Télécharger la grille d'audit. <span class="text-xs">(.ods, 233ko)</span>
+  </a>
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les liens</h1>
+
+<div class="grid grid-cols-[2fr_3fr] gap-xl">
+<div>
+  <h2 class="text-light">Des liens clairs</h2>
+  <p class="mbs-2xl!"><strong>Critères 6.2</strong></p>
+
+  <p v-click>
+    Il arrive parfois qu'un lien n'ai tout simplement pas de nom accessible, Lorsqu'on utilise des pictogames ou des images par exemple.
+  </p>
+
+  <Alert v-click class="mbs-2xl" type="error" title="Non conforme !" text="Ici les liens vers les réseau sociaux de Kiabi ne sont pas accessibles car ils n'ont pas de nom accessible." />
+</div>
+
+<img v-click="1" src="/images/kiabi-link.png" alt="" class="border">
+</div>
+
+
+<SlideFooter />
+
+

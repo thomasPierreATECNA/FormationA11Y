@@ -115,6 +115,26 @@ src: ./slides/exercice.html
 ---
 
 ---
+title: Présentation de l'information
+src: ./slides/8.Structuration-information.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
+title: Présentation de l'information
+src: ./slides/9.Liens.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
 title: Merci ! 
 src: ./slides/fin.html
 ---

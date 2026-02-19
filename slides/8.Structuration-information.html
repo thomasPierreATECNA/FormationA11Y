@@ -1,0 +1,276 @@
+---
+layout: center
+transition: slide-left
+---
+
+<h1 class="text-6xl! leading-snug! text-center">
+  La présentation
+  <br/>
+  de l'information
+</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Thématique 9 du RGAA.</h2>
+
+<p v-click class="mbs-2xl!">
+  Une page complexe et dont la structure est mal pensée peut être très difficile à comprendre et a utiliser pour certains personnes.
+</p>
+
+<p v-click class="mbs-2xl!">
+  Ici on se concentre sur la manière dont le code source structure le contenu pour qu'il soit compréhensible, tant par les utilisateurs que par les technologies d'assistance (comme les lecteurs d'écran).
+</p>
+<p v-click class="mbs-8xl! text-end">
+  <a
+    target="_blank"
+    href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#9"
+  >
+    Voir les 14 critères
+    <carbon-arrow-right />
+  </a>
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les titres</h2>
+
+<p class="mbs-2xl!"><strong>Critères 9.1 et 9.2</strong></p>
+
+<p v-click>
+  La structure de titre de la page est primordiale pour hierarchiser l'information. Elle permet à un utilisateur de naviguer dans une page comme on parcourt la table des matières d'un livre.
+</p>
+
+<p>Il existe 6 niveaux de titres HTML (h1 à h6). <br/>L'ordre des titres doit être logique et cohérent dans une page web.</p>
+
+<div class="grid grid-cols-2 gap-4xl mbs-4xl items-start">
+  <Alert v-click type="idea" title="Idée reçue" text="Il n'est pas obligatoire d'utiliser un seul <kbd>h1</kbd> par page, même si cela a longtemps été conseillé notament pour le SEO."/>
+  <Alert v-click type="warning" title="Erreur classique" text="Passer d'un <kbd>h1</kbd> à un <kbd>h3</kbd> directement parce que le texte du <kbd>h1</kbd> était trop gros visuellement.<br/>L'aspect visuel doit être géré par le CSS, pas par le choix de la balise."/>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Un mauvais exemple :</h2>
+
+<div class="grid grid-cols-[1fr_3fr] gap-3xl mbs-xl items-center">
+  <p>Ici la structure de titre est incorrecte. Il est impossible de comprendre comment est structurée la page</p>
+  <img src="/images/decathlon-title.png" alt="" />
+</div>
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Un bon exemple :</h2>
+
+<div class="grid grid-cols-[1fr_3fr] gap-3xl mbs-xl items-center">
+  <p>Ici la structure de titre est correcte. On comprends comment est structurée la page</p>
+  <img src="/images/ikea-title.png" alt="" />
+</div>
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les listes</h2>
+
+<p class="mbs-2xl!"><strong>Critère 9.3</strong></p>
+
+<p v-click>
+  Il arrive fréquement que des éléments soient répétés dans une page web, comme par exemple : 
+</p>
+
+<ul v-after class="mis-3xl mbe-3xl">
+  <li>Des resultats de recherche</li>
+  <li>Des étapes à suivre dans un tunnel d'achat</li>
+  <li>Des caractéristiques d'un produit</li>
+  <li>Des liens de navigation dans un pied de page</li>
+  <li>Etc.</li>
+</ul>
+
+<p v-click>
+  Il est important que ces éléments soient structurés en liste dans le code source, pour que les utilisateurs de lecteurs d'écran puissent comprendre que ces éléments font partie d'un même groupe.
+</p>
+
+<p v-click>
+  Les lecteurs d'écran ont des commandes pour naviguer de liste en liste, et pour annoncer le nombre d'éléments dans une liste.
+</p>
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les listes</h2>
+
+<p class="mbs-xl!">
+  Il existe plusieurs façons de structurer une liste dans le code source, en fonction du contexte :
+</p>
+
+<div class="grid grid-cols-[3fr_3fr_4fr] gap-xs mbs-2xl">
+  <div class="flex flex-col gap-xl">
+    <p class="font-bold m-0!">Les listes simples</p>
+```html
+<ul>
+  <li>élement 1</li>
+  <li>élement 2</li>
+  <li>élement 3</li>
+</ul>
+```
+
+  <ul class="mis-2xl">
+    <li>élement 1</li>
+    <li>élement 2</li>
+    <li>élement 3</li>
+  </ul>
+  </div>
+
+  <div class="flex flex-col gap-xl">
+    <p class="font-bold m-0!">Les listes ordonnées</p>
+```html
+<ol>
+  <li>élement 1</li>
+  <li>élement 2</li>
+  <li>élement 3</li>
+</ul>
+```
+
+  <ol class="mis-2xl">
+    <li>élement 1</li>
+    <li>élement 2</li>
+    <li>élement 3</li>
+  </ol>
+  </div>
+
+  <div class="flex flex-col gap-xl">
+    <p class="font-bold m-0!">Les listes de description</p>
+```html
+<dl>
+   <dt>Élement 1 :</dt>
+   <dd>Description de l'élement 1</dd>
+   <dt>Élement 2 :</dt>
+   <dd>Description de l'élement 2</dd>
+   <dt>Élement 3 :</dt>
+   <dd>Description de l'élement 3</dd>
+</dl>
+```
+  <dl class="mis-2xl grid grid-cols-[1fr_2fr]">
+    <dt>Élement 1 :</dt>
+    <dd>Description de l'élement 1</dd>
+    <dt>Élement 2 :</dt>
+    <dd>Description de l'élement 2</dd>
+    <dt>Élement 3 :</dt>
+    <dd>Description de l'élement 3</dd>
+  </dl>
+  </div>
+</div>
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les listes</h2>
+
+<div class="flex gap-xl mbs-xl justify-around">
+  <div v-click class="flex flex-col gap-md">
+    <h2 class="m-0! text-lg!">Un bon exemple :</h2>
+    <img src="/images/leroy-merlin-liste.png" alt="" class="w-[240px]"/>
+  </div>
+
+  <div v-click class="flex flex-col gap-md">
+    <h2 class="m-0! text-lg!">Un mauvais exemple :</h2>
+    <img src="/images/vert-baudet-liste.png" alt="" class="w-[240px]"/>
+  </div>
+</div>
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les citations</h2>
+
+<p class="mbs-2xl!"><strong>Critère 9.4</strong></p>
+
+<p v-click>
+  Ce critère vise à s'assurer que les citations ne sont pas de simples blocs de texte perdus dans la page, mais qu'elles sont identifiables comme telles par les navigateurs et les lecteurs d'écran.
+</p>
+
+<img v-click src="/images/citation.png" alt="" class="w-[500px] border my-4xl shadow-lg">
+  
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Structuration de l'information</h1>
+<h2 class="text-light">Les citations</h2>
+
+<p v-click class="mbs-2xl!">
+  Il y a plusieurs façons de structurer une citation dans le code source, en fonction du contexte :
+</p>
+
+<ul class="mis-3xl">
+  <ListItem label="Une citation en block avec la balise <kbd>blockquote</kbd>"/>
+  <ListItem label="Une citation en ligne avec la balise <kbd>q</kbd>"/>
+</ul>
+
+<div class="mbs-3xl mx-8xl">
+  <Alert v-click type="idea" title="Bon à savoir !" text="Il est possible de citer l'auteur de la citation en utilisant l'attribut <kbd>cite</kbd> sur la balise <kbd>blockquote</kbd>, ou en utilisant la balise <kbd>cite</kbd> à l'intérieur de la citation."/>
+</div>
+
+<SlideFooter />
