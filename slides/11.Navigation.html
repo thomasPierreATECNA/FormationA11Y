@@ -1,0 +1,403 @@
+---
+layout: center
+transition: slide-left
+---
+
+<h1 class="text-6xl! leading-snug! text-center">
+  La navigation
+</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Thématique 12 du RGAA.</h2>
+
+<p v-click class="mbs-4xl!">Un site accessible est un site qui permet à tous les utilisateurs de naviguer facilement dans les pages et entre les pages.</p>
+<p v-click>Il est important de fournir une syntaxe claire et compréhensible, et surtout commune à tout le site.</p>
+<p v-click>Penez aux personnes non voyantes qui utilise un lecteur d'écran, elles doivent avoir une représentation mentale de la structure du site.</p>
+
+
+<p v-click class="text-end mbs-2xl!">
+  <a
+    target="_blank"
+    href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#12"
+  >
+    Voir les 11 critères
+    <carbon-arrow-right />
+  </a>
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les systemes de navigation</h2>
+
+<p class="mbs-2xl!"><strong>Critères 12.1, 12.2, 12.3, 12.4, et 12.5</strong></p>
+
+<p v-click>Le site doit proposer 2 systèmes de navigation parmi les suivants :</p>
+
+<ul class="mis-3xl mbe-lg">
+  <ListItem label="Un plan du site"/>
+  <ListItem label="Un menu de navigation principal"/>
+  <ListItem label="Un moteur de recherche"/>
+</ul>
+
+<p v-click class="text-wrap!">Et ces 2 systèmes doivent être positionnés à la même place, ou accessible à partie d'une fonctionalité indentique sur toutes les pages du site.</p>
+
+<div v-click class="flex">
+  <Alert type="idea" title="Bon à savoir" text="Le site peut être découpé en parcours différents qui doivent respecter ces rêgles de manière indépendante.<br/>Par exemple sur un site e-commerce : Les pages principales du site, la partie compte client, le tunnel de commande, etc."/>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les systemes de navigation</h2>
+
+<div class="grid grid-cols-[2fr_1fr] gap-3xl mbs-4xl items-center">
+  <img src="/images/decathlon-nav.png" alt="Exemple de navigation" class="rounded-lg border border-solid border-gray-200"/>
+  <div class="flex flex-col">
+    <p>Sur le site de <strong>Decathlon</strong>, on trouve un menu de navigation et un moteur de recherche principal en haut de page.</p>
+    <p>Ces 2 systèmes de navigation sont présents sur toutes les pages principales du site, et sont positionnés à la même place.</p>  
+  </div>
+</div>
+    
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">La page "plan du site"</h2>
+
+<p class="mbs-2xl!">Une page "plan du site" est une page qui présente la structure globale du site et permet de naviguer facilement entre les différentes rubriques.</p>
+
+<p v-click>Elle est très pratique pour les personnes qui ont du mal à se repérer dans un site complexe, mais elle doit respecter quelques rêgles :</p>
+
+<ul class="mis-3xl mbe-lg">
+  <ListItem label="Elle doit être accessible depuis toutes les pages du site, au même endroit"/>
+  <ListItem label="Elle doit représenter l'architecture globale du site"/>
+  <ListItem label="Tous les liens doivent être fonctionnels et accessibles"/>
+  <ListItem label="Tous les liens doivent bien renvoyer vers les bonnes pages"/>
+</ul>
+
+<p v-click class="text-end mbs-6xl!">Exemple sur le site de <strong><a href="https://www.fnac.com/navigation/plan.aspx" target="_blank">La Fnac</a></strong>.</p>
+    
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les zones de regroupement</h2>
+
+<p class="mbs-2xl!"><strong>Critère 12.6</strong></p>
+
+<p v-click>Il est important de décomposer les pages en zones de regroupement logiques, afin de permettre aux utilisateurs de mieux comprendre la structure du site et de naviguer plus facilement.</p>
+<p v-click>Il existe des balises HTML5 qui permettent de structurer les pages de manière sémantique :</p>
+
+<ul class="mis-3xl mbe-lg">
+  <ListItem label="<kbd>header</kbd> pour l'entête de la page (avec <kbd>role=“banner“</kbd>)"/>
+  <ListItem label="<kbd>footer</kbd> pour le pied de page (avec <kbd>role=“contentinfo“</kbd>)"/>
+  <ListItem label="<kbd>nav</kbd> pour les zones de navigation (avec <kbd>role=“navigation“</kbd>)"/>
+  <ListItem label="<kbd>main</kbd> pour le contenu principal (avec <kbd>role=“main“</kbd> doit être unique sur chaque page)"/>
+  <ListItem label="un élément avec <kbd>role=search</kbd> pour le moteur de recherche"/>
+</ul>
+
+   
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les zones de regroupement</h2>
+
+<div class="grid grid-cols-[3fr_4fr] gap-3xl items-center mbs-2xl">
+  <div v-click>
+    <p>Les outils d'assistance (comme les lecteurs d'écran) utilisent les balises sémantiques pour interpreter la structure des pages et faciliter la navigation.</p>
+    <p>Plus d'information sur <a href="https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/" target="_blank">le site de MDN</a> </p>
+  </div>
+  <img src="/images/landmark-roles.jpg" alt="">
+</div>
+
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les liens d'évitement ou d'accès rapide</h2>
+
+<p class="mbs-2xl!"><strong>Critère 12.7</strong></p>
+
+<p v-click>Lorsqu'on navigue sur un site web, on consulte en général plusieurs pages. Il faut alors parcourir à nouveau toute les éléments qui se situent avant le contenu principal comme l'entête, la recherche, la navigation, etc.</p>
+<p v-click>Cela peut être fastidieux. Les liens d'évitement ou d'accès rapide permettent de contourner ces éléments et d'accéder directement au contenu principal.</p>
+<p v-click>Il s'agit d'ancres vers les differentes sections de la page, souvent invisibles, placés en premier dans le code HTML et qui apparaisent à la prise de focus.</p>
+<p v-click class="text-end mbs-6xl!">Exemple sur le site de <strong><a href="https://www.leroymerlin.fr/" target="_blank">Leroy Merlin</a></strong>.</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les liens d'évitement ou d'accès rapide</h2>
+
+<p class="mbs-2xl!"><strong>Comment ça fonctionne ?</strong></p>
+
+<div class="grid grid-cols-2 gap-3xl items-start">
+```html
+<a href="#main-menu" class="skip-link">
+  Aller au menu principal
+</a>
+
+<a href="#main-content" class="skip-link">
+  Aller au contenu principal
+</a>
+
+<a href="#footer" class="skip-link">
+  Aller au footer
+</a>
+```
+
+```css
+.skip-link {
+  /* Les liens sont présent dans le code HTML */
+  /* mais sont positionnés hors de l'écran */
+  position: absolute;
+  left: -9999px;
+  top: 20px;
+  ...
+}
+
+.skip-link:focus-visible {
+  /* À la prise de focus */
+  /* ils sont repositionnés dans l'écran */
+  left: 20px;
+}
+```
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">L'ordre de tabulation</h2>
+
+<p class="mbs-2xl!"><strong>Critères 12.8</strong></p>
+
+<p v-click>L'ordre de tabulation correspond à l'ordre dans lequel les éléments interactifs d'une page sont parcourus lorsque l'on utilise la touche de tabulation du clavier.</p>
+<p v-click>Il est important de respecter un ordre de tabulation logique et cohérent, qui correspond à l'ordre visuel des éléments sur la page.</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">L'ordre de tabulation</h2>
+
+<div class="grid grid-cols-2 gap-xl mbs-4xl">
+  <div 
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" 
+    class="bg-error-50 p-lg rounded-lg border border-error-300 mbs-xl">
+    <p class="text-error mbe-3xl!"><strong>❌ Mauvais Exemple :</strong></p>
+    <div class="grid grid-cols-3 gap-xl">
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-3">Bouton 3</button>
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-1">Bouton 1</button>
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-5">Bouton 5</button>
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-2">Bouton 2</button>
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-4">Bouton 4</button>
+      <button class="px-xl py-xs! text-sm bg-error-500 hover:bg-error-700 text-white rounded-xl order-6">Bouton 6</button>
+    </div>
+  </div>
+
+  <div 
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" 
+    class="bg-success-50 p-lg rounded-lg border border-success-300 mbs-xl">
+    <p class="text-success mbe-3xl!"><strong>✅ Bon Exemple :</strong></p>
+    <div class="grid grid-cols-3 gap-xl">
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 1</button>
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 2</button>
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 3</button>
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 4</button>
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 5</button>
+      <button class="px-xl py-xs! text-sm bg-success-500 hover:bg-success-700 text-white rounded-xl">Bouton 6</button>
+    </div>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les "pièges au clavier"</h2>
+
+<p class="mbs-2xl!"><strong>Critères 12.9</strong></p>
+
+<p>Parfois, il peut arriver que certains éléments d'une page soient inaccessibles au clavier, ou que l'on puisse rester bloqué dans une zone de la page sans pouvoir en sortir. C'est ce qu'on appelle les "pièges au clavier".</p>
+<div 
+  v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" 
+  class="bg-slate-50 p-lg rounded-lg border border-slate-300 mbs-xl">
+  <p class="text-slate mbe-xl!"><strong>Exemple :</strong></p>
+  <div class="grid grid-cols-5 gap-sm">
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 1</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl" id="btn-2">Bouton 2</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 3</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 4</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 5</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 6</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 7</button>
+    <Btn class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl" label="Bouton 8" targetId="btn-2" />
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 9</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 10</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 11</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 12</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 13</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 14</button>
+    <button class="px-xl py-xs! text-sm bg-slate-500 hover:bg-slate-700 text-white rounded-xl">Bouton 15</button>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les "pièges au clavier"</h2>
+<p class="mbs-2xl!"><strong>Critères 12.9</strong></p>    
+
+<div class="grid grid-cols-[1fr_2fr] gap-xl items-center">
+  <div>
+    <p>Il existe cependant des cas où les "pièges au clavier" sont nécéssaires, par exemple dans les fenetre modales.</p>
+    <p>L'utilisateur de doit pas pouvoir sortir de la modale sans la fermer.</p>
+  </div>
+
+  <div 
+    v-click v-motion :duration="250" :initial="{ y: -300 }" :enter="{ y: 20 }"  
+    class="border border-slate-400 rounded-lg shadow-xl p-lg relative flex flex-col gap-2xl">
+    <button aria-label="fermer la modale" id="btn-close" class="absolute top-sm end-lg"><carbon-close /></button>
+    <strong>Lorem ipsum dolor sit amet</strong>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia molestias harum similique quos expedita. Repellendus laudantium quo fuga perspiciatis, atque quidem, mollitia velit impedit nobis sapiente nisi <a href="#">totam quam dolorum</a>!</p>
+    <div class="flex gap-xl justify-end">
+      <button class="px-xl py-xs! text-sm bg-slate-100 hover:bg-slate-300 border border-slate-500 rounded-xl">Annuler</button>
+      <Btn class="px-xl py-xs text-sm bg-blue-500 hover:bg-blue-700 text-white rounded-xl" label="Confirmer" targetId="btn-close" />
+    </div>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les raccourcis clavier</h2>
+
+<p class="mbs-2xl!"><strong>Critères 12.10</strong></p>
+
+<p v-click>Il est possible de proposer des raccourcis clavier pour accéder rapidement à certaines fonctionnalités du site, comme le moteur de recherche, le menu de navigation, etc.</p>
+<p v-click>Si ce raccourci n’utilise qu’une seule touche (lettre minuscule ou majuscule, ponctuation, chiffre ou symbole), il doit doit pouvoir être désactivé ou reconfiguré par l’utilisateur.</p>
+<p v-click>Si ce raccourci concerne un composant interactif (comme un bouton ou un lien), il doit être actif uniquement si le focus est positionné sur ce composant.</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>La navigation</h1>
+<h2 class="text-light">Les contenus additionnels</h2>
+
+<p class="mbs-2xl!"><strong>Critères 12.11</strong></p>
+
+<div class="grid grid-cols-[3fr_4fr] gap-xl items-start">
+  <img src="/images/tooltip.png" alt="">
+  <div>
+    <p v-click>Tous les contenus additionnels apparaissant au survol ou au focus d'un élément d'interface (infobulles) doivent :</p>
+    <ul class="mis-3xl mbe-lg">
+      <ListItem label="être accessibles au clavier (on doit pouvoir entrer via la tabulation sans qu'il ne soit refermé)"/>
+      <ListItem label="ne pas cacher de zones importantes de la page"/>
+      <ListItem label="pouvoir être désactivés lorsque le focus est déplacé en dehors de la zone ou via la touche “Echap“"/>
+    </ul>
+  </div>
+</div>
+
+<div v-click class="flex justify-end mbs-6xl">
+  <a  href="https://mui.com/material-ui/react-tooltip/" target="_blank">Les tooltips de Material UI</a>
+</div>
+
+
+
+
+<SlideFooter />

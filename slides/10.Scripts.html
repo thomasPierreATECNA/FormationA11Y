@@ -1,0 +1,461 @@
+---
+layout: center
+transition: slide-left
+---
+
+<h1 class="text-6xl! leading-snug! text-center">
+  Les Scripts
+</h1>
+
+<SlideFooter />
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Thématique 7 du RGAA.</h2>
+
+<div class="grid grid-cols-[3fr_4fr] gap-3xl items-start">
+  <div class="flex flex-col">
+    <p v-click class="mbs-2xl!">
+      La plupart des sites web utilisent <strong>JavaScript</strong> pour rendre les pages plus interactives et dynamiques. Ces scripts peuvent améliorer l'expérience utilisateur, mais peuvent aussi poser des problèmes d'accessibilité s'ils ne sont pas correctement implémentés.
+    </p>
+    <p v-click>
+      L'objectif de cette thématique est de s'assurer que les scripts utilisés sur une page web ne créent pas d'obstacles pour les utilisateurs qui n'utilisent pas de souris ou d'écran, ou qui utilisent des technologies d'assistance pour naviguer sur le web.
+    </p>
+  </div>
+
+  
+  <div class="flex flex-col gap-3xl">
+    <img v-click="1" v-motion :duration="250" :initial="{ x: 200 }" :enter="{ x: 0 }" src="/images/javascript.jpg" alt="javascript">
+    <p v-click class="text-center">
+      <a
+        target="_blank"
+        href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/#7"
+      >
+        Voir les 5 critères
+        <carbon-arrow-right />
+      </a>
+    </p>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Compatibilité des scripts</h2>
+
+<p class="mbs-2xl!"><strong>Critères 7.1 et 7.3</strong></p>
+
+<p v-click>
+  Pour que ce critère soit respecté, les scripts utilisés sur une page web doivent être compatibles avec les technologies d'assistance et les navigateurs utilisés par les personnes en situation de handicap. 
+</p>
+
+<p v-click>
+  Par exemple, si le survol d'un composant d’interface déclenche une action, il faut s'assurer que cette action peut être également déclenchée par d'autres moyens, pour les personnes qui n'utilisent pas de souris ou d'écran.
+</p>
+
+
+<p v-click>
+   Pour cela, il faut préciser :
+</p>
+
+<ul class="mis-3xl">
+  <ListItem label="**Son Nom :** Donner un nom accessible clair, ex &quot;Valider le formulaire&quot;"/>
+  <ListItem label="**Son Rôle :** Préciser ce qu'est le composant (un boutton, une case à cocher, un onglet, etc.) "/>
+  <ListItem label="**Son État :** Indiquer si le composant est activé, désactivé, sélectionné, coché, replié, etc."/>
+</ul>
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Un exemple sur apple.com</h2>
+
+<div class="mbs-3xl grid grid-cols-[2fr_1fr] gap-3xl items-center">
+  <video src="/videos/apple-script.mov" autoplay loop class="border rounded-md"></video>
+  <div>
+    <p>Dans cet exemple, le survol d'une catégorie du menu fait apparaitre un sous-menu.</p>
+    <p>Il est également possible de faire apparaitre le sous-menu en naviguant au clavier jusqu'au chevron situé à coté de la catégorie et en appuyant sur "Entré" ou "Espace".</p>
+    <p><a href="https://www.apple.com/fr/iphone/" target="_blank">apple.com/fr/iphone/ <carbon-arrow-right /></a></p>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">La bonne balise au bon endroit</h2>
+
+
+<div 
+  v-click 
+  v-motion :duration="250" :initial="{ x: 200 }" :enter="{ x: 0 }" 
+  class="mbs-sm bg-error-200 border border-error-300 p-sm rounded-md">
+<p class="text-sm">❌ Exemple non conforme</p>
+
+<div class="grid grid-cols-[1fr_1fr] gap-3xl items-center">
+```html
+<div onclick="openSubMenu(iphone)">iPhone</div>
+<div id="iphone">...</div>
+```
+<p>Bien que fonctionnel, cet exemple ne respecte pas les standards d'accessibilité.</p>
+</div>
+</div>
+
+<div 
+  v-click 
+  v-motion :duration="250" :initial="{ x: 200 }" :enter="{ x: 0 }" 
+  class="mbs-sm bg-success-200 border border-success-300 p-sm rounded-md">
+<p class="text-sm">✅ Exemple conforme</p>
+
+<div class="grid grid-cols-[1fr_1fr] gap-3xl items-center">
+```html
+<button 
+  onclick="openSubMenu(iphone)" 
+  aria-expanded="false"
+  aria-controls="iphone"
+  aria-label="Ouvrir le sous-menu iPhone"
+>iPhone</button>
+<div id="iphone">...</div>
+```
+<p>Ici on connait le rôle (button), l'état (non étendu), et les composants qui sont contrôlés (iphone).</p>
+</div>
+</div>
+
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Vérifions le code chez apple.com</h2>
+
+<img src="/images/apple-code.png" class="border rounded-md mbs-3xl w-[650px]">
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Proposer une alternative pertinente</h2>
+
+<p class="mbs-2xl!"><strong>Critères 7.2</strong></p>
+
+<p v-click>
+  Parfois, un script est tellement complexe (une carte interactive 3D, un graphique dynamique, un éditeur de photo en ligne) qu'il est impossible de le rendre 100 % accessible directement.
+</p>
+
+<p v-click>
+  Il se peut également que certains utilisateurs aient désactivé JavaScript dans leur navigateur, ou utilisent des navigateurs qui ne supportent pas certaines fonctionnalités JavaScript.
+</p>
+
+<p v-click>
+  Dans ce cas, il est essentiel de proposer une alternative qui donne accès aux même fonctionnalités ou au même contenu
+</p>
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Proposer une alternative pertinente</h2>
+
+<p class="mbs-4xl!">Pour qu'une alternative soit pertinente, elle doit remplir ces conditions :</p>
+
+<ul class="mis-3xl my-3xl">
+  <ListItem label="**Équivalence :** Est-ce que l'information transmise est la même ?"/>
+  <ListItem label="**Actualisation :** Si le script met à jour des données en temps réel, l'alternative doit aussi être mise à jour"/>
+  <ListItem label="**Facilité d'accès :** L'alternative doit être facile à trouver accessible dans la page où le script est utilisé."/>
+</ul>
+
+<div class="mx-8xl mbs-6xl">
+  <Alert v-click type="warning" title="À éviter !" text="L'alternative doit être utilisée en dernier recours, si le script est trop complexe ou impossible à rendre accessible directement."/>
+</div>
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Un exemple concret : un graphique de la bourse 📈</h2>
+
+
+<div class="grid grid-cols-[3fr_4fr] gap-3xl mbs-5xl items-stretch">
+  <div 
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" 
+    class="flex flex-col border rounded-md p-sm">
+    <p class="mbe-3xl!">Un graphique dynamique via Javascript :</p>
+    <img src="/images/charts.png" alt="">
+  </div>
+
+  <div 
+    v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" 
+    class="flex flex-col border rounded-md p-sm">
+    <p class="mbe-3xl!">Une alternative conforme :</p>
+    <p class="mbe-xl flex flex-col">
+      <span>260.58 <small>USD</small>.</span>
+      <span class="text-xs text-success-700 font-semibold">+13,88 (5,63 %) depuis 1 mois</span>
+    </p>
+    <p class="text-[10px] flex flex-col">
+      <span>Évolution du cours de l'actions Apple depuis 1 mois. Fermé: 20 févr., 04:48 UTC−5.</span>
+      <span>Avant l'ouverture <span class="text-success-700"> 261,33 +0,75 (0,29 %)</span></span>
+      <a href="#" class="text-slate-900! underline-slate-900!">Clause de non-responsabilité</a>
+    </p>
+    <table class="border text-[10px] w-full">
+      <thead class="bg-slate-100">
+        <tr>
+          <td>17 Janvier</td>
+          <td>23 Janvier</td>
+          <td>29 Janvier</td>
+          <td>4 Février</td>
+          <td>9 Février</td>
+          <td>13 Février</td>
+          <td>19 Février</td>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <tr>
+          <td>$ 242.21</td>
+          <td>$ 263.48</td>
+          <td>$ 278.54</td>
+          <td>$ 279.15</td>
+          <td>$ 252.08</td>
+          <td>$ 258.84</td>
+          <td>$ 242.23</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">La balise <kbd class="text-2xl!">noscript</kbd></h2>
+
+<p class="my-3xl!">La balise <kbd>noscript</kbd> permet de fournir un contenu alternatif pour les utilisateurs qui ont désactivé JavaScript dans leur navigateur :</p>
+
+```html
+<div id="chart" />
+
+<script src="charts.js"></script>
+
+<noscript>
+  <p>Votre navigateur ne supporte pas JavaScript ou celui-ci est désactivé.</p>
+
+  ...
+</noscript>
+```
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Les changement de contexte</h2>
+
+<p class="mbs-2xl!"><strong>Critères 7.4</strong></p>
+
+<p v-click>
+  Si un script initie un changement de contexte, il est important de s'assurer que l'utilisateur en est informé et qu'il peut revenir facilement à l'état précédent.
+</p>
+
+<p v-click>
+  Un changement de contexte peut être : 
+</p>
+
+<ul class="mx-3xl mbe-3xl">
+  <ListItem label="Un changement de vue en cours, comme une pagination, ou un rafraîchissement de la page"/>
+  <ListItem label="Une redirection vers une autre page"/>
+  <ListItem label="L'ouverture d'une nouvelle fenêtre ou d'une fenêtre modale"/>
+  <ListItem label="Lancement d'un téléchargement de fichier"/>
+</ul>
+
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Les changement de contexte</h2>
+
+<p class="mbs-2xl!"><strong>Critères 7.4</strong></p>
+
+<p>
+  Pour que ce critère soit respecté, il faut :
+</p>
+
+<ul class="mx-3xl mbe-3xl">
+  <ListItem label="**Avertir l'utilisateur** avec un message clair, exemple: *“Vous allez être redirigé dans 10 secondes.“*"/>
+  <ListItem label="**Permettre d'annuler ou revenir en arrière** via un bouton de retour qui à le focus ou la touche *“Echap“*"/>
+</ul>
+
+<div class="grid grid-cols-2 gap-3xl">
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-error-50 p-xs rounded-lg border border-error-400">
+    <p class="font-bold text-error">❌ Exemple de défaut :</p>
+    <p class="text-sm">Un site de banque affiche un message : <br><b><i>“Votre session a expiré, merci de vous reconnecter.“</i></b>. <br>et un script ferme automatiquement la session sans laisser à l'utilisateur la possibilité de rester connecté.</p>
+  </div>
+
+  <div v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: 0 }" class="bg-success-100 p-xs rounded-lg border border-success-400">
+    <p class="font-bold text-success">✅ Correction :</p>
+    <p class="text-sm">une fenêtre apparaît : <br><b><i>“Pour votre sécurité, votre session va expirer dans 2 minutes. Voulez-vous continuer ?“</i></b><br>avec un bouton <b><i>“Continuer“</i></b>.</p>
+  </div>
+</div>
+
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Les messages de status</h2>
+
+<p class="mbs-2xl!"><strong>Critères 7.5</strong></p>
+
+<p v-click>
+  Il arrive parfois qu'un message soit affiché à l'utilisateur suite à une action, comme la validation d'un formulaire, ou l'ajout d'un produit au panier, etc.
+</p>
+
+<p v-click>
+  Il est important de s'assurer que ce message soit bien visible, accessible et correctement vocalisés par les lecteurs d'écran.
+</p>
+
+<p v-click>Il peut s'agir d'un message de :</p>
+
+<ul class="mx-3xl mbe-xl">
+  <ListItem label="**✅ Succès** : *“Votre message à bien été envoyé.”*, *“Article ajouté au panier.”*, etc."/>
+  <ListItem label="**❌ Erreur** : *Votre paiement à échoué.”*, *“Cet article n'est plus disponible.”*, etc."/>
+  <ListItem label="**⏳ Attente** : *“Téléchargement en cours... (40%)”*, *“Une opération est en cours, merci de patienter.“*, etc."/>
+</ul>
+
+<p v-click>
+  Il important de préciser la nature du message (succès, erreur, attente) et pas uniquement par la couleur !
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Les rôles de message</h2>
+
+<p class="mbs-2xl!">
+  Il existe des rôles ARIA spécifiques pour les messages de status, en fonction de leur nature et de leur importance :
+</p>
+
+<ul class="mx-3xl mbe-xl">
+  <ListItem label='<kbd>role="status"</kbd> pour un message de statut général ou de conseil'/>
+  <ListItem label='<kbd>role="alert"</kbd> pour un message d&apos;alerte important.'/>
+  <ListItem label='<kbd>role="log"</kbd> pour un message de log comme un historique d&apos;actions.'/>
+  <ListItem label='<kbd>role="progressbar"</kbd> pour un message indiquant la progression d&apos;une opération.'/>
+</ul>
+
+<p v-click>
+  Chacun de ces rôles a des caractéristiques spécifiques en termes de vocalisation et de priorité d'annonce par les lecteurs d'écran, il est donc important de choisir le rôle approprié pour chaque message.
+</p>
+
+<p v-click>
+  Par exemple, un message avec <kbd>role="alert"</kbd> sera vocalisé immédiatement et interrompra la lecture en cours, tandis qu'un message avec <kbd>role="status"</kbd> sera vocalisé de manière plus discrète et n'interrompra pas la lecture en cours.
+</p>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-up
+---
+
+<h1>Les scripts</h1>
+<h2 class="text-light">Les attributs ARIA pour les messages de status</h2>
+
+<p class="mbs-4xl!">
+  Il est tout à fait possible de modifier la priorité d'annonce d'un message de status en utilisant les attributs ARIA suivants :
+</p>
+
+<ul class="mx-3xl my-3xl">
+  <ListItem label='<kbd>aria-live="polite"</kbd> pour attendre que la lecture en cours soit terminée avant d&apos;annoncer le message.'/>
+  <ListItem label='<kbd>aria-live="assertive"</kbd> pour interrompre la lecture en cours et annoncer le message immédiatement.'/>
+  <ListItem label='<kbd>aria-live="off"</kbd> pour ne pas annoncer le message du tout.'/>
+  <ListItem label='<kbd>aria-atomic="true"</kbd> pour annoncer le message en entier, même si seul une partie du message a été mise à jour.'/>
+</ul>
+
+
+<SlideFooter />

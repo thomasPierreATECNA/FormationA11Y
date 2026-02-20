@@ -135,6 +135,36 @@ src: ./slides/exercice.html
 ---
 
 ---
+title: Présentation de l'information
+src: ./slides/10.Scripts.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
+title: Présentation de l'information
+src: ./slides/11.Navigation.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
+title: Présentation de l'information
+src: ./slides/12.Formulaires.html
+---
+
+---
+title: À vous de jouer !
+src: ./slides/exercice.html
+---
+
+---
 title: Merci ! 
 src: ./slides/fin.html
 ---
