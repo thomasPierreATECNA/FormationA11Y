@@ -18,8 +18,10 @@ transition: slide-left
 <h1>Les formulaires</h1>
 <h2 class="text-light">Thématique 11 du RGAA.</h2>
 
-<p v-click class="mbs-4xl!">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis veritatis accusamus, doloremque tenetur nesciunt nihil eaque saepe suscipit? Placeat possimus autem consectetur. Provident quod fuga modi consectetur, aspernatur eveniet repellendus.</p>
-<p v-click>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam fuga maiores unde, expedita soluta exercitationem quo eum facere vitae blanditiis dicta. Voluptatibus asperiores ad eos necessitatibus. Eligendi a facere deleniti?</p>
+<p v-click class="mbs-4xl!">C'est une des thématiques les plus importantes de l'accessibilité web. Elle concerne la manière dont les formulaires sont structurés et présentés pour que tous les utilisateurs puissent les remplir facilement.</p>
+<p v-click>Les formulaires sont partout sur le web, pour s'abonner à un service, pour effectuer un paiement, pour envoyer un message, etc.</p>
+<p v-click>Il est imporant de rendre la saisie des données accessible à tous les utilisateurs, y compris ceux qui utilisent des outils d'assistance comme les lecteurs d'écran.</p>
+
 
 
 <p v-click class="text-end mbs-2xl!">
@@ -45,5 +47,409 @@ transition: slide-left
 <h2 class="text-light">Les étiquettes de champs</h2>
 
 <p class="mbs-2xl!"><strong>Critères 11.1, 11.2, 11.3, et 11.4</strong></p>
+
+<div class="grid grid-cols-2 gap-3xl items-start mbs-3xl">
+  <div class="grid grid-cols-2 gap-xl">
+    <div class="col-span-2">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-2">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-1">
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-1">
+      <label for="email">Email</label>
+      <input type="email" id="email" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+  </div>
+
+  <div class="-mbs-5xl">
+    <p v-click>Il est primordial de bien indentifier chaque champs d'un formulaire avec une étiquette associée.</p>
+    <p v-click>Il peut s'agir d'une balise <kbd>label</kbd> ou encore d'un attribut <kbd>aria-label</kbd>, <kbd>aria-labelledby</kbd> ou <kbd>title</kbd>.</p>
+    <p v-click>Les étiquettes doivent être claires, concrètes et explicites, il ne doit pas y avoir d'ambiguïté.</p>
+    <p v-click>Par exemple: <br>"Numéro de téléphone" ou lieu de "Tel."</p>
+    <div v-click>
+```html
+<label for="email-field">Votre email :</label>
+<input id="email-field" type="email" />
+```
+    </div>
+  </div>
+</div>
+
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les étiquettes de champs</h2>
+
+<p class="mbs-2xl!"><strong>L'attribut placeholder</strong></p>
+
+<div class="grid grid-cols-2 gap-3xl items-start mbs-3xl">
+  <div class="grid grid-cols-2 gap-xl">
+    <div class="col-span-2">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" placeholder="Ex. John" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-2">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" placeholder="Ex. Doe" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-1">
+      <label for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" placeholder="Ex. 0320456526" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+    <div class="col-span-1">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Ex. john.doe@example.com" class="border border-gray-300 rounded px-3 py-2 w-full">
+    </div>
+  </div>
+
+  <div class="-mbs-8xl">
+    <p v-click>Il est possible de guider l'utilisateur avec des placeholders qui donnent un exemple de saisie attendue.</p>
+    <p v-click>Il est important de ne pas utiliser les placeholders comme étiquettes de champs, car ils disparaissent à la saisie et ne sont pas vocalisés par les lecteurs d'écran.</p>
+    <p v-click>Le type du champs permet d'indiquer au navigateur comment valider les données saisies. Par exemple: <kbd>type="email"</kbd>, <kbd>type="tel"</kbd>, etc.</p>
+    <div v-click>
+```html
+<label for="email-field">Votre email :</label>
+<input id="email-field" 
+  type="email" 
+  placeholder="Ex. john.doe@example.com"
+/>
+```
+    </div>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les étiquettes de champs</h2>
+
+<p class="mbs-2xl!"><strong>Critères 11.1, 11.2, 11.3, et 11.4</strong></p>
+
+<div class="grid grid-cols-[5fr_3fr] gap-xl">
+  <div>
+    <p>En résumé, chaque champ d'un formulaire doit être accompagné d'une étiquette</p>
+    <ul class="mis-3xl">
+      <ListItem label="Claire et pertinente, elle doit permet d'en déduire le rôle."/>
+      <ListItem label="Identique pour tous les formulaires de la même page ou du même site (exempe : courriel ou email)."/>
+      <ListItem label="Accolée au champ qu'elle décrit <br/>(immediatement au dessus ou à gauche en ltr)."/>
+      <ListItem label="Préciser si le champ est requis ou non <br/>(sauf si tous les champs sont requis)."/>
+    </ul>
+  </div>
+
+  <img v-click v-motion :duration="250" :initial="{ y: 100 }" :enter="{ y: -190 }" src="/images/leroy-merlin-form.png" alt="" >
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les regroupements de champs</h2>
+
+<p class="mbs-2xl!"><strong>Critères 11.5, 11.6 et 11.7</strong></p>
+
+<div class="grid grid-cols-[5fr_3fr] gap-xl">
+  <div>
+    <p>Lorsqu'un formulaire contient de nombreux champs, il est important de les regrouper par champs de même nature. Par exemple, dans un formulaire de création de compte, on peut regrouper :</p>
+    <ul class="mis-xl">
+      <ListItem label="Les champs d'identification (nom, prénom, email, téléphone, etc.)"/>
+      <ListItem label="Les champs d'adresse (rue, code postal, ville, etc.)"/>
+      <ListItem label="Les champs de mot de passe (mot de passe, confirmation du mot de passe, etc.)"/>
+    </ul>
+  </div>
+
+  <img v-motion :duration="0" :initial="{ y: 100 }" :enter="{ y: -190 }" src="/images/leroy-merlin-form.png" alt="" >
+  <Box v-click :delay="0" x="610" w ="310" y="10" h="215"/>
+  <Box v-after :delay="300" x="610" w ="310" y="240" h="235"/>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les regroupements de champs</h2>
+
+<p class="mbs-2xl!"><strong>Critères 11.5, 11.6 et 11.7</strong></p>
+
+<p>De la même manière que les champs doivent avoir une étiquette, les regroupements de champs doivent avoir une légende.</p>
+
+<div v-click class="mbs-2xl">
+```html
+<fieldset>
+  <legend>Adresse de livraison</legend>
+  
+  <label for="street">Rue</label>
+  <input type="text" id="street" placeholder="Ex. 123 Rue de la Paix">
+  
+  <label for="zipcode">Code postal</label>
+  <input type="number" id="zipcode" placeholder="Ex. 75001">
+  
+  <label for="city">Ville</label>
+  <input type="text" id="city" placeholder="Ex. Paris">
+</fieldset>
+```
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les regroupements de liste de choix</h2>
+
+<p class="mbs-2xl!"><strong>Critère 11.8</strong></p>
+
+<p>Dans les listes de choix, si le nombre de choix est important, il est important de regrouper les options par thème ou catégorie.</p>
+<p>Cela permet aux utilisateurs de choisir plus facilement parmi les options disponibles et au technologies d'assistance de naviguer plus facilement dans les listes.</p>
+
+<div class="grid grid-cols-2 gap-3xl mbs-4xl">
+  <div v-click>
+    <p class="font-semibold">Sans regroupement :</p>
+    <select class="border border-gray-300 rounded px-3 py-2 w-full">
+      <option disabled selected>Liste de course</option>
+      <option>Pommes</option>
+      <option>Oranges</option>
+      <option>Banane</option>
+      <option>Carottes</option>
+      <option>Brocolis</option>
+      <option>Épinards</option>
+      <option>Riz</option>
+      <option>Pâtes</option>
+      <option>Quinoa</option>
+      <option>Poulet</option>
+      <option>Boeuf</option>
+      <option>Poisson</option>
+      <option>Lait</option>
+      <option>Fromage</option>
+      <option>Yaourt</option>
+    </select>
+  </div>
+
+
+  <div v-click>
+    <p class="font-semibold">Sans regroupement :</p>
+    <select class="border border-gray-300 rounded px-3 py-2 w-full">
+      <option disabled selected>Liste de course</option>
+      <optgroup label="Fruits">
+        <option>Pommes</option>
+        <option>Oranges</option>
+        <option>Banane</option>
+      </optgroup>
+      <optgroup label="Légumes">
+        <option>Carottes</option>
+        <option>Brocolis</option>
+        <option>Épinards</option>
+      </optgroup>
+      <optgroup label="Céréales">
+        <option>Riz</option>
+        <option>Pâtes</option>
+        <option>Quinoa</option>
+      </optgroup>
+      <optgroup label="Viandes">
+        <option>Poulet</option>
+        <option>Boeuf</option>
+        <option>Poisson</option>
+      </optgroup>
+      <optgroup label="Produits laitiers">
+        <option>Lait</option>
+        <option>Fromage</option>
+        <option>Yaourt</option>
+      </optgroup>
+    </select>
+  </div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les intitulés de boutons</h2>
+
+<p class="mbs-2xl!"><strong>Critère 11.9</strong></p>
+
+<p v-click>Comme pour les liens, les intitulés de boutons doivent être explicites et décrir clairement et sans ambiguïté l'action qu'ils déclenchent.</p>
+<p v-click>Dans le cadre d'un formulaire, Il peut y avoir 3 types de boutons :</p>
+<ul class="mis-3xl">
+  <ListItem label="Un bouton de soumission du formulaire avec <kbd>role=“submit“</kbd>"/>
+  <ListItem label="Un bouton de réinitialisation du formulaire avec <kbd>role=“reset“</kbd>"/>
+  <ListItem label="Un bouton d'action personnalisée avec <kbd>role=“button“</kbd>"/>
+</ul>
+
+<p v-click class="mbs-2xl!">Il est important de respecter ces rôles et de leur donner un intitulé pertinent.</p>
+
+<div v-click class="flex gap-3xl mx-8xl justify-center items-center mbs-2xl">
+  <button class="px-xl py-xs! text-sm bg-red-500 hover:bg-red-700 text-white rounded-xl" role="submit">
+    valider
+  </button>
+  <p class="m-0!">ou</p>
+  <button class="px-xl py-xs! text-sm bg-green-500 hover:bg-green-700 text-white rounded-xl" role="submit">
+    Confirmer mon abonnement à la newsletter
+  </button> 
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les contrôle de saisie</h2>
+
+<p class="mbs-xl!"><strong>Critères 11.10 et 11.11</strong></p>
+
+<p v-click>Dans un formulaire, il peux y avoir de nombreux champs et la donnée attendue peut varier selon le type de champ. Il est important de fournir des instructions claires et des messages d'erreur pertinents pour aider les utilisateurs à saisir correctement les données.</p>
+
+
+<div class="grid grid-cols-[7fr_3fr] gap-3xl items-start mbs-xl">
+
+<ul class="mis-3 shrink-0">
+  <ListItem label="Préciser si le champ est requis ou non <br/>avec <kbd>required</kbd> ou <kbd>aria-required=“true“</kbd>."/>
+  <ListItem label="Indiquer si le champ est valide ou non <br/>avec <kbd>aria-invalid=“true“</kbd> ou <kbd>aria-invalid=“false“</kbd>."/>
+  <ListItem label="Préciser le type de champ (texte, email, date, etc.) <br/>avec l'attribut <kbd>type</kbd>."/>
+  <ListItem label="Préciser le format de données attendue (le cas échéant) <br/>avec avec l'attribut <kbd>pattern</kbd>."/>
+</ul>
+
+<div v-click>
+```html
+<input 
+  id="email" 
+  name="email"
+  type="email" 
+  title="Votre adresse email *"
+  placeholder="Ex. john.doe@example.com"
+  required
+  aria-invalid="false"
+  pattern="^[^@]+@[^@]+\.[^@]+$"
+/>
+<p>* Champ requis</p>
+```
+</div>
+</div>
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les contrôle de saisie</h2>
+
+<p class="mbs-xl!"><strong>Critères 11.10 et 11.11</strong></p>
+
+<p class="mbs-xl!">Il n'y a rien de plus frustrant que de ne pas comprendre pourquoi l'envoi d'un formulaire échoue, ou pourquoi un champ n'est pas valide.</p>
+<p>C'est pourtant ce que vivent quotidiennement les utilisateurs en situation de handicap.</p>
+<p v-click>Il est primordial de fournir des messages d'erreur clairs et pertinents pour aider les utilisateurs à corriger leurs erreurs de saisie et de faire en sorte qu'ils soient correctement liés au champ concerné</p>
+
+
+<SlideFooter />
+
+<SlideFooter />
+
+
+<!-- prettier-ignore -->
+---
+layout: default
+transition: slide-left
+---
+
+<h1>Les formulaires</h1>
+<h2 class="text-light">Les contrôle de saisie</h2>
+
+<p class="mbs-xl!"><strong>Critères 11.10 et 11.11</strong></p>
+
+<div class="grid grid-cols-2 gap-3xl mbs-3xl">
+  <div class="flex flex-col gap-[3px]">
+    <label for="email">Votre email (*)</label>
+    <input 
+      id="email" 
+      name="email"
+      type="email" 
+      title="Votre adresse email *"
+      placeholder="Ex. john.doe@example.com"
+      required
+      value="john.doe.com"
+      aria-invalid="true"
+      pattern="^[^@]+@[^@]+\.[^@]+$"
+      class="border border-red-500 bg-red-50 text-red-700! rounded px-3 py-2 w-full"
+    />
+    <p class="text-red-500 bg-red-500 text-white text-xs px-[10px] py-[2px] rounded-sm -mbs-2xl!">Le format de l'adresse email n'est pas valide. <br/>Voici un exemple d'adresse email valide. john.doe@example.com).</p>
+    <p>* Champ requis</p>
+  </div>
+
+<div class="-translate-y-5xl">
+```html
+<label for="email">Votre email (*)</label>
+<input 
+  id="email" 
+  name="email"
+  type="email" 
+  title="Votre adresse email *"
+  placeholder="Ex. john.doe@example.com"
+  value="john.doe.com"
+  required
+  pattern="^[^@]+@[^@]+\.[^@]+$"
+  aria-invalid="true"
+  aria-labelledby="error-email"
+/>
+<p id="error-email">
+  Le format de l'adresse email n'est pas valide
+  (Ex. john.doe@example.com).
+</p>
+<p>* Champ requis</p>
+```
+</div>
+</div>
 
 <SlideFooter />
